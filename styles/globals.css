@@ -1,9 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Antonio,
+    Open Sans sans-serif;
+
+  --header: Antonio;
+  --headerWeight: 700;
+  --para: Open Sans;
+  --paraWeight: 600;
+
+  --orange-400: #f4955c;
+  --gray-900: #2e2e2e;
+  --gray-800: #4a4a4a;
 }
 
 a {
@@ -13,4 +24,23 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: var(--header);
+  font-weight: var(--headerWeight);
+  font-size: 5rem;
+  color: var(--gray-900);
+  text-transform: uppercase;
 }
