@@ -10,7 +10,7 @@ const MobileFooter = () => {
   };
 
   return (
-    <>
+    <div className={styles.mobileFooter}>
       <BottomDrawer show={showDrawer} />
       <div className={styles.mobileFooter__container}>
         <div className={styles.buttonContainer} onClick={drawerToggleHandler}>
@@ -28,7 +28,7 @@ const MobileFooter = () => {
           </svg>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

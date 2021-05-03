@@ -6,9 +6,9 @@ const Layout = (props) => {
   return (
     <div>
       <Navbar />
-      {/* {props.children} */}
-      <Footer />
       <MobileFooter />
+      {props.children}
+      <Footer />
     </div>
   );
 };

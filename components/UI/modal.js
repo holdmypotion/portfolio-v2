@@ -38,7 +38,20 @@ const BottomDrawer = ({ show }) => {
             initial="closed"
             animate="opened"
             exit="exit"
-          ></motion.div>
+          >
+            <div className={styles.menu}>
+              <ul>
+                <li>Dribbble</li>
+                <li>LinkedIn</li>
+                <li>Instagram</li>
+                <li>Behance</li>
+                <li>Twitter</li>
+              </ul>
+              <div className={styles.contact}>
+                <h3>Contact Me</h3>
+              </div>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>
