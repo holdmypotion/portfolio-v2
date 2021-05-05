@@ -45,3 +45,19 @@ h1 {
   color: var(--gray-900);
   text-transform: uppercase;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--orange-400);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-900);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-800);
+}
