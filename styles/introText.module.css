@@ -1,0 +1,52 @@
+.container {
+  max-width: 600px;
+}
+.container > h2 {
+  font-size: 2.6rem;
+}
+
+.bold {
+  font-size: 3.1rem;
+  text-transform: uppercase;
+  font-weight: var(--headerWeight);
+  font-weight: bolder;
+}
+
+.transparent {
+  opacity: 0.4;
+}
+
+.white {
+  color: var(--white);
+}
+
+.container > p {
+  max-width: 600px;
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 500px) {
+}
+
+@media screen and (min-width: 700px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .container > h2 {
+    font-size: 4rem;
+  }
+
+  .bold {
+    font-size: 5rem;
+  }
+
+  .container > p {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+}
+
+@media screen and (min-width: 2000px) {
+}

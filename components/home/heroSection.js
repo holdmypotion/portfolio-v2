@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../../styles/heroSection.module.css";
+import IntroText from "./introText";
 
 const HeroSection = () => {
   return (
@@ -23,16 +24,8 @@ const HeroSection = () => {
           // objectPosition="bottom"
         /> */}
       </div>
-      {/* TODO: Get the intro text sorted */}
       <div className={styles.introText}>
-        {/* <h2>
-          Hi, I am <span>Rahul</span>
-        </h2>
-        <p>
-          Over the past 3 years, as a developer and designer, I’ve worked with
-          up-and-coming startups to successfully help them reach their full
-          potential and attract new customers.
-        </p> */}
+        <IntroText />
       </div>
     </div>
   );

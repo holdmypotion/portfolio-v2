@@ -46,6 +46,11 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  font-family: var(--para);
+  font-size: 3rem;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

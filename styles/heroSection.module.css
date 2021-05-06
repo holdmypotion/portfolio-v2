@@ -46,7 +46,11 @@
 
 /* IntroText */
 .introText {
-  /* position: absolute; */
+  display: none;
+  color: var(--gray-900);
+  position: absolute;
+  top: 65%;
+  right: 5%;
 }
 
 @media screen and (min-width: 500px) {
@@ -72,7 +76,7 @@
 @media screen and (min-width: 1200px) {
   .headerContainer {
     position: static;
-    height: 60%;
+    height: auto;
   }
 
   .floatingHeader {
@@ -94,6 +98,10 @@
   .designer {
     position: static;
     text-align: right;
+  }
+
+  .introText {
+    display: block;
   }
 }
 
