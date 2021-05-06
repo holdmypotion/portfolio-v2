@@ -1,12 +1,13 @@
 .container {
   max-width: 600px;
+  margin: 0 auto;
 }
 .container > h2 {
-  font-size: 2.6rem;
+  font-size: 2.1rem;
 }
 
 .bold {
-  font-size: 3.1rem;
+  font-size: 2.6rem;
   text-transform: uppercase;
   font-weight: var(--headerWeight);
   font-weight: bolder;
@@ -29,6 +30,17 @@
 }
 
 @media screen and (min-width: 700px) {
+  .container > h2 {
+    font-size: 3rem;
+  }
+
+  .bold {
+    font-size: 4rem;
+  }
+
+  .container > p {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
