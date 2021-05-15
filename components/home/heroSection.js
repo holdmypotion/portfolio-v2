@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className={styles.imageContainerWrapper}>
         <div className={styles.imageContainer}>
           <Image
-            src="/images/portrait-new-nc.png"
+            src="/images/portrait.png"
             quality={100}
             layout="fill"
             objectFit="cover"

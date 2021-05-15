@@ -97,13 +97,13 @@
   /* Image */
   .imageContainerWrapper {
     position: absolute;
-    top: 10%;
+    top: 5%;
   }
 
   .imageContainer {
     position: relative;
     width: 60vw;
-    height: 90vh;
+    height: 95vh;
     margin-left: -10rem;
   }
 }
