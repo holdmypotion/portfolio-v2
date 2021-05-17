@@ -1,0 +1,17 @@
+.container {
+  height: 100vh;
+  background-color: var(--gray-900);
+}
+
+.introText {
+  margin: 0 auto;
+  text-align: center;
+  color: var(--orange-400);
+  max-width: 90%;
+}
+
+@media screen and (min-width: 1200px) {
+  .introText {
+    display: none;
+  }
+}
