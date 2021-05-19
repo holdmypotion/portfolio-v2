@@ -12,8 +12,8 @@
   z-index: 10;
 }
 
-.floatingContainer {
-  position: relative;
+.floatingHeader {
+  overflow: hidden;
 }
 
 .floatingHeader > h1 {
@@ -41,6 +41,48 @@
   position: absolute;
   top: 65%;
   right: 5%;
+}
+
+.image {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 20%;
+  background: rgb(46, 46, 46);
+  background: linear-gradient(
+    0deg,
+    rgba(46, 46, 46, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+}
+
+.image > img {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 @media screen and (min-width: 500px) {
@@ -105,6 +147,7 @@
     width: 60vw;
     height: 95vh;
     margin-left: -10rem;
+    overflow: hidden;
   }
 }
 
