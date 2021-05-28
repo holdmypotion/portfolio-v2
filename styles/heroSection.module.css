@@ -22,24 +22,25 @@
 
 .floatingHeader {
   overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 30%;
 }
 
 .floatingHeader > h1 {
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--white);
+  line-height: 1.05;
   font-size: 7rem;
 }
 .developer {
-  position: absolute;
-  top: 50%;
-  right: 25%;
+  margin-left: -40%;
 }
 
 .designer {
-  position: absolute;
-  top: 65%;
-  left: 35%;
+  text-align: right;
+  margin-right: -40%;
 }
 
 /* IntroText */
@@ -103,9 +104,9 @@
     font-size: 8rem;
   }
 
-  .designer {
+  /* .designer {
     top: 66%;
-  }
+  } */
 }
 
 @media screen and (min-width: 700px) {
@@ -113,9 +114,9 @@
     font-size: 15.4rem;
   }
 
-  .developer {
+  /* .developer {
     top: 45%;
-  }
+  } */
 }
 
 @media screen and (min-width: 1200px) {
@@ -127,21 +128,24 @@
   .floatingHeader {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    position: static;
   }
 
   .floatingHeader > h1 {
     -webkit-text-fill-color: var(--gray-900);
     -webkit-text-stroke-width: 0px;
     -webkit-text-stroke-color: var(--white);
-    line-height: 01;
   }
 
   .developer {
     position: static;
+    margin-left: 0;
   }
 
   .designer {
     position: static;
+    margin-right: 0;
     text-align: right;
   }
 

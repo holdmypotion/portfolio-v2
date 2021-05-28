@@ -5,9 +5,9 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
-      {/* <SmoothScroll> */}
-      <Component {...pageProps} />
-      {/* </SmoothScroll> */}
+      <SmoothScroll>
+        <Component {...pageProps} />
+      </SmoothScroll>
     </Layout>
   );
 }

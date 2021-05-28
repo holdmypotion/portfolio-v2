@@ -5,11 +5,11 @@ import IntroText from "./introText";
 
 const HeroSection = () => {
   const { scrollY } = useViewportScroll();
-  const moveRight = useTransform(scrollY, [0, 500], [0, 1400]);
-  const moveLeft = useTransform(scrollY, [0, 500], [0, -1400]);
-  const scale = useTransform(scrollY, [0, 1000], [1, 2]);
-  const moveDown = useTransform(scrollY, [0, 1000], [0, 500]);
-  const moveUp = useTransform(scrollY, [0, 2000], [1500, 0]);
+  const moveRight = useTransform(scrollY, [0, 1500], [0, 1400]);
+  const moveLeft = useTransform(scrollY, [0, 1500], [0, -1400]);
+  const scale = useTransform(scrollY, [0, 1500], [1, 2]);
+  const moveDown = useTransform(scrollY, [0, 2000], [0, 1000]);
+
   return (
     <div className={styles.heroSection}>
       <div className={styles.headerContainer}>
@@ -25,7 +25,6 @@ const HeroSection = () => {
       <div className={styles.imageContainerWrapper}>
         <div className={styles.imageContainer}>
           <div className={styles.image}>
-            {/* <div className={styles.imageOverlay}></div> */}
             <motion.img
               src="/images/portrait.png"
               style={{ scale: scale, y: moveDown }}
@@ -36,7 +35,6 @@ const HeroSection = () => {
       <div className={styles.introText}>
         <IntroText />
       </div>
-      {/* <motion.div style={{ y: moveUp }} className={styles.overlay}></motion.div> */}
     </div>
   );
 };

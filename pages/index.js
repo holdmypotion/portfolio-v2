@@ -13,7 +13,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroSection />
-      <div style={{ height: "50vh", backgroundColor: "#2e2e2e" }}></div>
       <ProjectSection />
     </div>
   );
