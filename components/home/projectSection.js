@@ -4,11 +4,9 @@ import styles from "../../styles/projectSection.module.css";
 import IntroText from "./introText";
 
 const ProjectSection = () => {
-  const { scrollY } = useViewportScroll();
-  const opacity = useTransform(scrollY, [500, 1000], [0, 1]);
   return (
     <div className={styles.container}>
-      <motion.div className={styles.introText} style={{ opacity: opacity }}>
+      <motion.div className={styles.introText}>
         <IntroText />
       </motion.div>
     </div>
