@@ -3,10 +3,10 @@ import {
   useViewportScroll,
   useTransform,
   useSpring,
-} from "framer-motion";
+} from 'framer-motion';
 
-import styles from "../../styles/heroSection.module.css";
-import IntroText from "./introText";
+import styles from '../../../styles/portfolio/heroSection.module.css';
+import IntroText from './introText';
 
 const HeroSection = () => {
   const physics = { damping: 15, mass: 0.27, stiffness: 55 };
@@ -39,7 +39,7 @@ const HeroSection = () => {
         <div className={styles.imageContainer}>
           <div className={styles.image}>
             <motion.img
-              src="/images/portrait.png"
+              src='/images/portrait.png'
               style={{ scale: scaleSpring, y: moveDownSpring }}
             />
           </div>

@@ -1,4 +1,4 @@
-import styles from "../../styles/introText.module.css";
+import styles from '../../../styles/portfolio/introText.module.css';
 const IntroText = () => {
   return (
     <div className={styles.container}>

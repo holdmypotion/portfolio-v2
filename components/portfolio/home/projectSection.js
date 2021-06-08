@@ -1,7 +1,7 @@
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion, useViewportScroll, useTransform } from 'framer-motion';
 
-import styles from "../../styles/projectSection.module.css";
-import IntroText from "./introText";
+import styles from '../../../styles/portfolio/projectSection.module.css';
+import IntroText from './introText';
 
 const ProjectSection = () => {
   return (
