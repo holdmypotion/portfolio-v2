@@ -1,23 +1,41 @@
 import {
   Container,
+  Form,
   Heading,
+  Input,
   Item,
   Menu,
   Para,
 } from '../../../styles/blog/footerStyles';
-import { Flex } from '../../../styles/blog/globalStyles';
+import { Button, Flex } from '../../../styles/blog/globalStyles';
+// import Button from '../UI/Button';
 import Social from './social';
 
 export default function Footer() {
   return (
     <Container>
       <Flex column center>
-        <Heading>Welcome</Heading>
+        <Heading>Welcome!</Heading>
         <Para>
-          Liked my blog? You would definitely cherish my newsletters. Do Sign
-          up, it’s FREE.
+          Liked my blog? <br />
+          You would definitely cherish my newsletters. <br /> Do Sign up, it’s
+          FREE.
         </Para>
-        <div>Newsletter</div>
+
+        <Form
+          action='https://tinyletter.com/holdmypotion'
+          method='post'
+          target='popupwindow'
+          onsubmit="window.open('https://tinyletter.com/holdmypotion', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+        >
+          <Input
+            type='text'
+            name='email'
+            id='tlemail'
+            placeholder='Email Address'
+          />
+          <Button type='submit'>Subscribe</Button>
+        </Form>
         <Menu>
           <Item>Portfolio</Item>
           <Item>Contact</Item>
