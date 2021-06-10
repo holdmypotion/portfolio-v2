@@ -4,6 +4,7 @@ import {
   Form,
   Heading,
   Input,
+  InputContainer,
   Item,
   Menu,
   Para,
@@ -28,12 +29,17 @@ export default function Footer() {
           target='popupwindow'
           onsubmit="window.open('https://tinyletter.com/holdmypotion', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
         >
-          <Input
-            type='text'
-            name='email'
-            id='tlemail'
-            placeholder='Email Address'
-          />
+          <InputContainer>
+            <Input
+              type='text'
+              name='email'
+              id='tlemail'
+              placeholder='Email Address'
+            />
+            <span>
+              <i></i>
+            </span>
+          </InputContainer>
           <Button type='submit'>Subscribe</Button>
         </Form>
         <Menu>

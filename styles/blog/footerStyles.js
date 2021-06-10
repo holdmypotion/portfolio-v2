@@ -86,22 +86,85 @@ export const Item = styled.li`
 export const Form = styled.form`
   padding: 0.1rem;
   text-align: center;
+  width: 100%;
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
+  background: ${props => props.theme.base};
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+  width: 100%;
 `;
 
 export const Input = styled.input`
+  font-family: Antonio;
+  background-color: ${props => props.theme.base};
+  outline: none;
+  color: ${props => props.theme.primary};
   font-size: 0.8rem;
-  padding: 5px 2px;
+  letter-spacing: 0.5px;
   width: 100%;
-  margin-bottom: 0.7rem;
-  background: ${props => props.theme.base};
-  color: ${props => props.theme.para};
+  padding: 5px;
   border-radius: 2px;
   border: 2px solid transparent;
-  outline: none;
+  transition: 0.4s;
 
-  &:focus,
-  &:hover {
-    border: 2px solid ${props => props.theme.primary};
+  &:focus-within {
+    background-color: transparent;
+  }
+
+  &::placeholder {
+    color: ${props => props.theme.primary};
+  }
+
+  ~ span::before,
+  ~ span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: ${props => props.theme.primary};
+    transition: 0.4s;
+    border-radius: 2px;
+  }
+
+  ~ span::after {
+    top: auto;
+    bottom: 0;
+  }
+
+  ~ i::before,
+  ~ i::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background-color: ${props => props.theme.primary};
+    transition: 0.6s;
+  }
+
+  ~ i::after {
+    left: auto;
+    right: 0;
+  }
+
+  &:focus ~ span:before,
+  &:focus ~ span:after {
+    left: 0;
+    width: 100%;
+    transition: 0.4s;
+  }
+
+  &:focus ~ i:before,
+  &:focus ~ i:after {
+    left: 0;
+    width: 100%;
+    transition: 0.4s;
   }
 `;
 
