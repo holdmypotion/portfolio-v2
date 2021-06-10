@@ -8,7 +8,6 @@ import {
   Para,
 } from '../../../styles/blog/footerStyles';
 import { Button, Flex } from '../../../styles/blog/globalStyles';
-// import Button from '../UI/Button';
 import Social from './social';
 
 export default function Footer() {
@@ -18,7 +17,7 @@ export default function Footer() {
         <Heading>Welcome!</Heading>
         <Para>
           Liked my blog? <br />
-          You would definitely cherish my newsletters. <br /> Do Sign up, it’s
+          You would definitely cherish my newsletters. <br /> Do sign up, it’s
           FREE.
         </Para>
 
