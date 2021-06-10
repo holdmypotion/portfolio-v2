@@ -9,6 +9,8 @@ export const Container = styled.div`
   z-index: 10;
   background: ${props => props.theme.baseLight};
   border-radius: 2px;
+  border-top: 2px solid ${props => props.theme.primary};
+  border-bottom: 2px solid ${props => props.theme.primary};
 `;
 
 export const Heading = styled.h2`
@@ -95,6 +97,11 @@ export const InputContainer = styled.div`
   border-radius: 2px;
   margin-bottom: 0.5rem;
   width: 100%;
+  transition: 0.4s;
+
+  &:focus-within {
+    background-color: ${props => props.theme.baseLight};
+  }
 `;
 
 export const Input = styled.input`

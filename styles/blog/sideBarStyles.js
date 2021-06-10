@@ -10,22 +10,28 @@ export const Container = styled.div`
   z-index: 10;
   background: ${props => props.theme.baseLight};
   border-radius: 2px;
+  /* border-top: 2px solid ${props => props.theme.primary};
+  border-bottom: 2px solid ${props => props.theme.primary}; */
 `;
 
 export const SBContainer = styled.div`
   background: ${props => props.theme.base};
   border-radius: 2px;
   width: 100%;
+  transition: 0.4s;
 
   & svg {
     margin-left: 0.5rem;
     padding-top: 0.2rem;
   }
+  &:focus-within {
+    background: ${props => props.theme.baseLight};
+  }
 `;
 
 export const SBInput = styled.input`
   font-family: Antonio;
-  background-color: ${props => props.theme.base};
+  background: ${props => props.theme.base};
   outline: none;
   color: ${props => props.theme.primary};
   font-size: 0.8rem;
@@ -37,7 +43,7 @@ export const SBInput = styled.input`
   transition: 0.4s;
 
   &:focus-within {
-    background-color: transparent;
+    background: ${props => props.theme.baseLight};
   }
 
   &::placeholder {
