@@ -74,10 +74,12 @@ export const Button = styled.button`
   letter-spacing: 0.04em;
   border-radius: 2px;
   outline: none;
+  background: ${props => props.theme.base};
 
   &:focus,
   &:hover {
     color: ${props => props.theme.base};
+    background: transparent;
   }
 
   &::after {
