@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   Container,
   Form,
@@ -36,8 +37,16 @@ export default function Footer() {
           <Button type='submit'>Subscribe</Button>
         </Form>
         <Menu>
-          <Item>Portfolio</Item>
-          <Item>Contact</Item>
+          <Item>
+            <Link href='/'>
+              <a>Portfolio</a>
+            </Link>
+          </Item>
+          <Item>
+            <Link href='/blog'>
+              <a>Contact</a>
+            </Link>
+          </Item>
         </Menu>
         <Social />
       </Flex>

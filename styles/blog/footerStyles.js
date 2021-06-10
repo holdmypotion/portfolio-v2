@@ -42,7 +42,11 @@ export const Item = styled.li`
   text-transform: uppercase;
   transition: all 0.6s ease-in-out;
 
-  &:hover {
+  & a {
+    transition: all 0.6s ease-in-out;
+  }
+
+  &:hover a {
     letter-spacing: 5px;
   }
 
@@ -108,14 +112,13 @@ export const Svgs = styled.div`
 export const Svg = styled.span`
   position: relative;
   margin: 0 10px;
-  transition: all 0.2s ease;
 
   & svg {
     width: 18px;
   }
 
   & path {
-    transition: all 1s ease;
+    transition: all 0.6s ease;
     fill: ${props => props.theme.primary};
   }
 
@@ -131,7 +134,7 @@ export const Svg = styled.span`
     bottom: 0;
     height: 2px;
     background-color: ${props => props.theme.heading};
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     transform: scaleX(0);
   }
 
