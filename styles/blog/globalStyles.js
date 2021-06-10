@@ -18,7 +18,8 @@ export const Container = styled.div`
 export const Flex = styled.div`
   position: relative;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  width: 100%;
   ${props =>
     props.column &&
     css`
@@ -27,17 +28,17 @@ export const Flex = styled.div`
   ${props =>
     props.center &&
     css`
-      justify-content: center;
+      align-items: center;
     `};
   ${props =>
     props.spaceBetween &&
     css`
-      justify-content: space-between;
+      align-items: space-between;
     `};
   ${props =>
     props.flexEnd &&
     css`
-      justify-content: flex-end;
+      align-items: flex-end;
     `};
   ${props =>
     props.alignTop &&
@@ -75,6 +76,7 @@ export const Button = styled.button`
   border-radius: 2px;
   outline: none;
   background: ${props => props.theme.base};
+  font-size: 1.2rem;
 
   &:focus,
   &:hover {

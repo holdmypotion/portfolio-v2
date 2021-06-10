@@ -1,6 +1,7 @@
 import { Flex, H1 } from '../../../styles/blog/globalStyles';
 import { Container } from '../../../styles/blog/sideBarStyles';
 import SearchBar from './searchBar';
+import TagSection from './TagSection';
 
 export default function Sidebar() {
   return (
@@ -8,7 +9,7 @@ export default function Sidebar() {
       <Flex column center>
         <H1>LOGO</H1>
         <SearchBar />
-        {/* <TagSection /> */}
+        <TagSection />
       </Flex>
     </Container>
   );

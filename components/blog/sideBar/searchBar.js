@@ -21,7 +21,7 @@ const SearchBar = () => {
 
   return (
     <SBContainer>
-      <Flex>
+      <Flex center>
         <svg
           width='16'
           height='16'

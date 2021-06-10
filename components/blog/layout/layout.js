@@ -28,19 +28,23 @@ export default function Layout({ children }) {
   const darkTheme = {
     base: '#313131',
     baseLight: '#4A4A4A',
+    baseLightest: '#636363',
     primary: '#F1762D',
     primaryLight: '#F7B48C',
     para: '#E3E3E3',
     heading: '#FCFCFC',
+    black: '#171717',
   };
 
   const lightTheme = {
     base: '#E3E3E3',
     baseLight: '#FCFCFC',
+    baseLightest: '#E3E3E3',
     primary: '#F4955C',
     primaryLight: '#F7B48C',
     para: '#4A4A4A',
     heading: '#171717',
+    black: '#171717',
   };
 
   return (

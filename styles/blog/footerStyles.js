@@ -16,14 +16,14 @@ export const Container = styled.div`
 export const Heading = styled.h2`
   font-family: Antonio;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: ${props => props.theme.heading};
 `;
 
 export const Para = styled.p`
   padding: 1rem 0;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 1rem;
 `;
 
 export const Menu = styled.ul`
@@ -40,7 +40,7 @@ export const Item = styled.li`
   font-family: Antonio;
   font-weight: bold;
   color: ${props => props.theme.heading};
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   transition: all 0.6s ease-in-out;
 
@@ -109,7 +109,7 @@ export const Input = styled.input`
   background-color: ${props => props.theme.base};
   outline: none;
   color: ${props => props.theme.primary};
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   width: 100%;
   padding: 5px;
