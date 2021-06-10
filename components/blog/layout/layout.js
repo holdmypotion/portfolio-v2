@@ -1,6 +1,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { normalize } from 'styled-normalize';
 import { Container } from '../../../styles/blog/globalStyles';
+import Sidebar from '../sideBar/sideBar';
 import Footer from './footer';
 
 const GlobalStyle = createGlobalStyle`
@@ -46,8 +47,9 @@ export default function Layout({ children }) {
     <ThemeProvider theme={darkTheme}>
       <GlobalStyle />
       <Container>
-        <Footer />
+        <Sidebar />
         <main>{children}</main>
+        <Footer />
       </Container>
     </ThemeProvider>
   );
