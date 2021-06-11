@@ -257,6 +257,7 @@ export const UnselectedTag = styled.button`
 `;
 
 export const SelectedTag = styled.button`
+  cursor: pointer;
   margin: 0.2rem 0;
   margin-right: 0.4rem;
   position: relative;

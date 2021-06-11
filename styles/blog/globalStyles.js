@@ -63,6 +63,7 @@ const bubbles = keyframes`
 `;
 
 export const Button = styled.button`
+  cursor: pointer;
   position: relative;
   color: ${props => props.theme.primary};
   border: 2px solid ${props => props.theme.primary};
@@ -78,6 +79,7 @@ export const Button = styled.button`
   outline: none;
   background: ${props => props.theme.base};
   font-size: 1.2rem;
+  z-index: 20;
 
   &:focus,
   &:hover {

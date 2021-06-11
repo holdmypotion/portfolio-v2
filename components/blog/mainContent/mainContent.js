@@ -1,11 +1,12 @@
 import { Container } from '../../../styles/blog/globalStyles';
-import { ContentContainer } from '../../../styles/blog/mainContent';
+import { ContentContainer } from '../../../styles/blog/mainContentStyles';
+import Blogs from './blogs';
 
 export default function () {
   return (
     <Container>
       <ContentContainer>
-        <h1>blog</h1>
+        <Blogs />
       </ContentContainer>
     </Container>
   );
