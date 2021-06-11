@@ -1,8 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
+  display: none;
   position: absolute;
-  width: 20rem;
+  width: 20%;
+  /* max-width: 20rem; */
   height: 100vh;
   left: 20px;
   padding: 1rem;
@@ -12,6 +14,10 @@ export const Container = styled.div`
   border-radius: 2px;
   /* border-top: 2px solid ${props => props.theme.primary};
   border-bottom: 2px solid ${props => props.theme.primary}; */
+
+  @media (min-width: 1080px) {
+    display: block;
+  }
 `;
 
 export const SBContainer = styled.div`

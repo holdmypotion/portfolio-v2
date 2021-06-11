@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: none;
   position: absolute;
-  width: 16rem;
-  right: 40px;
+  width: 20%;
+  /* max-width: 16rem; */
+  right: 20px;
   top: 30px;
   padding: 1rem;
   z-index: 10;
@@ -11,6 +13,10 @@ export const Container = styled.div`
   border-radius: 2px;
   border-top: 2px solid ${props => props.theme.primary};
   border-bottom: 2px solid ${props => props.theme.primary};
+
+  @media (min-width: 1080px) {
+    display: block;
+  }
 `;
 
 export const Heading = styled.h2`
