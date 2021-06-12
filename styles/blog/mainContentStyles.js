@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export const ContentContainer = styled.section`
-  /* position: absolute; */
-  /* left: 50px; */
   margin: 0 auto;
   padding-top: 30px;
-  width: 55%;
+  width: 90%;
   z-index: 10;
+
+  @media (min-width: 1080px) {
+    width: 55%;
+  }
 `;

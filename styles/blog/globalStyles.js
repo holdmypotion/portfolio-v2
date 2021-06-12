@@ -12,7 +12,7 @@ export const H1 = styled.h2`
 export const Container = styled.div`
   flex-grow: 1;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1920px;
   position: relative;
 `;
 
@@ -21,6 +21,11 @@ export const Flex = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  ${props =>
+    props.wrap &&
+    css`
+      flex-wrap: wrap;
+    `}
   ${props =>
     props.column &&
     css`

@@ -8,20 +8,16 @@ import {
 } from '../../../styles/blog/blogsStyles';
 import { Button, Flex } from '../../../styles/blog/globalStyles';
 
-export default function BlogThumb() {
+export default function BlogThumb({ type, para }) {
   return (
-    <BTContainer>
+    <BTContainer type={type}>
       <Flex column>
         <BTImageContainer>
           <Image src='/images/image.png' layout='fill' objectFit='cover' />
         </BTImageContainer>
         <BTContent>
           <BTHeading>Title</BTHeading>
-          <BTPara>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
-            sit sem lectus. Pellentesque orci sed ut leo sollicitudin eleifend.
-            Magna congue dignissim blandit malesuada quis....
-          </BTPara>
+          <BTPara>{para}</BTPara>
           <div>
             <Button>Read More</Button>
           </div>

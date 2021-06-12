@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: fixed;
   display: none;
-  position: absolute;
   width: 20%;
   /* max-width: 16rem; */
   right: 20px;
