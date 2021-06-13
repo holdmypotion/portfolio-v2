@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const ContentContainer = styled.section`
+  top: 0;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 15px;
   width: 90%;
   z-index: 10;
 

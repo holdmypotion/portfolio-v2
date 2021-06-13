@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   display: none;
-  position: fixed;
+  position: absolute;
   width: 20%;
   height: 100vh;
   left: 20px;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   border-radius: 2px;
 
   @media (min-width: 1080px) {
-    display: block;
+    display: inline-block;
   }
 `;
 

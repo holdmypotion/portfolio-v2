@@ -7,13 +7,18 @@ export const H1 = styled.h2`
   color: ${props => props.theme.heading};
   text-transform: auto;
 `;
-// TODO: Set the max-width after the blog is done.
-// TODO: Accordingly change the width %s of the three main containers
+
 export const Container = styled.div`
   flex-grow: 1;
   margin: 0 auto;
   max-width: 1920px;
   position: relative;
+`;
+
+export const StickyContainer = styled.div`
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
 `;
 
 export const Flex = styled.div`

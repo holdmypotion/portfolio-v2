@@ -52,8 +52,8 @@ export default function Layout({ children }) {
       <GlobalStyle />
       <Container>
         <Sidebar />
-        <main>{children}</main>
         <Footer />
+        <main>{children}</main>
       </Container>
     </ThemeProvider>
   );

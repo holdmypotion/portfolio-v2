@@ -28,6 +28,7 @@ export const BTContainer = styled.div`
   background: ${props => props.theme.baseLight};
   border-top: 2px solid ${props => props.theme.primary};
   border-bottom: 2px solid ${props => props.theme.primary};
+  border-radius: 2px;
 
   ${props =>
     props.type === 'small' &&
