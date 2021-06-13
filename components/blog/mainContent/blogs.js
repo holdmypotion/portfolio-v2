@@ -20,19 +20,19 @@ export default function Blogs() {
             sit sem lectus. Pellentesque orci sed ut leo sollicitudin eleifend.
             Magna congue dignissim blandit malesuada quis.... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
             sit sem lectus. Pellentesque orci sed ut leo sollicitudin eleifend.
-            Magna congue dignissim blandit malesuada quis....'
+            ....'
       />
       <BlogThumb
         type='medium'
         para='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
             sit sem lectus. Pellentesque orci sed ut leo sollicitudin eleifend.
-            Magna congue dignissim blandit malesuada quis....'
+            Magna congue dignissim blandit malesuada quis Magna congue dignissim ....'
       />
       <BlogThumb
         type='medium'
         para='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
             sit sem lectus. Pellentesque orci sed ut leo sollicitudin eleifend.
-            Magna congue dignissim blandit malesuada quis....'
+            Magna congue dignissim blandit malesuada quis Magna congue dignissim....'
       />
       <BlogThumb
         type='small'
