@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import SmoothScroll from '../components/utils/SmoothScroll/SmoothScroll';
+import SmoothScroll from '../components/utils/smoothScroll/smoothScroll';
 import Layout from '../components/portfolio/layout/layout';
 import HeroSection from '../components/portfolio/home/heroSection';
 import ProjectSection from '../components/portfolio/home/projectSection';
