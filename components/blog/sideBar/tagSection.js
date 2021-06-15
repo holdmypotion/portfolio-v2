@@ -15,7 +15,7 @@ export default function TagSection() {
   const filterContext = useContext(FilterContext);
 
   const [unselectedTags, setUnselectedTags] = useState(TAGS);
-  const [selectedTags, setSelectedTags] = useState(['rahul']);
+  const [selectedTags, setSelectedTags] = useState([]);
 
   const selectTagHandler = tag => {
     const updatedSelectedTags = selectedTags.concat(tag);

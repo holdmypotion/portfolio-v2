@@ -12,6 +12,9 @@ export default function Blogs() {
   let filteredArticles;
 
   filteredArticles = ARTICLES.filter(article => {
+    if (tags.length === 0) {
+      return article;
+    }
     if (tags.some(val => article.tags.includes(val))) {
       return article;
     } else {
