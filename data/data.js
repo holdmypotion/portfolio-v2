@@ -130,6 +130,7 @@ export const ARTICLES = [
     body: 'If you\'ve been hearing the term "Context API" and feel totally confused about it (like me, some days ago) or you have no clue what this even means, look no further! I\'ve got you covered (for the most part, I believe)',
     date: 'February 18, 2021',
     comments: 13,
+    tags: ['react', 'web-dev'],
     type: 'medium',
   },
   {
@@ -138,6 +139,7 @@ export const ARTICLES = [
     body: 'If you\'ve been hearing the term "Context API" and feel totally confused about it (like me, some days ago) or you have no clue what this even means, look no further! I\'ve got you covered (for the most part, I believe)',
     date: 'February 18, 2021',
     comments: 13,
+    tags: ['react', 'books-note'],
     type: 'small',
   },
   {
@@ -146,6 +148,9 @@ export const ARTICLES = [
     body: 'If you\'ve been hearing the term "Context API" and feel totally confused about it (like me, some days ago) or you have no clue what this even means, look no further! I\'ve got you covered (for the most part, I believe)',
     date: 'February 18, 2021',
     comments: 13,
+    tags: ['design'],
     type: 'large',
   },
 ];
+
+export const TAGS = ['react', 'books-notes', 'web-dev', 'design', 'javascript'];

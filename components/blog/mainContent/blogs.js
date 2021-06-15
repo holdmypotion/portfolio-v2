@@ -1,22 +1,31 @@
 import { useContext } from 'react';
 import { ARTICLES } from '../../../data/data';
 import { SearchContext } from '../../../store/search-context';
+import { FilterContext } from '../../../store/filter-context';
 import { Container } from '../../../styles/blog/blogsStyles';
-import { Flex } from '../../../styles/blog/globalStyles';
 import BlogThumb from './blogThumb';
 
 export default function Blogs() {
   // TODO: Set the excerpt from the body of the article according to the type.
   const searchContext = useContext(SearchContext);
-  let filteredArticles = ARTICLES.filter(article => {
-    if (article.title.toLowerCase().includes(searchContext.query)) {
+  const { tags } = useContext(FilterContext);
+  let filteredArticles;
+
+  filteredArticles = ARTICLES.filter(article => {
+    if (tags.some(val => article.tags.includes(val))) {
       return article;
     } else {
       return null;
     }
   });
 
-  console.log(filteredArticles);
+  filteredArticles = filteredArticles.filter(article => {
+    if (article.title.toLowerCase().includes(searchContext.query)) {
+      return article;
+    } else {
+      return null;
+    }
+  });
 
   return (
     <Container>

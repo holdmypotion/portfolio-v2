@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Layout from '../components/blog/layout/layout';
 import MainContent from '../components/blog/mainContent/mainContent';
-import SearchContextProvider from '../store/search-context';
+import Context from '../store';
 
 export default function Blog() {
   return (
-    <SearchContextProvider>
+    <Context>
       <Layout>
         <Head>
           <title>Rahsand- Blog</title>
@@ -14,6 +14,6 @@ export default function Blog() {
         </Head>
         <MainContent />
       </Layout>
-    </SearchContextProvider>
+    </Context>
   );
 }
