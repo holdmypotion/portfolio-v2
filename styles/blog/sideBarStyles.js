@@ -1,19 +1,39 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
-  display: none;
+  display: inline-block;
   position: absolute;
   width: 20%;
   height: 100vh;
   left: 20px;
   padding: 1rem;
   top: 0;
-  z-index: 10;
   background: ${props => props.theme.baseLight};
   border-radius: 2px;
+  z-index: 10;
+  transition: 0.8s;
 
-  @media (min-width: 1080px) {
-    display: inline-block;
+  @media (max-width: 1080px) {
+    width: 50%;
+  }
+`;
+
+export const TBContainer = styled.div`
+  position: absolute;
+  z-index: 40;
+  left: 20px;
+
+  &svg {
+    transition: 0.4s;
+  }
+
+  & path {
+    fill: ${props => props.theme.primary};
+    transition: 0.4s;
+  }
+
+  &:hover path {
+    fill: ${props => props.theme.black};
   }
 `;
 

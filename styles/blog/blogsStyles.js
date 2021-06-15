@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: grid;
   justify-content: center;
   grid-template-columns: auto auto auto;
+  z-index: 0;
 
   @media (max-width: 1666px) {
     grid-template-columns: auto auto;
@@ -28,6 +29,7 @@ export const BTContainer = styled.div`
   border-top: 2px solid ${props => props.theme.primary};
   border-bottom: 2px solid ${props => props.theme.primary};
   border-radius: 2px;
+  z-index: 0;
 
   ${props =>
     props.type === 'small' &&
@@ -50,12 +52,14 @@ export const BTImageContainer = styled.div`
   position: relative;
   width: auto;
   height: 200px;
+  z-index: 0;
 `;
 
 export const BTContent = styled.div`
   max-width: 80%;
   margin: 0 auto;
   position: relative;
+  z-index: 0;
 `;
 
 export const BTHeading = styled.h3`

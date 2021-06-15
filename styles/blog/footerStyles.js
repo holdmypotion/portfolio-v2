@@ -8,7 +8,6 @@ export const Container = styled.div`
   right: 20px;
   top: 30px;
   padding: 1rem;
-  z-index: 10;
   background: ${props => props.theme.baseLight};
   border-radius: 2px;
   border-top: 2px solid ${props => props.theme.primary};
