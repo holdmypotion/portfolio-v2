@@ -17,6 +17,10 @@ export const BackdropStyles = styled.div`
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   transition: 0.8s;
+
+  @media (min-width: 1080px) {
+    display: none;
+  }
 `;
 
 export const ToggleContainer = styled.div`
