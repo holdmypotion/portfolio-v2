@@ -8,6 +8,17 @@ export const H1 = styled.h2`
   text-transform: auto;
 `;
 
+export const BackdropStyles = styled.div`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.8s;
+`;
+
 export const ToggleContainer = styled.div`
   display: inline-block;
   z-index: 10;
@@ -204,7 +215,7 @@ export const Button = styled.button`
 
 export const TBContainer = styled.div`
   position: absolute;
-  z-index: 40;
+  z-index: 21;
   ${props =>
     props.right &&
     css`

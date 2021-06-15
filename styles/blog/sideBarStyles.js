@@ -6,6 +6,7 @@ export const Container = styled.div`
   width: 20%;
   height: 100vh;
   left: 20px;
+  max-width: 20rem;
   padding: 1rem;
   top: 0;
   background: ${props => props.theme.baseLight};
@@ -15,25 +16,6 @@ export const Container = styled.div`
 
   @media (max-width: 1080px) {
     width: 50%;
-  }
-`;
-
-export const TBContainer = styled.div`
-  position: absolute;
-  z-index: 40;
-  left: 20px;
-
-  &svg {
-    transition: 0.4s;
-  }
-
-  & path {
-    fill: ${props => props.theme.primary};
-    transition: 0.4s;
-  }
-
-  &:hover path {
-    fill: ${props => props.theme.black};
   }
 `;
 

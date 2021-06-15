@@ -11,12 +11,16 @@ import {
 import { Container } from '../../../styles/blog/sideBarStyles';
 import SearchBar from './searchBar';
 import TagSection from './TagSection';
+import Backdrop from '../UI/Backdrop';
 
 export default function Sidebar() {
   const [showSideBar, setShowSideBar] = useState(false);
 
   return (
     <StickyContainer>
+      {showSideBar && (
+        <Backdrop show={showSideBar} clicked={() => setShowSideBar(false)} />
+      )}
       <ToggleContainer>
         <TBContainer left>
           <ToggleButton

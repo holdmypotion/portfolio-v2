@@ -20,12 +20,16 @@ import {
   TBContainer,
 } from '../../../styles/blog/globalStyles';
 import Social from './social';
+import Backdrop from '../UI/Backdrop';
 
 export default function Footer() {
   const [showSideBar, setShowSideBar] = useState();
 
   return (
     <StickyContainer>
+      {showSideBar && (
+        <Backdrop show={showSideBar} clicked={() => setShowSideBar(false)} />
+      )}
       <ToggleContainer>
         <TBContainer right>
           <ToggleButton

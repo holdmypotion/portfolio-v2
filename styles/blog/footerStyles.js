@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   position: absolute;
   width: 20%;
-  /* max-width: 16rem; */
+  max-width: 18rem;
   right: 20px;
   top: 30px;
   padding: 1rem;
@@ -12,6 +12,7 @@ export const Container = styled.div`
   border-top: 2px solid ${props => props.theme.primary};
   border-bottom: 2px solid ${props => props.theme.primary};
   transition: 0.8s;
+  z-index: 10;
 
   @media (max-width: 1080px) {
     width: 50%;

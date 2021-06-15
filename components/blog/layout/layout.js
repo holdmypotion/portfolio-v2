@@ -51,8 +51,8 @@ export default function Layout({ children }) {
     <ThemeProvider theme={darkTheme}>
       <GlobalStyle />
       <Container>
-        <Sidebar />
         <Footer />
+        <Sidebar />
         <main>{children}</main>
       </Container>
     </ThemeProvider>
