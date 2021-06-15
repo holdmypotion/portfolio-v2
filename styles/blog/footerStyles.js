@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: absolute;
-  display: none;
   width: 20%;
   /* max-width: 16rem; */
   right: 20px;
@@ -12,10 +11,16 @@ export const Container = styled.div`
   border-radius: 2px;
   border-top: 2px solid ${props => props.theme.primary};
   border-bottom: 2px solid ${props => props.theme.primary};
+  transition: 0.8s;
 
-  @media (min-width: 1080px) {
-    display: block;
+  @media (max-width: 1080px) {
+    width: 50%;
   }
+`;
+
+export const TBContainer = styled.div`
+  position: absolute;
+  right: 20px;
 `;
 
 export const Heading = styled.h2`

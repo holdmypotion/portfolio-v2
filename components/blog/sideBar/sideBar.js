@@ -6,8 +6,9 @@ import {
   FullContainer,
   ToggleContainer,
   ToggleButton,
+  TBContainer,
 } from '../../../styles/blog/globalStyles';
-import { Container, TBContainer } from '../../../styles/blog/sideBarStyles';
+import { Container } from '../../../styles/blog/sideBarStyles';
 import SearchBar from './searchBar';
 import TagSection from './TagSection';
 
@@ -17,7 +18,7 @@ export default function Sidebar() {
   return (
     <StickyContainer>
       <ToggleContainer>
-        <TBContainer>
+        <TBContainer left>
           <ToggleButton
             py='2px'
             px='6px'

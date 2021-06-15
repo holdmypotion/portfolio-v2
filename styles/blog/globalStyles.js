@@ -202,6 +202,35 @@ export const Button = styled.button`
   }
 `;
 
+export const TBContainer = styled.div`
+  position: absolute;
+  z-index: 40;
+  ${props =>
+    props.right &&
+    css`
+      right: 20px;
+    `};
+
+  ${props =>
+    props.left &&
+    css`
+      left: 20px;
+    `};
+
+  &svg {
+    transition: 0.4s;
+  }
+
+  & path {
+    fill: ${props => props.theme.primary};
+    transition: 0.4s;
+  }
+
+  &:hover path {
+    fill: ${props => props.theme.black};
+  }
+`;
+
 export const ToggleButton = styled.button`
   cursor: pointer;
   position: relative;
