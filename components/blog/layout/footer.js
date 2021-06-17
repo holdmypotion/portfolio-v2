@@ -20,7 +20,7 @@ import {
   TBContainer,
 } from '../../../styles/blog/globalStyles';
 import Social from './social';
-import Backdrop from '../UI/Backdrop';
+import Backdrop from '../UI/backdrop';
 
 export default function Footer() {
   const [showSideBar, setShowSideBar] = useState();

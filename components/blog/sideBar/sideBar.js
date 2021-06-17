@@ -11,7 +11,7 @@ import {
 import { Container } from '../../../styles/blog/sideBarStyles';
 import SearchBar from './searchBar';
 import TagSection from './TagSection';
-import Backdrop from '../UI/Backdrop';
+import Backdrop from '../UI/backdrop';
 
 export default function Sidebar() {
   const [showSideBar, setShowSideBar] = useState(false);
