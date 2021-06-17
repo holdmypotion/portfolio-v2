@@ -5,6 +5,7 @@
 
 .introText {
   margin: 0 auto;
+  padding-top: 4rem;
   text-align: center;
   color: var(--orange-400);
   max-width: 90%;

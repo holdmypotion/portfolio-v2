@@ -4,6 +4,14 @@
   height: 100vh;
 }
 
+.overlay {
+  position: absolute;
+  z-index: 15;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--gray-900);
+}
+
 /* Headers */
 .headerContainer {
   position: fixed;
@@ -12,26 +20,27 @@
   z-index: 10;
 }
 
-.floatingContainer {
-  position: relative;
+.floatingHeader {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 30%;
 }
 
 .floatingHeader > h1 {
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--white);
+  line-height: 1.05;
   font-size: 7rem;
 }
 .developer {
-  position: absolute;
-  top: 50%;
-  right: 25%;
+  margin-left: -40%;
 }
 
 .designer {
-  position: absolute;
-  top: 65%;
-  left: 35%;
+  text-align: right;
+  margin-right: -40%;
 }
 
 /* IntroText */
@@ -43,14 +52,61 @@
   right: 5%;
 }
 
+/* Image */
+.imageContainer {
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+  height: 100vh;
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 20%;
+  background: rgb(46, 46, 46);
+  background: linear-gradient(
+    0deg,
+    rgba(46, 46, 46, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+}
+
+.image > img {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 @media screen and (min-width: 500px) {
   .floatingHeader > h1 {
     font-size: 8rem;
   }
 
-  .designer {
+  /* .designer {
     top: 66%;
-  }
+  } */
 }
 
 @media screen and (min-width: 700px) {
@@ -58,9 +114,9 @@
     font-size: 15.4rem;
   }
 
-  .developer {
+  /* .developer {
     top: 45%;
-  }
+  } */
 }
 
 @media screen and (min-width: 1200px) {
@@ -72,21 +128,24 @@
   .floatingHeader {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    position: static;
   }
 
   .floatingHeader > h1 {
     -webkit-text-fill-color: var(--gray-900);
     -webkit-text-stroke-width: 0px;
     -webkit-text-stroke-color: var(--white);
-    line-height: 01;
   }
 
   .developer {
     position: static;
+    margin-left: 0;
   }
 
   .designer {
     position: static;
+    margin-right: 0;
     text-align: right;
   }
 
@@ -105,6 +164,7 @@
     width: 60vw;
     height: 95vh;
     margin-left: -10rem;
+    overflow: hidden;
   }
 }
 

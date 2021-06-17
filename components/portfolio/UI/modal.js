@@ -1,28 +1,28 @@
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-import styles from "../../styles/modal.module.css";
-import Link from "next/link";
+import styles from '../../../styles/portfolio/modal.module.css';
+import Link from 'next/link';
 
 const bottomDrawerVariant = {
   closed: {
-    transform: "translateY(100%)",
+    transform: 'translateY(100%)',
     transition: {
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
   opened: {
-    transform: "translateY(0%)",
+    transform: 'translateY(0%)',
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
   exit: {
-    transform: "translateY(100%)",
+    transform: 'translateY(100%)',
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
 };
@@ -35,9 +35,9 @@ const BottomDrawer = ({ show }) => {
           <motion.div
             className={styles.bottomDrawer}
             variants={bottomDrawerVariant}
-            initial="closed"
-            animate="opened"
-            exit="exit"
+            initial='closed'
+            animate='opened'
+            exit='exit'
           >
             <div className={styles.menu}>
               <ul>

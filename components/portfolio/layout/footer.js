@@ -1,10 +1,10 @@
-import Link from "next/link";
-import styles from "../../styles/layout.module.css";
+import Link from 'next/link';
+import styles from '../../../styles/portfolio/layout.module.css';
 
-import { SOCIAL_SVGS } from "../../data/data";
+import { SOCIAL_SVGS } from '../../../data/data';
 
 const Footer = () => {
-  const svgs = SOCIAL_SVGS.map((svg) => (
+  const svgs = SOCIAL_SVGS.map(svg => (
     <span key={svg.url}>
       <Link href={svg.url}>
         <a>{svg.svg}</a>
@@ -22,7 +22,7 @@ const Footer = () => {
       </div>
       <div className={styles.scrollContainer}></div>
       <div className={styles.flexContainer}>
-        <Link href="/">
+        <Link href='/'>
           <a>
             <div className={styles.text}>
               <h3>Contact me</h3>

@@ -1,5 +1,5 @@
-import Link from "next/link";
-import styles from "../../styles/layout.module.css";
+import Link from 'next/link';
+import styles from '../../../styles/portfolio/layout.module.css';
 
 const Navbar = () => {
   return (
@@ -10,12 +10,12 @@ const Navbar = () => {
       <div className={styles.menuContainer}>
         <ul>
           <li>
-            <Link href="/">
+            <Link href='/'>
               <a>Work</a>
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href='/'>
               <a>Services</a>
             </Link>
           </li>
