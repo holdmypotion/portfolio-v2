@@ -12,12 +12,23 @@ import {
 } from '../../../styles/blog/blogsStyles';
 import { Button, Flex } from '../../../styles/blog/globalStyles';
 
-export default function BlogThumb({ type, title, excerpt, date, comments }) {
+export default function BlogThumb({
+  type,
+  title,
+  excerpt,
+  date,
+  comments,
+  image,
+}) {
   return (
     <BTContainer type={type}>
       <Flex column>
         <BTImageContainer>
-          <Image src='/images/image.png' layout='fill' objectFit='cover' />
+          <Image
+            src={'https:' + image.fields.file.url}
+            layout='fill'
+            objectFit='cover'
+          />
         </BTImageContainer>
         <BTContent>
           <BTHeading>{title}</BTHeading>
@@ -43,7 +54,7 @@ export default function BlogThumb({ type, title, excerpt, date, comments }) {
                         fill='#F7B48C'
                       />
                     </svg>
-                    <span>{comments}</span>
+                    <span>{comments.length}</span>
                   </Flex>
                 </Comment>
               </a>
