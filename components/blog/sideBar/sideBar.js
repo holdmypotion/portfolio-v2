@@ -10,7 +10,7 @@ import {
 } from '../../../styles/blog/globalStyles';
 import { Container } from '../../../styles/blog/sideBarStyles';
 import SearchBar from './searchBar';
-import TagSection from './TagSection';
+import TagSection from './tagSection';
 import Backdrop from '../UI/backdrop';
 
 export default function Sidebar() {
