@@ -1,11 +1,8 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { normalize } from 'styled-normalize';
 import { Container } from '../../../styles/blog/globalStyles';
-import Sidebar from '../sideBar/sideBar';
 import Footer from './footer';
 
 const GlobalStyle = createGlobalStyle`
-${'' /* ${normalize} */}
 * {
   text-decoration: none;
 }
@@ -52,7 +49,6 @@ export default function Layout({ children }) {
       <GlobalStyle />
       <Container>
         <Footer />
-        <Sidebar />
         <main>{children}</main>
       </Container>
     </ThemeProvider>

@@ -43,6 +43,7 @@ export default function Blogs({ blogs }) {
           return (
             <BlogThumb
               key={data.slug}
+              slug={data.slug}
               type={type}
               title={data.title}
               excerpt={data.description}

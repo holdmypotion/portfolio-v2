@@ -12,8 +12,9 @@ import { Container } from '../../../styles/blog/sideBarStyles';
 import SearchBar from './searchBar';
 import TagSection from './tagSection';
 import Backdrop from '../UI/backdrop';
+import Link from 'next/link';
 
-export default function Sidebar() {
+export default function SideBar() {
   const [showSideBar, setShowSideBar] = useState(false);
 
   return (
@@ -52,7 +53,11 @@ export default function Sidebar() {
           }}
         >
           <Flex column center>
-            <H1>LOGO</H1>
+            <Link href={'/blog/'}>
+              <a>
+                <H1>LOGO</H1>
+              </a>
+            </Link>
             <SearchBar />
             <TagSection />
           </Flex>
@@ -61,7 +66,11 @@ export default function Sidebar() {
       <FullContainer>
         <Container>
           <Flex column center>
-            <H1>LOGO</H1>
+            <Link href={'/blog/'}>
+              <a>
+                <H1>LOGO</H1>
+              </a>
+            </Link>
             <SearchBar />
             <TagSection />
           </Flex>

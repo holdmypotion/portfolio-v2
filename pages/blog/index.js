@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { createClient } from 'contentful';
 
-import Layout from '../components/blog/layout/layout';
-import MainContent from '../components/blog/mainContent/mainContent';
-import Context from '../store';
+import Layout from '../../components/blog/layout/layout';
+import MainContent from '../../components/blog/mainContent/mainContent';
+import Context from '../../store';
 
 export async function getStaticProps() {
   const client = createClient({
@@ -21,7 +21,6 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ blogs }) {
-  console.log(blogs[0].fields);
   return (
     <Context>
       <Layout>

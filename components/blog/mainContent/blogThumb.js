@@ -13,6 +13,7 @@ import {
 import { Button, Flex } from '../../../styles/blog/globalStyles';
 
 export default function BlogThumb({
+  slug,
   type,
   title,
   excerpt,
@@ -34,11 +35,15 @@ export default function BlogThumb({
           <BTHeading>{title}</BTHeading>
           <BTPara>{excerpt}</BTPara>
           <div>
-            <Button>Read More</Button>
+            <Link href={`/blog/${slug}`}>
+              <a>
+                <Button>Read More</Button>
+              </a>
+            </Link>
           </div>
           <Footer>
             <Date>{date}</Date>
-            <Link href='/'>
+            <Link href={`/blog/${slug}`}>
               <a>
                 <Comment>
                   <Flex center>
