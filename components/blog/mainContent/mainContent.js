@@ -8,7 +8,6 @@ export default function MainContent({ article, blogs }) {
     <>
       <SideBar />
       <ContentContainer>
-        {!article && !blogs && <h1>loading</h1>}
         {article && <Article article={article} />}
 
         {blogs && <Blogs blogs={blogs} />}

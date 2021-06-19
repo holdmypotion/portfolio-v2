@@ -1,5 +1,4 @@
 import { createClient } from 'contentful';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Layout from '../../components/blog/layout/layout';
 import Head from 'next/head';
 import MainContent from '../../components/blog/mainContent/mainContent';

@@ -19,6 +19,35 @@ body {
   overscroll-behavior: none;
   overflow-x: hidden;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans;
+}
+
+h1 {
+  font-family: Open Sans;
+  font-weight: 800;
+  font-size: 5rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3rem;
+}
+code {
+  color: ${props => props.theme.base};
+  background: ${props => props.theme.heading}
+
+}
 `;
 
 export default function Layout({ children }) {
