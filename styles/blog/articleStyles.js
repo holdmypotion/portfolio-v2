@@ -58,4 +58,15 @@ export const Body = styled.article`
     padding: 1rem 0;
     font-weight: 700;
   }
+
+  & a {
+    color: ${props => props.theme.primary};
+    text-decoration: underline;
+    line-height: 32px;
+  }
+
+  & h3 {
+    padding: 1rem 0;
+    font-size: 1.8rem;
+  }
 `;
