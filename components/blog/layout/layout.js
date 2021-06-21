@@ -19,6 +19,7 @@ body {
   overscroll-behavior: none;
   overflow-x: hidden;
 }
+
 h1,
 h2,
 h3,
@@ -34,20 +35,15 @@ ul {
 
 h1 {
   font-family: Open Sans;
-  font-weight: 800;
-  font-size: 5rem;
-  color: white;
-  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: ${props => props.theme.heading};
 }
 
 h2 {
   font-size: 3rem;
 }
-code {
-  color: ${props => props.theme.base};
-  background: ${props => props.theme.heading}
 
-}
 `;
 
 export default function Layout({ children }) {
@@ -74,7 +70,7 @@ export default function Layout({ children }) {
   };
 
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
       <Container>
         <Footer />

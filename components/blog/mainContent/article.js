@@ -9,6 +9,7 @@ import {
 } from '../../../styles/blog/articleStyles';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
+import CodeBlock from '../../utils/codeBlock/codeBlock';
 
 export default function Article({ article }) {
   if (!article) return <h1>loading</h1>;
@@ -28,12 +29,12 @@ export default function Article({ article }) {
         <Heading>{title}</Heading>
         <TagsContainer>
           {tags.map(tag => (
-            <Tag key={tag}>{tag}</Tag>
+            <Tag key={tag}>#{tag}</Tag>
           ))}
         </TagsContainer>
-        <div>
-          <ReactMarkdown>{body}</ReactMarkdown>
-        </div>
+        <Body>
+          <ReactMarkdown children={body} components={CodeBlock} />
+        </Body>
       </ContentContainer>
     </Container>
   );

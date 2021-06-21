@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import { ARTICLES } from '../../../data/data';
 import { SearchContext } from '../../../store/search-context';
 import { FilterContext } from '../../../store/filter-context';
 import { Container } from '../../../styles/blog/blogsStyles';

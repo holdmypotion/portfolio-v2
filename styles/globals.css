@@ -37,20 +37,14 @@ p,
 ul {
   margin: 0;
   padding: 0;
-  font-family: var(--para);
 }
 
-h1 {
+h4 {
   font-family: var(--header);
   font-weight: var(--headerWeight);
   font-size: 5rem;
   color: var(--gray-900);
   text-transform: uppercase;
-}
-
-h2 {
-  font-family: var(--para);
-  font-size: 3rem;
 }
 
 ::-webkit-scrollbar {
