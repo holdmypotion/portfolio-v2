@@ -13,8 +13,9 @@ import SearchBar from './searchBar';
 import TagSection from './tagSection';
 import Backdrop from '../UI/backdrop';
 import Link from 'next/link';
+import TableOfContent from '../mainContent/tableOfContent';
 
-export default function SideBar() {
+export default function SideBar({ type }) {
   const [showSideBar, setShowSideBar] = useState(false);
 
   return (
@@ -58,8 +59,14 @@ export default function SideBar() {
                 <H1>LOGO</H1>
               </a>
             </Link>
-            <SearchBar />
-            <TagSection />
+
+            {type === 'home' && (
+              <>
+                <SearchBar />
+                <TagSection />
+              </>
+            )}
+            {type === 'article' && <TableOfContent />}
           </Flex>
         </Container>
       </ToggleContainer>

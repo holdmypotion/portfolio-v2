@@ -32,7 +32,7 @@ export default function Article({ article }) {
             <Tag key={tag}>#{tag}</Tag>
           ))}
         </TagsContainer>
-        <Body>
+        <Body id='article'>
           <ReactMarkdown children={body} components={CodeBlock} />
         </Body>
       </ContentContainer>
