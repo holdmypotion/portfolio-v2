@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   position: absolute;
   width: 20%;
   max-width: 18rem;
@@ -11,11 +12,11 @@ export const Container = styled.div`
   border-radius: 2px;
   border-top: 2px solid ${props => props.theme.primary};
   border-bottom: 2px solid ${props => props.theme.primary};
-  transition: 0.8s;
   z-index: 10;
 
   @media (max-width: 1080px) {
-    width: 50%;
+    width: 70%;
+    position: fixed;
   }
 `;
 

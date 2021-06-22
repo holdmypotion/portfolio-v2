@@ -28,8 +28,8 @@ h5,
 h6,
 p,
 ul {
-  margin: 0;
-  padding: 0;
+   margin: 0;
+  padding: 0; 
   font-family: Open Sans;
 }
 
@@ -41,7 +41,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 `;
@@ -62,7 +62,8 @@ export default function Layout({ children }) {
     base: '#E3E3E3',
     baseLight: '#FCFCFC',
     baseLightest: '#E3E3E3',
-    primary: '#F4955C',
+    primary: '#F1762D',
+    // primary: '#F4955C',
     primaryLight: '#F7B48C',
     para: '#4A4A4A',
     heading: '#171717',
@@ -70,7 +71,7 @@ export default function Layout({ children }) {
   };
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={darkTheme}>
       <GlobalStyle />
       <Container>
         <Footer />

@@ -24,10 +24,16 @@ export const Heading = styled.h1`
   font-size: 3rem;
   font-weight: 800;
   line-height: 1;
+
+  @media (max-width: 400px) {
+    font-size: 2.3rem;
+  }
 `;
 
 export const TagsContainer = styled.div`
-  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 `;
 
 export const Tag = styled.span`
@@ -36,6 +42,7 @@ export const Tag = styled.span`
   font-family: Antonio;
   font-weight: 800;
   margin-right: 1rem;
+  margin-top: 1rem;
   padding: 5px 15px;
   border-radius: 2px;
 `;
@@ -45,18 +52,22 @@ export const Body = styled.article`
   & p {
     line-height: 30px;
     font-size: 1.1rem;
-    color: ${props => props.theme.black};
+    color: ${props => props.theme.para};
   }
 
   & li {
     line-height: 30px;
     font-size: 1.1rem;
-    color: ${props => props.theme.black};
+    color: ${props => props.theme.para};
   }
 
   & h1 {
     padding: 1rem 0;
     font-weight: 700;
+
+    @media (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
 
   & a {
@@ -68,5 +79,9 @@ export const Body = styled.article`
   & h3 {
     padding: 1rem 0;
     font-size: 1.8rem;
+  }
+
+  & img {
+    width: 100%;
   }
 `;

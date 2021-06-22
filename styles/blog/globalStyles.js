@@ -44,7 +44,7 @@ export const FullContainer = styled.div`
 export const Container = styled.div`
   flex-grow: 1;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 1660px;
   position: relative;
 `;
 

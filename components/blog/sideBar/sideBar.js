@@ -50,7 +50,7 @@ export default function SideBar({ type }) {
         </TBContainer>
         <Container
           style={{
-            transform: showSideBar ? 'translateX(0)' : 'translateX(-700px)',
+            transform: showSideBar ? 'translateX(0)' : 'translateX(-350px)',
           }}
         >
           <Flex column center>
@@ -78,8 +78,13 @@ export default function SideBar({ type }) {
                 <H1>LOGO</H1>
               </a>
             </Link>
-            <SearchBar />
-            <TagSection />
+            {type === 'home' && (
+              <>
+                <SearchBar />
+                <TagSection />
+              </>
+            )}
+            {type === 'article' && <TableOfContent />}
           </Flex>
         </Container>
       </FullContainer>

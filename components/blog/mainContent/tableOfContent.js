@@ -2,14 +2,21 @@ import { useState } from 'react';
 
 import useHeadingsData from '../../../hooks/useHeadingsData';
 import useIntersectionObserver from '../../../hooks/useIntersectionObserver';
-import { TOC } from '../../../styles/blog/tOCStyles';
+import {
+  Content,
+  InnerList,
+  ListItem,
+  OuterList,
+  Title,
+  TOC,
+} from '../../../styles/blog/tOCStyles';
 
 const Headings = ({ headings, activeId }) => (
-  <ul>
+  <OuterList>
     {headings.map(heading => (
-      <li
+      <ListItem
         key={heading.id}
-        // className={heading.id === activeId ? styles.active : ''}
+        active={heading.id === activeId ? true : false}
       >
         <a
           href={`#${heading.id}`}
@@ -23,11 +30,11 @@ const Headings = ({ headings, activeId }) => (
           {heading.title}
         </a>
         {heading.items.length > 0 && (
-          <ul>
+          <InnerList>
             {heading.items.map(child => (
-              <li
+              <ListItem
                 key={child.id}
-                // className={child.id === activeId ? styles.active : ''}
+                active={heading.id === activeId ? true : false}
               >
                 <a
                   href={`#${child.id}`}
@@ -40,23 +47,26 @@ const Headings = ({ headings, activeId }) => (
                 >
                   {child.title}
                 </a>
-              </li>
+              </ListItem>
             ))}
-          </ul>
+          </InnerList>
         )}
-      </li>
+      </ListItem>
     ))}
-  </ul>
+  </OuterList>
 );
 
 export default function TableOfContent() {
   const { nestedHeadings } = useHeadingsData();
   const [activeId, setActiveId] = useState('');
   useIntersectionObserver(setActiveId);
-  console.log(nestedHeadings);
+  console.log(activeId);
   return (
     <TOC aria-label='Table Of Content'>
-      <Headings headings={nestedHeadings} activeId={activeId} />
+      <Title>Table Of content</Title>
+      <Content>
+        <Headings headings={nestedHeadings} activeId={activeId} />
+      </Content>
     </TOC>
   );
 }

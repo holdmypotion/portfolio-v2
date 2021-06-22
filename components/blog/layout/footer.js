@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import {
   Container,
@@ -21,6 +22,8 @@ import {
 } from '../../../styles/blog/globalStyles';
 import Social from './social';
 import Backdrop from '../UI/backdrop';
+
+const transition = { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] };
 
 export default function Footer() {
   const [showSideBar, setShowSideBar] = useState();
@@ -55,53 +58,58 @@ export default function Footer() {
             </svg>
           </ToggleButton>
         </TBContainer>
-        <Container
-          style={{
-            transform: showSideBar ? 'translateX(0)' : 'translateX(700px)',
-          }}
-        >
-          <Flex column center>
-            <Heading>Welcome!</Heading>
-            <Para>
-              Liked my blog? <br />
-              You would definitely cherish my newsletters. <br /> Do sign up,
-              it’s FREE.
-            </Para>
-
-            <Form
-              action='https://tinyletter.com/holdmypotion'
-              method='post'
-              target='popupwindow'
-              onsubmit="window.open('https://tinyletter.com/holdmypotion', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+        <AnimatePresence>
+          {showSideBar && (
+            <Container
+              initial={{ x: 300 }}
+              animate={{ x: 0 }}
+              exit={{ x: 300 }}
+              transition={transition}
             >
-              <InputContainer>
-                <Input
-                  type='text'
-                  name='email'
-                  id='tlemail'
-                  placeholder='Email Address'
-                />
-                <span>
-                  <i></i>
-                </span>
-              </InputContainer>
-              <Button type='submit'>Subscribe</Button>
-            </Form>
-            <Menu>
-              <Item>
-                <Link href='/'>
-                  <a>Portfolio</a>
-                </Link>
-              </Item>
-              <Item>
-                <Link href='/blog'>
-                  <a>Contact</a>
-                </Link>
-              </Item>
-            </Menu>
-            <Social />
-          </Flex>
-        </Container>
+              <Flex column center>
+                <Heading>Welcome!</Heading>
+                <Para>
+                  Liked my blog? <br />
+                  You would definitely cherish my newsletters. <br /> Do sign
+                  up, it’s FREE.
+                </Para>
+
+                <Form
+                  action='https://tinyletter.com/holdmypotion'
+                  method='post'
+                  target='popupwindow'
+                  onsubmit="window.open('https://tinyletter.com/holdmypotion', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+                >
+                  <InputContainer>
+                    <Input
+                      type='text'
+                      name='email'
+                      id='tlemail'
+                      placeholder='Email Address'
+                    />
+                    <span>
+                      <i></i>
+                    </span>
+                  </InputContainer>
+                  <Button type='submit'>Subscribe</Button>
+                </Form>
+                <Menu>
+                  <Item>
+                    <Link href='/'>
+                      <a>Portfolio</a>
+                    </Link>
+                  </Item>
+                  <Item>
+                    <Link href='/blog'>
+                      <a>Contact</a>
+                    </Link>
+                  </Item>
+                </Menu>
+                <Social />
+              </Flex>
+            </Container>
+          )}
+        </AnimatePresence>
       </ToggleContainer>
       <FullContainer>
         <Container>

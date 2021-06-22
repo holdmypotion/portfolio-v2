@@ -32,7 +32,8 @@ const useIntersectionObserver = setActiveId => {
       rootMargin: '0px 0px -40% 0px',
     });
 
-    const headingElements = Array.from(document.querySelectorAll('h2, h3'));
+    const container = document.querySelector('#article');
+    const headingElements = Array.from(container.querySelectorAll('h1, h3'));
 
     headingElements.forEach(element => observer.observe(element));
 
