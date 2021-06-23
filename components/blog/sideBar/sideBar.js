@@ -8,7 +8,7 @@ import {
   ToggleButton,
   TBContainer,
 } from '../../../styles/blog/globalStyles';
-import { Container } from '../../../styles/blog/sideBarStyles';
+import { Container, Content } from '../../../styles/blog/sideBarStyles';
 import SearchBar from './searchBar';
 import TagSection from './tagSection';
 import Backdrop from '../UI/backdrop';
@@ -16,10 +16,16 @@ import Link from 'next/link';
 import TableOfContent from '../mainContent/tableOfContent';
 
 export default function SideBar({ type }) {
+  // TODO: Add a Share button at the bottom
   const [showSideBar, setShowSideBar] = useState(false);
 
   return (
     <StickyContainer>
+      <div className='animationContainer'>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+      </div>
       {showSideBar && (
         <Backdrop show={showSideBar} clicked={() => setShowSideBar(false)} />
       )}
@@ -61,10 +67,10 @@ export default function SideBar({ type }) {
             </Link>
 
             {type === 'home' && (
-              <>
+              <Content>
                 <SearchBar />
                 <TagSection />
-              </>
+              </Content>
             )}
             {type === 'article' && <TableOfContent />}
           </Flex>
@@ -79,10 +85,10 @@ export default function SideBar({ type }) {
               </a>
             </Link>
             {type === 'home' && (
-              <>
+              <Content>
                 <SearchBar />
                 <TagSection />
-              </>
+              </Content>
             )}
             {type === 'article' && <TableOfContent />}
           </Flex>

@@ -1,31 +1,28 @@
 import styled, { css } from 'styled-components';
 
 export const TOC = styled.nav`
-  /* margin: 0 auto; */
   padding-top: 2rem;
-  margin: 0;
   width: 100%;
+  margin: 0;
 `;
 
 export const Title = styled.h2`
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   color: ${props => props.theme.heading};
   font-family: Antonio;
   text-align: center;
-  padding-bottom: 1rem;
-
+  padding: 1rem 0;
   @media (max-width: 1410px) {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 `;
 
 export const Content = styled.div`
   width: 100%;
-  margin-top: 2rem;
   padding-left: 1rem;
   color: ${props => props.theme.primary};
   background: ${props => props.theme.base};
-  overflow-x: auto;
+  overflow: auto;
   border-top: 2px solid ${props => props.theme.primary};
   border-bottom: 2px solid ${props => props.theme.primary};
 `;

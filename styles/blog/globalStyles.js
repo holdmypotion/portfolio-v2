@@ -62,6 +62,11 @@ export const Flex = styled.div`
   justify-content: center;
   width: 100%;
   ${props =>
+    props.fullHeight &&
+    css`
+      height: 100vh;
+    `}
+  ${props =>
     props.wrap &&
     css`
       flex-wrap: wrap;

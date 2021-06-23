@@ -19,6 +19,12 @@ export const Container = styled.div`
   }
 `;
 
+export const Content = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+`;
+
 export const SBContainer = styled.div`
   background: ${props => props.theme.base};
   border-radius: 2px;
