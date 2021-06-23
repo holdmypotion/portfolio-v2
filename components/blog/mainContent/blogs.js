@@ -36,7 +36,6 @@ export default function Blogs({ blogs }) {
         filteredArticles.map((article, index) => {
           const data = article.fields;
           const date = data.publishDate.slice(0, 10);
-          console.log(date);
           const types = ['small', 'large', 'medium'];
           const type = types[index % 3];
           return (

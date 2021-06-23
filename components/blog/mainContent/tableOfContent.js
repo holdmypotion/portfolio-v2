@@ -60,7 +60,6 @@ export default function TableOfContent() {
   const { nestedHeadings } = useHeadingsData();
   const [activeId, setActiveId] = useState('');
   useIntersectionObserver(setActiveId);
-  console.log(activeId);
   return (
     <TOC aria-label='Table Of Content'>
       <Title>Table Of content</Title>

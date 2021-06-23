@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import {
@@ -10,6 +10,7 @@ import {
   Item,
   Menu,
   Para,
+  SwitchButton,
 } from '../../../styles/blog/footerStyles';
 import {
   Button,
@@ -22,11 +23,13 @@ import {
 } from '../../../styles/blog/globalStyles';
 import Social from './social';
 import Backdrop from '../UI/backdrop';
+import { ThemeContext } from '../../../store/theme-context';
 
 const transition = { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] };
 
 export default function Footer() {
   const [showSideBar, setShowSideBar] = useState();
+  const { theme, themeSwitchHandler } = useContext(ThemeContext);
 
   return (
     <StickyContainer>
@@ -106,6 +109,15 @@ export default function Footer() {
                   </Item>
                 </Menu>
                 <Social />
+                <SwitchButton>
+                  <input
+                    type='checkbox'
+                    onChange={() =>
+                      themeSwitchHandler(theme === 'dark' ? 'light' : 'dark')
+                    }
+                  />
+                  <span></span>
+                </SwitchButton>
               </Flex>
             </Container>
           )}
@@ -153,6 +165,15 @@ export default function Footer() {
               </Item>
             </Menu>
             <Social />
+            <SwitchButton>
+              <input
+                type='checkbox'
+                onChange={() =>
+                  themeSwitchHandler(theme === 'dark' ? 'light' : 'dark')
+                }
+              />
+              <span></span>
+            </SwitchButton>
           </Flex>
         </Container>
       </FullContainer>

@@ -15,7 +15,6 @@ export default function Article({ article }) {
   if (!article) return <h1>loading</h1>;
   const { title, comments, publishDate, featuredImage, body, tags } =
     article.fields;
-  console.log(article.fields);
   return (
     <Container>
       <ImageContainer>

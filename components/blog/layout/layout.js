@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { ThemeContext } from '../../../store/theme-context';
 import { Container } from '../../../styles/blog/globalStyles';
 import Footer from './footer';
 
@@ -63,15 +65,27 @@ export default function Layout({ children }) {
     baseLight: '#FCFCFC',
     baseLightest: '#E3E3E3',
     primary: '#F1762D',
-    // primary: '#F4955C',
     primaryLight: '#F7B48C',
     para: '#4A4A4A',
     heading: '#171717',
     black: '#171717',
   };
 
+  const currentTheme = useContext(ThemeContext);
+  let theme;
+  switch (currentTheme.theme) {
+    case 'dark':
+      theme = darkTheme;
+      break;
+    case 'light':
+      theme = lightTheme;
+      break;
+    default:
+      theme = lightTheme;
+  }
+
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Container>
         <Footer />
