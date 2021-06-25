@@ -10,6 +10,7 @@ import {
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import CodeBlock from '../../utils/codeBlock/codeBlock';
+import Comments from './comments';
 
 export default function Article({ article }) {
   if (!article) return <h1>loading</h1>;
@@ -34,6 +35,7 @@ export default function Article({ article }) {
         <Body id='article'>
           <ReactMarkdown children={body} components={CodeBlock} />
         </Body>
+        <Comments data={comments} />
       </ContentContainer>
     </Container>
   );
