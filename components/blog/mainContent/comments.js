@@ -100,22 +100,19 @@ export default function Comments({ data }) {
     <DiscussionContainer key={comment.id}>
       <Comment data={comment} />
       {comment.replies.map(reply => (
-        <Replies key={reply.id} style={{ paddingLeft: '2rem' }}>
+        <Replies key={reply.id}>
           <Comment data={reply} />
           {reply.replies &&
             reply.replies.map(reply => (
-              <Replies key={reply.id} style={{ paddingLeft: '2rem' }}>
+              <Replies key={reply.id}>
                 <Comment data={reply} />
                 {reply.replies &&
                   reply.replies.map(reply => (
-                    <Replies key={reply.id} style={{ paddingLeft: '2rem' }}>
+                    <Replies key={reply.id}>
                       <Comment data={reply} />
                       {reply.replies &&
                         reply.replies.map(reply => (
-                          <Replies
-                            key={reply.id}
-                            style={{ paddingLeft: '2rem' }}
-                          >
+                          <Replies key={reply.id}>
                             <Comment data={reply} />
                           </Replies>
                         ))}

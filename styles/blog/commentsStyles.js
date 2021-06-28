@@ -244,5 +244,5 @@ export const Reply = styled.div`
 
 export const Replies = styled.div`
   padding-top: 2rem;
-  /* padding-left: 2rem; */
+  padding-left: 2rem;
 `;
