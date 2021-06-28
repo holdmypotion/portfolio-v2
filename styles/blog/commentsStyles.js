@@ -231,6 +231,7 @@ export const Reply = styled.div`
   align-items: center;
   padding-left: 3rem;
   margin-top: 0.5rem;
+  cursor: pointer;
 
   & svg {
     margin-right: 0.2rem;
@@ -243,5 +244,5 @@ export const Reply = styled.div`
 
 export const Replies = styled.div`
   padding-top: 2rem;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
 `;
