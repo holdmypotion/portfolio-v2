@@ -104,17 +104,17 @@ export default function Comments({ data }) {
           <Comment data={reply} />
           {reply.replies &&
             reply.replies.map(reply => (
-              <Replies key={reply.id} style={{ paddingLeft: '3rem' }}>
+              <Replies key={reply.id} style={{ paddingLeft: '2rem' }}>
                 <Comment data={reply} />
                 {reply.replies &&
                   reply.replies.map(reply => (
-                    <Replies key={reply.id} style={{ paddingLeft: '4rem' }}>
+                    <Replies key={reply.id} style={{ paddingLeft: '2rem' }}>
                       <Comment data={reply} />
                       {reply.replies &&
                         reply.replies.map(reply => (
                           <Replies
                             key={reply.id}
-                            style={{ paddingLeft: '5rem' }}
+                            style={{ paddingLeft: '2rem' }}
                           >
                             <Comment data={reply} />
                           </Replies>
