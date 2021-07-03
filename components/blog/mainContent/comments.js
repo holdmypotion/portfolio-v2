@@ -13,7 +13,7 @@ export default function Comments() {
     scriptEl.setAttribute('crossorigin', 'anonymous');
     scriptEl.setAttribute('async', true);
     scriptEl.setAttribute('repo', 'holdmypotion/portfolio-v2');
-    scriptEl.setAttribute('issue-term', 'url');
+    scriptEl.setAttribute('issue-term', 'pathname');
     scriptEl.setAttribute(
       'theme',
       theme === 'dark' ? 'github-dark' : 'github-light'

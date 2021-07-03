@@ -35,7 +35,6 @@ export default function Blogs({ blogs }) {
       {filteredArticles !== null &&
         filteredArticles.map((article, index) => {
           const data = article.fields;
-          const date = data.publishDate.slice(0, 10);
           const types = ['small', 'large', 'medium'];
           const type = types[index % 3];
           return (
@@ -45,8 +44,7 @@ export default function Blogs({ blogs }) {
               type={type}
               title={data.title}
               excerpt={data.description}
-              comments={data.comments.comments}
-              date={date}
+              date={data.publishDate}
               image={data.featuredImage}
             />
           );

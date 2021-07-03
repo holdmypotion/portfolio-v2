@@ -77,13 +77,14 @@ export const BTPara = styled.p`
 
 export const Footer = styled.div`
   display: flex;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 `;
 
-export const Date = styled.span`
+export const PublishDate = styled.span`
   font-weight: 600;
   font-size: 0.9rem;
+  padding-left: 0.2rem;
 `;
 
 export const Comment = styled.div`

@@ -48,7 +48,7 @@ export const Tag = styled.span`
 `;
 
 export const Body = styled.article`
-  padding: 2rem 0;
+  padding: 1rem 0;
   & p {
     line-height: 30px;
     font-size: 1.1rem;
@@ -84,4 +84,10 @@ export const Body = styled.article`
   & img {
     width: 100%;
   }
+`;
+
+export const PublishDate = styled.div`
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
 `;
