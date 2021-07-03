@@ -14,8 +14,7 @@ import Comments from './comments';
 
 export default function Article({ article }) {
   if (!article) return <h1>loading</h1>;
-  const { title, comments, publishDate, featuredImage, body, tags } =
-    article.fields;
+  const { title, publishDate, featuredImage, body, tags } = article.fields;
   return (
     <Container>
       <ImageContainer>
@@ -35,7 +34,7 @@ export default function Article({ article }) {
         <Body id='article'>
           <ReactMarkdown children={body} components={CodeBlock} />
         </Body>
-        <Comments data={comments} />
+        <Comments />
       </ContentContainer>
     </Container>
   );
