@@ -86,8 +86,16 @@ export const Body = styled.article`
   }
 `;
 
-export const PublishDate = styled.div`
+export const InfoContainer = styled.div`
   padding: 1rem 0;
   font-size: 0.9rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+`;
+
+export const SocialContainer = styled.div`
+  & button {
+    margin-left: 0.6rem;
+  }
 `;
