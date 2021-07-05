@@ -3,7 +3,7 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter>
       <Component {...pageProps} key={router.route} />
     </AnimatePresence>
   );

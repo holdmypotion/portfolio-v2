@@ -14,32 +14,32 @@ export default function Panels() {
   return (
     <PanelsContainer>
       <LeftPanel
-        initial={{ height: 0 }}
+        initial={{ height: windowSize.height }}
         animate={{
-          height: [0, windowSize.height, 0],
-          bottom: [null, 0, 0],
+          height: [windowSize.height, 0],
+          bottom: [0, 0],
         }}
         exit={{
-          height: [0, windowSize.height, 0],
-          top: [null, 0, 0],
+          height: [0, windowSize.height],
+          top: [null, 0],
         }}
-        transition={{ ...transition, duration: 2, times: [0, 0.5, 1] }}
+        transition={{ ...transition, duration: 1, times: [0, 0.5, 1] }}
         style={{ background: panelComplete ? '#F1762D' : '#F1762D' }}
       ></LeftPanel>
       <RightPanel
         style={{
           background: panelComplete ? '#F1762D' : '#F1762D',
         }}
-        initial={{ height: 0 }}
+        initial={{ height: windowSize.height }}
         animate={{
-          height: [0, windowSize.height, 0],
-          bottom: [0, 0, windowSize.height],
+          height: [windowSize.height, 0],
+          bottom: [0, windowSize.height],
         }}
         exit={{
-          height: [0, windowSize.height, 0],
-          bottom: [null, 0, 0],
+          height: [0, windowSize.height],
+          bottom: [null, 0],
         }}
-        transition={{ ...transition, duration: 2, times: [0, 0.5, 1] }}
+        transition={{ ...transition, duration: 1, times: [0, 0.5, 1] }}
         onAnimationComplete={() => {
           setPanelComplete(!panelComplete);
         }}
