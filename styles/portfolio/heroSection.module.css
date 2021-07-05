@@ -27,7 +27,7 @@
   top: 30%;
 }
 
-.floatingHeader > h1 {
+.floatingHeader > h4 {
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--white);
@@ -100,7 +100,7 @@
 }
 
 @media screen and (min-width: 500px) {
-  .floatingHeader > h1 {
+  .floatingHeader > h4 {
     font-size: 8rem;
   }
 
@@ -110,7 +110,7 @@
 }
 
 @media screen and (min-width: 700px) {
-  .floatingHeader > h1 {
+  .floatingHeader > h4 {
     font-size: 15.4rem;
   }
 
@@ -132,7 +132,7 @@
     position: static;
   }
 
-  .floatingHeader > h1 {
+  .floatingHeader > h4 {
     -webkit-text-fill-color: var(--gray-900);
     -webkit-text-stroke-width: 0px;
     -webkit-text-stroke-color: var(--white);
@@ -169,13 +169,13 @@
 }
 
 @media screen and (min-width: 1600px) {
-  .floatingHeader > h1 {
+  .floatingHeader > h4 {
     font-size: 20rem;
   }
 }
 
 @media screen and (min-width: 2000px) {
-  .floatingHeader > h1 {
+  .floatingHeader > h4 {
     font-size: 25rem;
   }
 }

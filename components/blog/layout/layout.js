@@ -1,11 +1,11 @@
+import { useContext } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { normalize } from 'styled-normalize';
+import { ThemeContext } from '../../../store/theme-context';
 import { Container } from '../../../styles/blog/globalStyles';
-import Sidebar from '../sideBar/sideBar';
+import Panels from '../UI/Panels';
 import Footer from './footer';
 
 const GlobalStyle = createGlobalStyle`
-${'' /* ${normalize} */}
 * {
   text-decoration: none;
 }
@@ -22,6 +22,31 @@ body {
   overscroll-behavior: none;
   overflow-x: hidden;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+   margin: 0;
+  padding: 0; 
+  font-family: Open Sans;
+}
+
+h1 {
+  font-family: Open Sans;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: ${props => props.theme.heading};
+}
+
+h2 {
+  font-size: 2rem;
+}
+
 `;
 
 export default function Layout({ children }) {
@@ -40,19 +65,32 @@ export default function Layout({ children }) {
     base: '#E3E3E3',
     baseLight: '#FCFCFC',
     baseLightest: '#E3E3E3',
-    primary: '#F4955C',
+    primary: '#F1762D',
     primaryLight: '#F7B48C',
     para: '#4A4A4A',
     heading: '#171717',
     black: '#171717',
   };
 
+  const currentTheme = useContext(ThemeContext);
+  let theme;
+  switch (currentTheme.theme) {
+    case 'dark':
+      theme = darkTheme;
+      break;
+    case 'light':
+      theme = lightTheme;
+      break;
+    default:
+      theme = lightTheme;
+  }
+
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <Panels />
       <Container>
         <Footer />
-        <Sidebar />
         <main>{children}</main>
       </Container>
     </ThemeProvider>

@@ -8,16 +8,24 @@ import {
   ToggleButton,
   TBContainer,
 } from '../../../styles/blog/globalStyles';
-import { Container } from '../../../styles/blog/sideBarStyles';
+import { Container, Content } from '../../../styles/blog/sideBarStyles';
 import SearchBar from './searchBar';
 import TagSection from './tagSection';
 import Backdrop from '../UI/backdrop';
+import Link from 'next/link';
+import TableOfContent from '../mainContent/tableOfContent';
 
-export default function Sidebar() {
+export default function SideBar({ type }) {
+  // TODO: Add a Share button at the bottom
   const [showSideBar, setShowSideBar] = useState(false);
 
   return (
     <StickyContainer>
+      <div className='animationContainer'>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+      </div>
       {showSideBar && (
         <Backdrop show={showSideBar} clicked={() => setShowSideBar(false)} />
       )}
@@ -48,22 +56,41 @@ export default function Sidebar() {
         </TBContainer>
         <Container
           style={{
-            transform: showSideBar ? 'translateX(0)' : 'translateX(-700px)',
+            transform: showSideBar ? 'translateX(0)' : 'translateX(-350px)',
           }}
         >
           <Flex column center>
-            <H1>LOGO</H1>
-            <SearchBar />
-            <TagSection />
+            <Link href={'/blog/'}>
+              <a>
+                <H1>LOGO</H1>
+              </a>
+            </Link>
+
+            {type === 'home' && (
+              <Content>
+                <SearchBar />
+                <TagSection />
+              </Content>
+            )}
+            {type === 'article' && <TableOfContent />}
           </Flex>
         </Container>
       </ToggleContainer>
       <FullContainer>
         <Container>
           <Flex column center>
-            <H1>LOGO</H1>
-            <SearchBar />
-            <TagSection />
+            <Link href={'/blog/'}>
+              <a>
+                <H1>LOGO</H1>
+              </a>
+            </Link>
+            {type === 'home' && (
+              <Content>
+                <SearchBar />
+                <TagSection />
+              </Content>
+            )}
+            {type === 'article' && <TableOfContent />}
           </Flex>
         </Container>
       </FullContainer>

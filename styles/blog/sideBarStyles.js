@@ -7,7 +7,7 @@ export const Container = styled.div`
   height: 100vh;
   left: 20px;
   max-width: 20rem;
-  padding: 1rem;
+  padding-top: 1rem;
   top: 0;
   background: ${props => props.theme.baseLight};
   border-radius: 2px;
@@ -15,8 +15,14 @@ export const Container = styled.div`
   transition: 0.8s;
 
   @media (max-width: 1080px) {
-    width: 50%;
+    width: 70%;
   }
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
 `;
 
 export const SBContainer = styled.div`

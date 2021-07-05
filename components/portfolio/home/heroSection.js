@@ -24,15 +24,15 @@ const HeroSection = () => {
     <div className={styles.heroSection}>
       <div className={styles.headerContainer}>
         <div className={styles.floatingHeader}>
-          <motion.h1
+          <motion.h4
             style={{ x: moveRightSpring }}
             className={styles.developer}
           >
             Developer.
-          </motion.h1>
-          <motion.h1 style={{ x: moveLeftSpring }} className={styles.designer}>
+          </motion.h4>
+          <motion.h4 style={{ x: moveLeftSpring }} className={styles.designer}>
             Designer.
-          </motion.h1>
+          </motion.h4>
         </div>
       </div>
       <div className={styles.imageContainerWrapper}>

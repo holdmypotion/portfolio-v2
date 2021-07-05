@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const H1 = styled.h2`
   font-family: Open Sans;
@@ -44,7 +45,7 @@ export const FullContainer = styled.div`
 export const Container = styled.div`
   flex-grow: 1;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 1660px;
   position: relative;
 `;
 
@@ -61,6 +62,11 @@ export const Flex = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  ${props =>
+    props.fullHeight &&
+    css`
+      height: 100vh;
+    `}
   ${props =>
     props.wrap &&
     css`
@@ -351,4 +357,32 @@ export const ToggleButton = styled.button`
         transparent 6px
       );
   }
+`;
+
+export const PanelsContainer = styled.div`
+  /* position: fixed;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 55px;
+  width: 100%;
+  z-index: 10;
+
+  @media (min-width: 1080px) {
+    padding-top: 15px;
+  } */
+`;
+
+export const LeftPanel = styled(motion.div)`
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  z-index: 30;
+`;
+
+export const RightPanel = styled(motion.div)`
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  z-index: 30;
 `;
