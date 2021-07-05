@@ -20,9 +20,11 @@ export default function Comments() {
     );
     commentBox.current.appendChild(scriptEl);
     return () => {
-      commentBox.current.removeChild(commentBox.current.children[0]);
+      if (commentBox.current !== null) {
+        commentBox.current.removeChild(commentBox.current.children[0]);
+      }
     };
-  }, [theme, commentBox]);
+  }, [theme]);
 
   return (
     <Container>
