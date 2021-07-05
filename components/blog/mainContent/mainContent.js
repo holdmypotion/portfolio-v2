@@ -14,13 +14,11 @@ export default function MainContent({ article, blogs }) {
   }
   return (
     <>
+      <Panels />
       <SideBar type={type} />
       <ContentContainer>
-        {/* <AnimatePresence> */}
         {article && <Article article={article} />}
-        <Panels />
         {blogs && <Blogs blogs={blogs} />}
-        {/* </AnimatePresence> */}
       </ContentContainer>
     </>
   );

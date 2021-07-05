@@ -375,14 +375,14 @@ export const PanelsContainer = styled.div`
 export const LeftPanel = styled(motion.div)`
   height: 100vh;
   width: 50%;
-  position: absolute;
+  position: fixed;
   z-index: 30;
 `;
 
 export const RightPanel = styled(motion.div)`
   height: 100vh;
   width: 50%;
-  position: absolute;
+  position: fixed;
   right: 0;
   z-index: 30;
 `;
