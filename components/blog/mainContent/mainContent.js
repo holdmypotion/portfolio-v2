@@ -18,7 +18,7 @@ export default function MainContent({ article, blogs }) {
       <ContentContainer>
         {/* <AnimatePresence> */}
         {article && <Article article={article} />}
-        {/* <Panels /> */}
+        <Panels />
         {blogs && <Blogs blogs={blogs} />}
         {/* </AnimatePresence> */}
       </ContentContainer>

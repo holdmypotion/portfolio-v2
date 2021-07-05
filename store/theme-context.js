@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react';
+import { useState, useEffect, createContext } from 'react';
 
 export const ThemeContext = createContext({
   currentTheme: 'yy',
@@ -7,8 +7,13 @@ export const ThemeContext = createContext({
 const ThemeContextProvider = props => {
   const [currentTheme, setCurrentTheme] = useState('light');
 
+  useEffect(() => {
+    setCurrentTheme(localStorage.getItem('theme'));
+  }, []);
+
   const themeSwitchHandler = themeType => {
     setCurrentTheme(themeType);
+    localStorage.setItem('theme', themeType);
   };
   return (
     <ThemeContext.Provider

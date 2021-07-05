@@ -34,7 +34,6 @@ export default function Article({ article }) {
   const month = date.toLocaleString('en-US', { month: 'long' });
   const day = date.toLocaleString('en-US', { month: '2-digit' });
   const year = date.getFullYear();
-  console.log(router);
   return (
     <Container>
       <ImageContainer>

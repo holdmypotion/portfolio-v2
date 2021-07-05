@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { ThemeContext } from '../../../store/theme-context';
 import { Container } from '../../../styles/blog/globalStyles';
-import Panels from '../UI/Panels';
 import Footer from './footer';
 
 const GlobalStyle = createGlobalStyle`
@@ -88,7 +87,6 @@ export default function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Panels />
       <Container>
         <Footer />
         <main>{children}</main>

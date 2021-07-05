@@ -19,9 +19,15 @@ export default function Comments() {
       theme === 'dark' ? 'github-dark' : 'github-light'
     );
     commentBox.current.appendChild(scriptEl);
+
     return () => {
-      if (commentBox.current !== null) {
-        commentBox.current.removeChild(commentBox.current.children[0]);
+      try {
+        if (commentBox.current !== null) {
+          console.log(commentBox);
+          commentBox.current.removeChild(commentBox.current.children[0]);
+        }
+      } catch (err) {
+        console.log(err);
       }
     };
   }, [theme]);
