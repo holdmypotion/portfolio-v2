@@ -10,7 +10,9 @@ const transition = { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.9] };
 
 export default function Panels() {
   const [panelComplete, setPanelComplete] = useState(false);
-  const windowSize = useWindowSize();
+  // const windowSize = useWindowSize()
+  const windowSize = { height: 2180 };
+
   return (
     <PanelsContainer>
       <LeftPanel
