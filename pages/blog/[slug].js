@@ -48,6 +48,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export default function Article({ article }) {
+  if (!article) return <div>loading</div>;
   return (
     <Context>
       <Layout>

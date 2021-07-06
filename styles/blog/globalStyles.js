@@ -360,19 +360,11 @@ export const ToggleButton = styled.button`
 `;
 
 export const PanelsContainer = styled.div`
-  /* position: fixed;
-  height: 100vh;
-  margin: 0 auto;
-  padding-top: 55px;
-  width: 100%;
-  z-index: 10;
-
-  @media (min-width: 1080px) {
-    padding-top: 15px;
-  } */
+  width: 100vw;
 `;
 
 export const LeftPanel = styled(motion.div)`
+  left: 0;
   height: 100vh;
   width: 50%;
   position: fixed;
