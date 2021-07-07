@@ -123,34 +123,11 @@ export const SOCIAL_SVGS = [
   },
 ];
 
-export const ARTICLES = [
-  {
-    id: '1',
-    title: 'Using React Context API Like a Pro',
-    body: 'If you\'ve been hearing the term "Context API" and feel totally confused about it (like me, some days ago) or you have no clue what this even means, look no further! I\'ve got you covered (for the most part, I believe)',
-    date: 'February 18, 2021',
-    comments: 13,
-    tags: ['react', 'web-dev'],
-    type: 'medium',
-  },
-  {
-    id: '2',
-    title: 'Never Split the difference - Book Notes',
-    body: 'If you\'ve been hearing the term "Context API" and feel totally confused about it (like me, some days ago) or you have no clue what this even means, look no further! I\'ve got you covered (for the most part, I believe)',
-    date: 'February 18, 2021',
-    comments: 13,
-    tags: ['books-notes'],
-    type: 'small',
-  },
-  {
-    id: '3',
-    title: 'Design in React',
-    body: 'If you\'ve been hearing the term "Context API" and feel totally confused about it (like me, some days ago) or you have no clue what this even means, look no further! I\'ve got you covered (for the most part, I believe)',
-    date: 'February 18, 2021',
-    comments: 13,
-    tags: ['design'],
-    type: 'large',
-  },
+export const TAGS = [
+  'react',
+  'books-notes',
+  'webdev',
+  'design',
+  'javascript',
+  'reactnative',
 ];
-
-export const TAGS = ['react', 'books-notes', 'web-dev', 'design', 'javascript'];

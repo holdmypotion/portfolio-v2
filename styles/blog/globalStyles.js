@@ -63,6 +63,11 @@ export const Flex = styled.div`
   justify-content: center;
   width: 100%;
   ${props =>
+    props.containerHeight &&
+    css`
+      height: 100%;
+    `}
+  ${props =>
     props.fullHeight &&
     css`
       height: 100vh;

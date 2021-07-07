@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: grid;
   justify-content: center;
   grid-template-columns: auto auto auto;
+  grid-auto-rows: auto;
   z-index: 0;
 
   @media (max-width: 1666px) {
@@ -34,17 +35,17 @@ export const BTContainer = styled.div`
   ${props =>
     props.type === 'small' &&
     css`
-      grid-row-end: span 40;
+      grid-row-end: span 42;
     `}
   ${props =>
     props.type === 'medium' &&
     css`
-      grid-row-end: span 50;
+      grid-row-end: span 47;
     `};
   ${props =>
     props.type === 'large' &&
     css`
-      grid-row-end: span 58;
+      grid-row-end: span 52;
     `}
 `;
 
@@ -60,6 +61,10 @@ export const BTContent = styled.div`
   margin: 0 auto;
   position: relative;
   z-index: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const BTHeading = styled.h3`
@@ -76,15 +81,15 @@ export const BTPara = styled.p`
 `;
 
 export const Footer = styled.div`
-  display: flex;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 `;
 
 export const PublishDate = styled.span`
+  display: block;
+  padding-bottom: 0.5rem;
   font-weight: 600;
   font-size: 0.9rem;
-  padding-left: 0.2rem;
+  color: ${props => props.theme.primary};
 `;
 
 export const Comment = styled.div`

@@ -19,7 +19,7 @@ export default function BlogThumb({ slug, type, title, excerpt, date, image }) {
   const year = publishDate.getFullYear();
   return (
     <BTContainer type={type}>
-      <Flex column>
+      <Flex column containerHeight>
         <BTImageContainer>
           <Image
             src={'https:' + image.fields.file.url}
@@ -28,19 +28,19 @@ export default function BlogThumb({ slug, type, title, excerpt, date, image }) {
           />
         </BTImageContainer>
         <BTContent>
-          <BTHeading>{title}</BTHeading>
-          <BTPara>{excerpt}</BTPara>
           <div>
+            <BTHeading>{title}</BTHeading>
+            <PublishDate>
+              {month} {day} {year}
+            </PublishDate>
+            <BTPara>{excerpt}</BTPara>
+          </div>
+          <Footer>
             <Link href={`/blog/${slug}`}>
               <a>
                 <Button>Read More</Button>
               </a>
             </Link>
-          </div>
-          <Footer>
-            <PublishDate>
-              {month} {day} {year}
-            </PublishDate>
           </Footer>
         </BTContent>
       </Flex>
