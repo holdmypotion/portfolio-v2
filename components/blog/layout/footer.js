@@ -103,7 +103,7 @@ export default function Footer() {
                     </Link>
                   </Item>
                   <Item>
-                    <Link href='/blog'>
+                    <Link href='/'>
                       <a>Contact</a>
                     </Link>
                   </Item>
@@ -159,7 +159,7 @@ export default function Footer() {
                 </Link>
               </Item>
               <Item>
-                <Link href='/blog'>
+                <Link href='/'>
                   <a>Contact</a>
                 </Link>
               </Item>
