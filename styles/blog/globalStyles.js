@@ -1,14 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const H1 = styled.h2`
-  font-family: Open Sans;
-  font-weight: 800;
-  font-size: 4rem;
-  color: ${props => props.theme.heading};
-  text-transform: auto;
-`;
-
 export const BackdropStyles = styled.div`
   width: 100%;
   height: 100%;

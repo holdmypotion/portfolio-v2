@@ -13,7 +13,7 @@ export const Container = styled.div`
   border-radius: 2px;
   z-index: 10;
   transition: 0.8s;
-
+  overflow-y: auto;
   @media (max-width: 1080px) {
     width: 70%;
   }
@@ -368,4 +368,26 @@ export const SelectedTag = styled.button`
         transparent 6px
       );
   }
+`;
+
+export const LogoContainer = styled.div`
+  position: relative;
+`;
+
+export const LogoImageContainer = styled.div`
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+`;
+
+export const Logo = styled.h2`
+  font-family: Caveat;
+  font-weight: 800;
+  font-size: 4rem;
+  color: ${props => props.theme.heading};
+  text-transform: auto;
+  text-align: center;
 `;

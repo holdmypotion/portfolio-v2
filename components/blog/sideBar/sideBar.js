@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useState } from 'react';
 import {
   Flex,
@@ -8,7 +9,13 @@ import {
   ToggleButton,
   TBContainer,
 } from '../../../styles/blog/globalStyles';
-import { Container, Content } from '../../../styles/blog/sideBarStyles';
+import {
+  Container,
+  Content,
+  Logo,
+  LogoContainer,
+  LogoImageContainer,
+} from '../../../styles/blog/sideBarStyles';
 import SearchBar from './searchBar';
 import TagSection from './tagSection';
 import Backdrop from '../UI/backdrop';
@@ -16,7 +23,6 @@ import Link from 'next/link';
 import TableOfContent from '../mainContent/tableOfContent';
 
 export default function SideBar({ type }) {
-  // TODO: Add a Share button at the bottom
   const [showSideBar, setShowSideBar] = useState(false);
 
   return (
@@ -62,7 +68,14 @@ export default function SideBar({ type }) {
           <Flex column center>
             <Link href={'/blog/'}>
               <a>
-                <H1>LOGO</H1>
+                {/* <LogoContainer>
+                  <Image
+                    src={'/images/portrait.png'}
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </LogoContainer> */}
+                <Logo>RnS</Logo>
               </a>
             </Link>
 
@@ -81,7 +94,16 @@ export default function SideBar({ type }) {
           <Flex column center>
             <Link href={'/blog/'}>
               <a>
-                <H1>LOGO</H1>
+                <LogoContainer>
+                  {/* <LogoImageContainer>
+                    <Image
+                      src={'/images/portrait.png'}
+                      layout='fill'
+                      objectFit='cover'
+                    />
+                  </LogoImageContainer> */}
+                  <Logo>RnS</Logo>
+                </LogoContainer>
               </a>
             </Link>
             {type === 'home' && (
