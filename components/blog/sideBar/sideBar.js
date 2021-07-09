@@ -66,18 +66,16 @@ export default function SideBar({ type }) {
           }}
         >
           <Flex column center>
-            <Link href={'/blog/'}>
-              <a>
-                {/* <LogoContainer>
+            <a href='/blog'>
+              {/* <LogoContainer>
                   <Image
                     src={'/images/portrait.png'}
                     layout='fill'
                     objectFit='cover'
                   />
                 </LogoContainer> */}
-                <Logo>RnS</Logo>
-              </a>
-            </Link>
+              <Logo>RnS</Logo>
+            </a>
 
             {type === 'home' && (
               <Content>
@@ -92,20 +90,18 @@ export default function SideBar({ type }) {
       <FullContainer>
         <Container>
           <Flex column center>
-            <Link href={'/blog/'}>
-              <a>
-                <LogoContainer>
-                  {/* <LogoImageContainer>
+            <a href='/blog'>
+              <LogoContainer>
+                {/* <LogoImageContainer>
                     <Image
                       src={'/images/portrait.png'}
                       layout='fill'
                       objectFit='cover'
                     />
                   </LogoImageContainer> */}
-                  <Logo>RnS</Logo>
-                </LogoContainer>
-              </a>
-            </Link>
+                <Logo>RnS</Logo>
+              </LogoContainer>
+            </a>
             {type === 'home' && (
               <Content>
                 <SearchBar />
