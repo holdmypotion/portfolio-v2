@@ -25,6 +25,7 @@ export default function BlogThumb({ slug, type, title, excerpt, date, image }) {
             src={'https:' + image.fields.file.url}
             layout='fill'
             objectFit='cover'
+            alt={image.fields.title}
           />
         </BTImageContainer>
         <BTContent>
