@@ -31,17 +31,12 @@ export default function Blog({ blogs }) {
           <meta charSet='utf-8' />
           <meta
             name='description'
-            content='This is a blog made using nextjs. Home page containing all the articles!'
-          ></meta>
-          <meta property='og:title' content='Rahsand | Blog' key='ogtitle' />+{' '}
-          <meta
-            property='og:description'
-            content='This is a blog made using nextjs. Home page containing all the articles!'
-            key='ogdesc'
+            content='I develop websites and I develop them good! | Blog on frontend, book notes, UI designs, and much more.'
           />
+          <meta name='author' content='Rahul Sharma'></meta>
           <meta
             name='description'
-            content='This is a blog made using nextjs. Home page containing all the articles!'
+            content='I develop websites and I develop them good! | Blog on frontend, book notes, UI designs, and much more.'
           />
           <link rel='icon' href='/favicon.ico' />
           {/* Twitter */}
@@ -51,6 +46,8 @@ export default function Blog({ blogs }) {
             content='https://twitter.com/holdmypotionn'
             key='twhandle'
           />
+          <meta name='copyright' content='2021 | Rahul Sharma'></meta>
+          <meta name='robots' content='index, follow'></meta>
         </Head>
         <MainContent blogs={blogs} />
       </Layout>

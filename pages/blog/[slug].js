@@ -59,17 +59,11 @@ export default function Article({ article }) {
           <meta charSet='utf-8' />
           <meta
             name='description'
-            content='This is a blog made using nextjs. Article page containing details of the article!'
+            content='I develop websites and I develop them good! | Blog on frontend, book notes, UI designs, and much more.'
           ></meta>
-          <meta property='og:title' content={title} key='ogtitle' />+{' '}
-          <meta
-            property='og:description'
-            content='This is a blog made using nextjs. Article page containing details of the article!'
-            key='ogdesc'
-          />
           <meta
             name='description'
-            content='This is a blog made using nextjs. Article page containing details of the article!'
+            content='I develop websites and I develop them good! | Blog on frontend, book notes, UI designs, and much more.'
           />
           {/* Twitter */}
           <meta name='twitter:card' content='summary' key='twcard' />
@@ -78,7 +72,43 @@ export default function Article({ article }) {
             content='https://twitter.com/holdmypotionn'
             key='twhandle'
           />
+          <meta name='author' content='Rahul Sharma' />
+          <meta name='copyright' content='2021 | Rahul Sharma' />
+          <meta name='robots' content='index, follow'></meta>
           <link rel='icon' href='/favicon.ico' />
+
+          {/* OG */}
+          <meta property='og:type' content='article' />
+          <meta property='og:title' content={article.fields.title} />
+          <meta
+            property='og:url'
+            content={`https://rahsand.tech/blog/${article.fields.slug}`}
+          />
+          <meta
+            property='og:image'
+            content={article.fields.featuredImage.fields.file.url}
+          />
+          <meta
+            property='og:description'
+            content={article.fields.description}
+          />
+          <meta property='article:author' content='Rahul Sharma' />
+          <meta
+            property='article:published_time'
+            content={article.fields.publishDate}
+          ></meta>
+          <meta
+            property='article:modified_time'
+            content={article.fields.publishDate}
+          />
+          <meta
+            property='article:section'
+            content={article.fields.tags.join(', ')}
+          />
+          <meta
+            property='article:tag'
+            content={article.fields.tags.join(', ')}
+          />
         </Head>
         <MainContent article={article} />
       </Layout>
