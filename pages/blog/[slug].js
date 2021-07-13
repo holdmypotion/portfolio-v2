@@ -55,29 +55,15 @@ export default function Article({ article }) {
       <Layout>
         <Head>
           <title>{title}</title>
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta charSet='utf-8' />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta
             name='description'
-            content='I develop websites and I develop them good! | Blog on frontend, book notes, UI designs, and much more.'
-          ></meta>
-          <meta
-            name='description'
-            content='I develop websites and I develop them good! | Blog on frontend, book notes, UI designs, and much more.'
-          />
-          {/* Twitter */}
-          <meta name='twitter:card' content='summary' key='twcard' />
-          <meta
-            name='twitter:creator'
-            content='https://twitter.com/holdmypotionn'
-            key='twhandle'
+            content='I develop websites and I develop them good! | Articles on frontend, book notes, UI designs, and much more.'
           />
           <meta name='author' content='Rahul Sharma' />
           <meta name='copyright' content='2021 | Rahul Sharma' />
           <meta name='robots' content='index, follow'></meta>
-          <link rel='icon' href='/favicon.ico' />
-
-          {/* OG */}
           <meta property='og:type' content='article' />
           <meta property='og:title' content={article.fields.title} />
           <meta
@@ -109,6 +95,22 @@ export default function Article({ article }) {
             property='article:tag'
             content={article.fields.tags.join(', ')}
           />
+          <meta property='twitter:site' content='@holdmypotionn'></meta>
+          <meta property='twitter:title' content='Rahsand | Blog'></meta>
+          <meta
+            property='twitter:description'
+            content='I develop websites and I develop them good! | Articles on frontend, book notes, UI designs, and much more.'
+          />
+          <meta name='twitter:card' content='summary' key='twcard' />
+          <meta
+            name='twitter:creator'
+            content='@holdmypotionn'
+            key='twhandle'
+          />
+          {/* <meta property="og:image" content="Enter url"></meta> */}
+          <meta property='forem:domain' content='rahsand.tech'></meta>
+          <link rel='canonical' href='https://www.rahsand.tech/'></link>
+          <link rel='icon' href='/favicon.ico' />
         </Head>
         <MainContent article={article} />
       </Layout>

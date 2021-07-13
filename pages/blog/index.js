@@ -31,23 +31,31 @@ export default function Blog({ blogs }) {
           <meta charSet='utf-8' />
           <meta
             name='description'
-            content='I develop websites and I develop them good! | Blog on frontend, book notes, UI designs, and much more.'
+            content='I develop websites and I develop them good! | Articles on frontend, book notes, UI designs, and much more.'
           />
           <meta name='author' content='Rahul Sharma'></meta>
-          <meta
-            name='description'
-            content='I develop websites and I develop them good! | Blog on frontend, book notes, UI designs, and much more.'
-          />
-          <link rel='icon' href='/favicon.ico' />
-          {/* Twitter */}
-          <meta name='twitter:card' content='summary' key='twcard' />
-          <meta
-            name='twitter:creator'
-            content='https://twitter.com/holdmypotionn'
-            key='twhandle'
-          />
           <meta name='copyright' content='2021 | Rahul Sharma'></meta>
           <meta name='robots' content='index, follow'></meta>
+          <meta property='og:type' content='website'></meta>
+          <meta property='og:url' content='https://www.rahsand.tech/'></meta>
+          <meta property='og:title' content='Rahsand | Blog'></meta>
+          <meta
+            property='og:description'
+            content='I develop websites and I develop them good! | Articles on frontend, book notes, UI designs, and much more.'
+          />
+          <meta property='og:site_name' content='Rahsand | Blog'></meta>
+          <meta property='twitter:site' content='@holdmypotionn'></meta>
+          <meta property='twitter:title' content='Rahsand | Blog'></meta>
+          <meta
+            property='twitter:description'
+            content='I develop websites and I develop them good! | Articles on frontend, book notes, UI designs, and much more.'
+          />
+          <meta name='twitter:card' content='summary' key='twcard' />
+          <meta name='twitter:creator' content='holdmypotionn' key='twhandle' />
+          {/* <meta property="og:image" content="Enter url"></meta> */}
+          <meta property='forem:domain' content='rahsand.tech'></meta>
+          <link rel='canonical' href='https://www.rahsand.tech/'></link>
+          <link rel='icon' href='/favicon.ico' />
         </Head>
         <MainContent blogs={blogs} />
       </Layout>
