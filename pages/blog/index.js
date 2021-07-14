@@ -54,6 +54,10 @@ export default function Blog({ blogs }) {
           <meta name='twitter:creator' content='holdmypotionn' key='twhandle' />
           {/* <meta property="og:image" content="Enter url"></meta> */}
           <meta property='forem:domain' content='rahsand.tech'></meta>
+          <meta
+            name='monetization'
+            content='$ilp.uphold.com/m9E8Lgjik82p'
+          ></meta>
           <link rel='canonical' href='https://www.rahsand.tech/'></link>
           <link rel='icon' href='/favicon.ico' />
         </Head>

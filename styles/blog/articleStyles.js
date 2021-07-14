@@ -71,6 +71,12 @@ export const Body = styled.article`
     }
   }
 
+  & code {
+    background-color: ${props => props.theme.base};
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 0.2rem;
+  }
   & a {
     color: ${props => props.theme.primary};
     text-decoration: underline;
