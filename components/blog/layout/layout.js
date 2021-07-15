@@ -58,6 +58,7 @@ export default function Layout({ children }) {
     para: '#E3E3E3',
     heading: '#FCFCFC',
     black: '#171717',
+    articlePara: '#fff',
   };
 
   const lightTheme = {
@@ -69,6 +70,7 @@ export default function Layout({ children }) {
     para: '#4A4A4A',
     heading: '#171717',
     black: '#171717',
+    articlePara: '#000',
   };
 
   const currentTheme = useContext(ThemeContext);
