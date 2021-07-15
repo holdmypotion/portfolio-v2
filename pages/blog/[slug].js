@@ -50,6 +50,15 @@ export const getStaticProps = async ({ params }) => {
 export default function Article({ article }) {
   if (!article) return <div>loading</div>;
   const title = `Rahsand | Blog - ${article.fields.title}`;
+  const imageString = article.fields.featuredImage.fields.file.url.replaceAll(
+    '/',
+    '%2F'
+  );
+  console.log(
+    article.fields.featuredImage.fields.file.url.replaceAll('/', '%2F')
+  );
+  console.log(imageString);
+  const imageURL = `https://www.rahsand.tech/_next/image?url=https%3A${imageString}&w=828&q=75`;
   return (
     <Context>
       <Layout>
@@ -70,10 +79,7 @@ export default function Article({ article }) {
             property='og:url'
             content={`https://rahsand.tech/blog/${article.fields.slug}`}
           />
-          <meta
-            property='og:image'
-            content={article.fields.featuredImage.fields.file.url}
-          />
+          <meta property='og:image' content={imageURL} />
           <meta
             property='og:description'
             content={article.fields.description}
