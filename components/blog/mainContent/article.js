@@ -26,8 +26,6 @@ import {
 import CodeBlock from '../../utils/codeBlock/codeBlock';
 import Comments from './comments';
 
-const NextArticle = {};
-
 export default function Article({ article }) {
   const router = useRouter();
   if (!article) return <h1>loading</h1>;

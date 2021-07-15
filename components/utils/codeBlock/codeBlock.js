@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const CodeBlock = {
-  code({ node, inline, className, children, ...props }) {
+  code({ inline, className, children, ...props }) {
     const match = /language-(\w+)/.exec(className || '');
     return !inline && match ? (
       <SyntaxHighlighter
@@ -14,7 +14,9 @@ const CodeBlock = {
         {...props}
       />
     ) : (
-      <code className={className} {...props} />
+      <code className={className} inline='true' {...props}>
+        {children}
+      </code>
     );
   },
 };
