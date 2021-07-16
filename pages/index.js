@@ -9,12 +9,6 @@ import ProjectSection from '../components/portfolio/home/projectSection';
 import { Button } from '../styles/blog/globalStyles';
 
 export default function Home() {
-  const router = useRouter();
-  useEffect(() => {
-    setTimeout(() => {
-      router.replace('/blog');
-    }, 4000);
-  }, []);
   return (
     <Layout>
       <Head>
@@ -43,28 +37,13 @@ export default function Home() {
           content='I develop websites and I develop them good! | Articles on frontend, book notes, UI designs, and much more.'
         />
         <meta name='twitter:card' content='summary' key='twcard' />
-        <meta name='twitter:creator' content='holdmypotionn' key='twhandle' />
+        <meta name='twitter:creator' content='@holdmypotionn' key='twhandle' />
         {/* <meta property="og:image" content="Enter url"></meta> */}
         <meta property='forem:domain' content='rahsand.tech'></meta>
         <link rel='canonical' href='https://www.rahsand.tech/'></link>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div
-        style={{
-          position: 'fixed',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-        }}
-      >
-        <h1>Work under process!</h1>
-        <p>You'll be redirected in 4 seconds...</p>
-        <Link href={'/blog'}>
-          <a>
-            <Button>Blog</Button>
-          </a>
-        </Link>
-      </div>
+
       {/* <HeroSection />
       <ProjectSection /> */}
     </Layout>
