@@ -49,6 +49,7 @@ export const Tag = styled.span`
 `;
 
 export const Body = styled.article`
+  font-family: Open Sans;
   padding: 1rem 0;
   word-wrap: break-word;
   & p {
