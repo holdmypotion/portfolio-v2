@@ -50,6 +50,7 @@ export const Tag = styled.span`
 
 export const Body = styled.article`
   padding: 1rem 0;
+  word-wrap: break-word;
   & p {
     line-height: 30px;
     font-size: 1.2rem;
