@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { AnimatePresence } from 'framer-motion';
 import * as gtag from '../lib/gtag';
+import { AnimatePresence } from 'framer-motion';
 
 import '../styles/globals.css';
 

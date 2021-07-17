@@ -26,9 +26,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Step 5: Output the styles in the head  */}
-          {this.props.styleTags}
-
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
@@ -46,6 +43,9 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+
+          {/* Step 5: Output the styles in the head  */}
+          {this.props.styleTags}
         </Head>
         <body>
           <Main />
