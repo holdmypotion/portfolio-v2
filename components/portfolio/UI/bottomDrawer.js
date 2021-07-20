@@ -2,7 +2,10 @@ import Link from 'next/link';
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import styles from '../../../styles/portfolio/bottomDrawer.module.css';
+import {
+  BottomDrawerContainer,
+  Menu,
+} from '../../../styles/portfolio/bottomDrawerStyles';
 
 const menuVariants = {
   open: {
@@ -56,14 +59,13 @@ const BottomDrawer = ({ show, top, left, windowSize }) => {
     <>
       <AnimatePresence>
         {show && (
-          <motion.div
-            className={styles.bottomDrawer}
+          <BottomDrawerContainer
             variants={bottomDrawerVariants}
             initial='closed'
             animate='open'
             exit='closed'
           >
-            <motion.div className={styles.menu} variants={menuVariants}>
+            <Menu variants={menuVariants}>
               <ul>
                 <motion.li
                   variants={menuItemVariants}
@@ -115,15 +117,15 @@ const BottomDrawer = ({ show, top, left, windowSize }) => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <h3 className={styles.contact}>
+                  <h3>
                     <Link href='/'>
                       <a>Contact Me</a>
                     </Link>
                   </h3>
                 </motion.li>
               </ul>
-            </motion.div>
-          </motion.div>
+            </Menu>
+          </BottomDrawerContainer>
         )}
       </AnimatePresence>
     </>

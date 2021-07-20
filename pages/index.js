@@ -44,8 +44,8 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      {/* <HeroSection />
-      <ProjectSection /> */}
+      <HeroSection />
+      <ProjectSection />
     </Layout>
   );
 }

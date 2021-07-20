@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import styles from '../../../styles/portfolio/layout.module.css';
+import {
+  MFButtonContainer,
+  MFContainer,
+} from '../../../styles/portfolio/layoutStyles';
 import BottomDrawer from '../UI/bottomDrawer';
 
 const MobileFooter = () => {
@@ -31,19 +34,15 @@ const MobileFooter = () => {
   };
 
   return (
-    <div className={styles.mobileFooter}>
+    <>
       <BottomDrawer
         show={showDrawer}
         top={top}
         left={left}
         windowSize={windowSize}
       />
-      <div className={styles.mobileFooter__container}>
-        <div
-          ref={mobileButtonRef}
-          className={styles.buttonContainer}
-          onClick={drawerToggleHandler}
-        >
+      <MFContainer>
+        <MFButtonContainer ref={mobileButtonRef} onClick={drawerToggleHandler}>
           <svg
             width='35'
             height='35'
@@ -56,9 +55,9 @@ const MobileFooter = () => {
               fill='white'
             />
           </svg>
-        </div>
-      </div>
-    </div>
+        </MFButtonContainer>
+      </MFContainer>
+    </>
   );
 };
 

@@ -5,7 +5,17 @@ import {
   useSpring,
 } from 'framer-motion';
 
-import styles from '../../../styles/portfolio/heroSection.module.css';
+import {
+  FloatingHeader,
+  HeaderContainer,
+  Container,
+  Image,
+  ImageContainer,
+  ImageContainerWrapper,
+  IntroTextContainer,
+  Developer,
+  Designer,
+} from '../../../styles/portfolio/heroSectionStyles';
 import IntroText from './introText';
 
 const HeroSection = () => {
@@ -21,34 +31,27 @@ const HeroSection = () => {
   const moveDownSpring = useSpring(moveDown, physics);
 
   return (
-    <div className={styles.heroSection}>
-      <div className={styles.headerContainer}>
-        <div className={styles.floatingHeader}>
-          <motion.h4
-            style={{ x: moveRightSpring }}
-            className={styles.developer}
-          >
-            Developer.
-          </motion.h4>
-          <motion.h4 style={{ x: moveLeftSpring }} className={styles.designer}>
-            Designer.
-          </motion.h4>
-        </div>
-      </div>
-      <div className={styles.imageContainerWrapper}>
-        <div className={styles.imageContainer}>
-          <div className={styles.image}>
+    <Container>
+      <HeaderContainer>
+        <FloatingHeader>
+          <Developer style={{ x: moveRightSpring }}>Developer.</Developer>
+          <Designer style={{ x: moveLeftSpring }}>Designer.</Designer>
+        </FloatingHeader>
+      </HeaderContainer>
+      <ImageContainerWrapper>
+        <ImageContainer>
+          <Image>
             <motion.img
               src='/images/portrait.png'
               style={{ scale: scaleSpring, y: moveDownSpring }}
             />
-          </div>
-        </div>
-      </div>
-      <div className={styles.introText}>
+          </Image>
+        </ImageContainer>
+      </ImageContainerWrapper>
+      <IntroTextContainer>
         <IntroText />
-      </div>
-    </div>
+      </IntroTextContainer>
+    </Container>
   );
 };
 
