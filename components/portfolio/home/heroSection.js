@@ -21,21 +21,22 @@ import IntroText from './introText';
 const HeroSection = () => {
   const physics = { damping: 15, mass: 0.27, stiffness: 55 };
   const { scrollY } = useViewportScroll();
-  const moveRight = useTransform(scrollY, [0, 1500], [0, 1400]);
+  const moveRight = useTransform(scrollY, [0, 2000], [0, 1400]);
   const moveRightSpring = useSpring(moveRight, physics);
-  const moveLeft = useTransform(scrollY, [0, 1500], [0, -1400]);
+  const moveLeft = useTransform(scrollY, [0, 2000], [0, -1400]);
   const moveLeftSpring = useSpring(moveLeft, physics);
-  const scale = useTransform(scrollY, [0, 1500], [1, 2]);
+  const scale = useTransform(scrollY, [0, 2000], [1, 5]);
+  const opacity = useTransform(scrollY, [0, 2000], [3, 0]);
   const scaleSpring = useSpring(scale, physics);
-  const moveDown = useTransform(scrollY, [0, 2000], [0, 1000]);
+  const moveDown = useTransform(scrollY, [0, 2000], [0, -1200]);
   const moveDownSpring = useSpring(moveDown, physics);
 
   return (
     <Container>
       <HeaderContainer>
         <FloatingHeader>
-          <Developer style={{ x: moveRightSpring }}>Developer.</Developer>
-          <Designer style={{ x: moveLeftSpring }}>Designer.</Designer>
+          <Developer style={{ x: moveRight }}>Developer.</Developer>
+          <Designer style={{ x: moveLeft }}>Designer.</Designer>
         </FloatingHeader>
       </HeaderContainer>
       <ImageContainerWrapper>
@@ -43,7 +44,7 @@ const HeroSection = () => {
           <Image>
             <motion.img
               src='/images/portrait.png'
-              style={{ scale: scaleSpring, y: moveDownSpring }}
+              style={{ scale: scale, y: moveDown, opacity: opacity }}
             />
           </Image>
         </ImageContainer>

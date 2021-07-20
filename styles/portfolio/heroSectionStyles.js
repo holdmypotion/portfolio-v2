@@ -92,20 +92,20 @@ export const Designer = styled(motion.h1)`
 
 export const ImageContainerWrapper = styled(motion.div)`
   @media (min-width: 1200px) {
-    position: absolute;
-    top: 5%;
+    /* position: absolute;
+    top: 5%; */
   }
 `;
 
 export const ImageContainer = styled(motion.div)`
-  overflow: hidden;
-  @media (min-width: 1200px) {
+  /* overflow: hidden; */
+  /* @media (min-width: 1200px) {
     position: relative;
     width: 60vw;
-    height: 95vh;
+    height: 1000px;
     margin-left: -10rem;
     overflow: hidden;
-  }
+  } */
 `;
 
 export const Image = styled(motion.div)`
@@ -116,9 +116,10 @@ export const Image = styled(motion.div)`
   box-sizing: border-box;
   margin: 0px;
   height: 100vh;
+  /* left: -10rem; */
 
   & img {
-    position: absolute;
+    position: fixed;
     inset: 0px;
     box-sizing: border-box;
     padding: 0px;
