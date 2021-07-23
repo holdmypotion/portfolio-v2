@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: relative;
   max-width: 600px;
   margin: 0 auto;
   color: white;
   font-family: Open Sans;
+  z-index: 12;
 
   & h2 {
     font-size: 2.1rem;

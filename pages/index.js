@@ -45,7 +45,7 @@ export default function Home() {
       </Head>
 
       <HeroSection />
-      <div style={{ height: '2000px' }}></div>
+      <div style={{ background: '#2e2e2e', height: '2000px' }}></div>
       {/* <div style={{ height: '50vh' }}></div> */}
       <ProjectSection />
     </Layout>

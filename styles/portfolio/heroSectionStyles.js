@@ -11,11 +11,10 @@ export const HeaderContainer = styled(motion.div)`
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 11;
 
   @media (min-width: 1200px) {
-    position: static;
-    height: auto;
+    z-index: 10;
   }
 `;
 
@@ -46,10 +45,10 @@ export const FloatingHeader = styled(motion.div)`
   }
 
   @media (min-width: 1200px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: static;
+    /* display: flex;
+    flex-direction: column; */
+    /* position: static; */
+    inset: 0;
 
     & h1 {
       -webkit-text-fill-color: ${props => props.theme.gray};
@@ -75,7 +74,6 @@ export const Developer = styled(motion.h1)`
   margin-left: -20%;
 
   @media (min-width: 1200px) {
-    position: static;
     margin-left: 0;
   }
 `;
@@ -84,48 +82,25 @@ export const Designer = styled(motion.h1)`
   text-align: right;
   margin-right: -20%;
   @media (min-width: 1200px) {
-    position: static;
     margin-right: 0;
-    text-align: right;
   }
-`;
-
-export const ImageContainerWrapper = styled(motion.div)`
-  @media (min-width: 1200px) {
-    /* position: absolute;
-    top: 5%; */
-  }
-`;
-
-export const ImageContainer = styled(motion.div)`
-  /* overflow: hidden; */
-  /* @media (min-width: 1200px) {
-    position: relative;
-    width: 60vw;
-    height: 1000px;
-    margin-left: -10rem;
-    overflow: hidden;
-  } */
 `;
 
 export const Image = styled(motion.div)`
   display: block;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   inset: 0px;
   box-sizing: border-box;
   margin: 0px;
   height: 100vh;
-  /* left: -10rem; */
-
+  z-index: 10;
+  /* margin: 0 auto; */
   & img {
-    position: fixed;
-    inset: 0px;
     box-sizing: border-box;
     padding: 0px;
     border: none;
     margin: auto;
-    display: block;
     width: 0px;
     height: 0px;
     min-width: 100%;
@@ -134,6 +109,10 @@ export const Image = styled(motion.div)`
     max-height: 100%;
     object-fit: cover;
     object-position: center top;
+    @media (min-width: 1200px) {
+      object-fit: contain;
+      object-position: center bottom;
+    }
   }
 `;
 
