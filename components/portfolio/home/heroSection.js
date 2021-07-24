@@ -24,9 +24,9 @@ const HeroSection = () => {
         matches: window.innerWidth > 1200 ? true : false,
       });
     };
-    // handleMQuery();
-    mediaQuery.addEventListener('change', handleMQuery());
-    return () => mediaQuery.removeEventListener('change', handleMQuery());
+    handleMQuery();
+    mediaQuery.addEventListener('change', handleMQuery);
+    return () => mediaQuery.removeEventListener('change', handleMQuery);
   }, []);
 
   console.log(mQuery.matches);
