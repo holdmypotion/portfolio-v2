@@ -6,8 +6,6 @@ import {
   HeaderContainer,
   Container,
   Image,
-  ImageContainer,
-  ImageContainerWrapper,
   IntroTextContainer,
   Developer,
   Designer,
@@ -16,14 +14,19 @@ import IntroText from './introText';
 
 const HeroSection = () => {
   const [mQuery, setMQuery] = useState({
-    matches: window.innerWidth > 1200 ? true : false,
+    matches: null,
   });
 
   useEffect(() => {
     let mediaQuery = window.matchMedia('(min-width: 1200px)');
-    mediaQuery.addListener(setMQuery);
-    // this is the cleanup function to remove the listener
-    return () => mediaQuery.removeListener(setMQuery);
+    const handleMQuery = () => {
+      setMQuery({
+        matches: window.innerWidth > 1200 ? true : false,
+      });
+    };
+    // handleMQuery();
+    mediaQuery.addEventListener('change', handleMQuery());
+    return () => mediaQuery.removeEventListener('change', handleMQuery());
   }, []);
 
   console.log(mQuery.matches);

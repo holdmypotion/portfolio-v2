@@ -45,9 +45,6 @@ export const FloatingHeader = styled(motion.div)`
   }
 
   @media (min-width: 1200px) {
-    /* display: flex;
-    flex-direction: column; */
-    /* position: static; */
     inset: 0;
 
     & h1 {
