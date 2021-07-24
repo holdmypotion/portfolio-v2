@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/gtag.js": "^0.0.7",
     "contentful": "^8.4.2",
     "contentful-management": "^7.27.0",
     "framer-motion": "^4.1.17",

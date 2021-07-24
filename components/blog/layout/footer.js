@@ -73,8 +73,8 @@ export default function Footer() {
                 <Heading>Welcome!</Heading>
                 <Para>
                   Liked my blog? <br />
-                  You would definitely cherish my newsletters. <br /> Do sign
-                  up, it’s FREE.
+                  You would definitely love my newsletter. <br /> Do sign up,
+                  it’s FREE.
                 </Para>
 
                 <Form
