@@ -46,6 +46,7 @@ export const FloatingHeader = styled(motion.div)`
 
   @media (min-width: 1200px) {
     inset: 0;
+    top: -2rem;
 
     & h1 {
       -webkit-text-fill-color: ${props => props.theme.gray};

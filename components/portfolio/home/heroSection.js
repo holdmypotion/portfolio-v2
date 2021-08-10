@@ -1,4 +1,9 @@
-import { motion, useViewportScroll, useTransform } from 'framer-motion';
+import {
+  motion,
+  useViewportScroll,
+  useTransform,
+  useSpring,
+} from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import {
@@ -34,11 +39,16 @@ const HeroSection = () => {
   const { scrollY } = useViewportScroll();
   const moveRight = useTransform(scrollY, [0, 2000], [0, 1400]);
   const moveLeft = useTransform(scrollY, [0, 2000], [0, -1400]);
-  const scale = useTransform(scrollY, [250, 2000], [1, 5]);
+  const scale = useTransform(scrollY, [250, 1500], [1, 5]);
   const opacity = useTransform(scrollY, [0, 2700], [3, 0]);
-  const moveDown = useTransform(scrollY, [250, 2000], [0, -1200]);
+  const moveDown = useTransform(scrollY, [250, 1500], [0, -1200]);
   const centerImage = useTransform(scrollY, [0, 250], ['50vw', '100vw']);
-  const disappear = useTransform(scrollY, [0, 500], [1, 0]);
+  const disappear = useTransform(scrollY, [0, 1000], [1, 0]);
+  const sticky = useTransform(scrollY, [0, 1000], [0, 1000]);
+  const physics = { damping: 15, mass: 0.27, stiffness: 95 };
+  const scaleSmooth = useSpring(scale, physics);
+  const opacitySmooth = useSpring(opacity, physics);
+  const moveDownSmooth = useSpring(moveDown, physics);
   return (
     <>
       <Container>
@@ -62,7 +72,7 @@ const HeroSection = () => {
             }}
           />
         </Image>
-        <IntroTextContainer style={{ opacity: disappear }}>
+        <IntroTextContainer style={{ opacity: disappear, y: sticky }}>
           <IntroText />
         </IntroTextContainer>
       </Container>

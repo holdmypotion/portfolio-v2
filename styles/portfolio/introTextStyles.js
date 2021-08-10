@@ -22,7 +22,7 @@ export const Container = styled.div`
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1600px) {
     & h2 {
       font-size: 4rem;
     }
@@ -43,7 +43,7 @@ export const Bold = styled.span`
     font-size: 4rem;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1600px) {
     font-size: 5rem;
   }
 `;
