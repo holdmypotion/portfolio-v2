@@ -35,7 +35,7 @@ export default function Blogs({ blogs }) {
         filteredArticles.map((article, index) => {
           const data = article.fields;
           const types = ['small', 'large', 'medium'];
-          const size = [200, 600, 400];
+          const size = [360, 440, 400];
           const type = types[index % 3];
           const excerpt = `${data.description.substr(0, size[index % 3])}...`;
 

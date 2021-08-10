@@ -1,14 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const H1 = styled.h2`
-  font-family: Open Sans;
-  font-weight: 800;
-  font-size: 4rem;
-  color: ${props => props.theme.heading};
-  text-transform: auto;
-`;
-
 export const BackdropStyles = styled.div`
   width: 100%;
   height: 100%;
@@ -62,6 +54,11 @@ export const Flex = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  ${props =>
+    props.containerHeight &&
+    css`
+      height: 100%;
+    `}
   ${props =>
     props.fullHeight &&
     css`

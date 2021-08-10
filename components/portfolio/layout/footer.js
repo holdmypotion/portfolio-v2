@@ -1,7 +1,11 @@
 import Link from 'next/link';
-import styles from '../../../styles/portfolio/layout.module.css';
-
 import { SOCIAL_SVGS } from '../../../data/data';
+import {
+  FContainer,
+  FlexContainer,
+  FSocialSVG,
+  FTextContainer,
+} from '../../../styles/portfolio/layoutStyles';
 
 const Footer = () => {
   const svgs = SOCIAL_SVGS.map(svg => (
@@ -12,26 +16,25 @@ const Footer = () => {
     </span>
   ));
   return (
-    <div className={styles.footer__container}>
-      <div className={styles.flexContainer}>
-        <div className={styles.text}>
+    <FContainer>
+      <FlexContainer>
+        <FTextContainer>
           <h3>Follow</h3>
           <div></div>
-        </div>
-        <div className={styles.socialSVG}>{svgs}</div>
-      </div>
-      <div className={styles.scrollContainer}></div>
-      <div className={styles.flexContainer}>
+        </FTextContainer>
+        <FSocialSVG>{svgs}</FSocialSVG>
+      </FlexContainer>
+      <FlexContainer>
         <Link href='/'>
           <a>
-            <div className={styles.text}>
+            <FTextContainer>
               <h3>Contact me</h3>
               <div></div>
-            </div>
+            </FTextContainer>
           </a>
         </Link>
-      </div>
-    </div>
+      </FlexContainer>
+    </FContainer>
   );
 };
 

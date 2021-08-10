@@ -1,13 +1,17 @@
 import Link from 'next/link';
-import styles from '../../../styles/portfolio/layout.module.css';
+import {
+  NContainer,
+  NLogoContainer,
+  NMenuContainer,
+} from '../../../styles/portfolio/layoutStyles';
 
 const Navbar = () => {
   return (
-    <div className={styles.navbar__container}>
-      <div className={styles.logoContainer}>
-        <h3>Rahul Sharma</h3>
-      </div>
-      <div className={styles.menuContainer}>
+    <NContainer>
+      <NLogoContainer>
+        <h2>RnS</h2>
+      </NLogoContainer>
+      <NMenuContainer>
         <ul>
           <li>
             <Link href='/'>
@@ -19,9 +23,14 @@ const Navbar = () => {
               <a>Services</a>
             </Link>
           </li>
+          <li>
+            <Link href='/blog'>
+              <a>Blog</a>
+            </Link>
+          </li>
         </ul>
-      </div>
-    </div>
+      </NMenuContainer>
+    </NContainer>
   );
 };
 

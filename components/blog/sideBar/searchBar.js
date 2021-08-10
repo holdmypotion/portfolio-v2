@@ -1,21 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Flex } from '../../../styles/blog/globalStyles';
 import { SBContainer, SBInput } from '../../../styles/blog/sideBarStyles';
 import { SearchContext } from '../../../store/search-context';
 
 const SearchBar = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const searchContext = useContext(SearchContext);
-
-  const searchHandler = () => {
-    searchContext.searchHandler(searchQuery);
-  };
-
-  const handleKeyPress = e => {
-    if (e.key === 'Enter') {
-      searchHandler();
-    }
-  };
+  const { query, searchHandler } = useContext(SearchContext);
 
   return (
     <SBContainer>
@@ -35,9 +24,8 @@ const SearchBar = () => {
         <SBInput
           placeholder='Search'
           type='text'
-          onChange={e => setSearchQuery(e.target.value)}
-          onKeyPress={e => handleKeyPress(e)}
-          value={searchQuery}
+          onChange={e => searchHandler(e.target.value)}
+          value={query}
         />
         <span>
           <i></i>

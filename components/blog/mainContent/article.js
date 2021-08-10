@@ -26,8 +26,6 @@ import {
 import CodeBlock from '../../utils/codeBlock/codeBlock';
 import Comments from './comments';
 
-const NextArticle = {};
-
 export default function Article({ article }) {
   const router = useRouter();
   if (!article) return <h1>loading</h1>;
@@ -43,6 +41,7 @@ export default function Article({ article }) {
           src={'https:' + featuredImage.fields.file.url}
           layout='fill'
           objectFit='cover'
+          alt={featuredImage.fields.title}
         />
       </ImageContainer>
       <ContentContainer>

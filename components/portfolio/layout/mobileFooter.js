@@ -1,19 +1,48 @@
-import React, { useState } from 'react';
-import styles from '../../../styles/portfolio/layout.module.css';
-import BottomDrawer from '../UI/modal';
+import React, { useEffect, useRef, useState } from 'react';
+import {
+  MFButtonContainer,
+  MFContainer,
+} from '../../../styles/portfolio/layoutStyles';
+import BottomDrawer from '../UI/bottomDrawer';
 
 const MobileFooter = () => {
   const [showDrawer, setShowDrawer] = useState(false);
+  const [top, setTop] = useState(1258);
+  const [left, setLeft] = useState(622);
+  const [windowSize, setWindowSize] = useState({ width: 1920, height: 1329 });
+  const mobileButtonRef = useRef(null);
+
+  useEffect(() => {
+    const getSize = () => {
+      return {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    };
+    const handleResize = () => {
+      setTop(mobileButtonRef.current.getBoundingClientRect().top);
+      setLeft(mobileButtonRef.current.getBoundingClientRect().left);
+      setWindowSize(getSize());
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const drawerToggleHandler = () => {
     setShowDrawer(!showDrawer);
   };
 
   return (
-    <div className={styles.mobileFooter}>
-      <BottomDrawer show={showDrawer} />
-      <div className={styles.mobileFooter__container}>
-        <div className={styles.buttonContainer} onClick={drawerToggleHandler}>
+    <>
+      <BottomDrawer
+        show={showDrawer}
+        top={top}
+        left={left}
+        windowSize={windowSize}
+      />
+      <MFContainer>
+        <MFButtonContainer ref={mobileButtonRef} onClick={drawerToggleHandler}>
           <svg
             width='35'
             height='35'
@@ -26,9 +55,9 @@ const MobileFooter = () => {
               fill='white'
             />
           </svg>
-        </div>
-      </div>
-    </div>
+        </MFButtonContainer>
+      </MFContainer>
+    </>
   );
 };
 

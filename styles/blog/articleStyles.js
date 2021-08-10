@@ -49,17 +49,26 @@ export const Tag = styled.span`
 `;
 
 export const Body = styled.article`
+  font-family: Open Sans;
   padding: 1rem 0;
+  word-wrap: break-word;
   & p {
     line-height: 30px;
-    font-size: 1.1rem;
-    color: ${props => props.theme.para};
+    font-size: 1.2rem;
+    color: ${props => props.theme.articlePara};
+    margin-bottom: 1rem;
   }
 
   & li {
     line-height: 30px;
-    font-size: 1.1rem;
-    color: ${props => props.theme.para};
+    font-size: 1.2rem;
+    color: ${props => props.theme.articlePara};
+    margin-bottom: 1rem;
+
+    & li {
+      margin-left: 1.3rem;
+      list-style: disc;
+    }
   }
 
   & h1 {
@@ -71,6 +80,12 @@ export const Body = styled.article`
     }
   }
 
+  & code {
+    background-color: ${props => props.theme.base};
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 0.2rem;
+  }
   & a {
     color: ${props => props.theme.primary};
     text-decoration: underline;
@@ -80,6 +95,7 @@ export const Body = styled.article`
   & h3 {
     padding: 1rem 0;
     font-size: 1.8rem;
+    color: ${props => props.theme.heading};
   }
 
   & img {
