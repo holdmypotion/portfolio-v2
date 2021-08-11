@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   ContentContainer,
   HeroContainer,
@@ -7,7 +8,6 @@ import {
   Title,
   FeaturedImageContainer,
 } from '../../../styles/portfolio/caseStudyStyles';
-import Image from 'next/image';
 
 export default function Hero({ featuredImage, title, myRole, client, year }) {
   return (

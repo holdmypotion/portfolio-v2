@@ -110,6 +110,8 @@ export const AboutPara = styled.p`
 export const Images = styled.section`
   max-width: 90%;
   margin: 0 auto;
+  /* display: flex;
+  flex-wrap: wrap; */
 `;
 
 export const ImageContainer = styled.div`

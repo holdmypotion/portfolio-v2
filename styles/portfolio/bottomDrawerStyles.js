@@ -6,7 +6,7 @@ export const BottomDrawerContainer = styled(motion.div)`
   height: 100%;
   position: fixed;
   z-index: 100;
-  background-color: var(--gray-900);
+  background-color: ${props => props.theme.grayLight};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@ export const BottomDrawerContainer = styled(motion.div)`
 
 export const Menu = styled(motion.div)`
   & ul {
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ export const Menu = styled(motion.div)`
   }
 
   & h3 {
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     font-size: 2.5rem;
     letter-spacing: 5px;
     text-transform: uppercase;
