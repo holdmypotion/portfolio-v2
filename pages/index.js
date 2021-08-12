@@ -7,7 +7,8 @@ import Layout from '../components/portfolio/layout/layout';
 import HeroSection from '../components/portfolio/home/heroSection';
 import ProjectSection from '../components/portfolio/home/projectSection';
 import { Button } from '../styles/blog/globalStyles';
-import { CASE_STUDIES } from '../data/dummy';
+import { CASE_STUDIES, SERVICES } from '../data/dummy';
+import Services from '../components/portfolio/home/services';
 
 export default function Home() {
   return (
@@ -53,6 +54,7 @@ export default function Home() {
         heading='Case Studies'
         projects={CASE_STUDIES}
       />
+      <Services services={SERVICES} />
     </Layout>
   );
 }

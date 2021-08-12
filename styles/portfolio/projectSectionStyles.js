@@ -40,8 +40,6 @@ export const Thumbnail = styled.div`
   z-index: 5;
   max-width: 1080px;
   max-height: 700px;
-  max-width: 1180px;
-  max-height: 750px;
   margin: 10vh 0;
 
   &:focus,

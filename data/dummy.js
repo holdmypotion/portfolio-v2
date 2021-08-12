@@ -176,3 +176,51 @@ export const CASE_STUDIES = [
     },
   },
 ];
+
+export const SERVICES = [
+  {
+    title: 'development',
+    subServices: [
+      {
+        subTitle: 'frontend-web',
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.',
+      },
+      {
+        subTitle: 'BACKEND-WEB',
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.',
+      },
+      {
+        subTitle: 'MOBILE',
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.',
+      },
+      {
+        subTitle: 'Devops',
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.',
+      },
+    ],
+  },
+  {
+    title: 'Design',
+    subServices: [
+      {
+        subTitle: 'Mobile / Web ui',
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.',
+      },
+      {
+        subTitle: 'Logo',
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.',
+      },
+      {
+        subTitle: 'Graphic',
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.',
+      },
+    ],
+  },
+];

@@ -33,7 +33,10 @@ const ProjectSection = ({ subHeading, heading, projects }) => {
                 reverse = true;
               }
               return (
-                <Thumbnail style={{ marginLeft: reverse ? 'auto' : 0 }}>
+                <Thumbnail
+                  key={project.slug}
+                  style={{ marginLeft: reverse ? 'auto' : 0 }}
+                >
                   <Image
                     src={project.featuredImage}
                     layout='fill'
