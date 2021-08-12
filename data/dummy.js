@@ -1,6 +1,6 @@
 export const CASE_STUDIES = [
   {
-    title: 'Prof',
+    title: 'Portfolio Redesign',
     slug: 'prof',
     myRole: [
       'DevOps',
@@ -11,7 +11,7 @@ export const CASE_STUDIES = [
     ],
     client: 'Rahul',
     year: '2021',
-    featuredImage: '/images/image.png',
+    featuredImage: '/images/image1.png',
     about:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae, porro eligendi itaque iure minima aut harum id veritatis dolorem.',
     images: [
@@ -23,6 +23,138 @@ export const CASE_STUDIES = [
     readNext: {
       title: 'Prof 2.0',
       slug: 'prof2.0',
+      myRole: [
+        'DevOps',
+        'Frontend Developer',
+        'UI/UX',
+        'Website Design',
+        'Backend Developer',
+      ],
+      client: 'Rahul',
+      year: '2021',
+      featuredImage: '/images/image2.png',
+      about:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae, porro eligendi itaque iure minima aut harum id veritatis dolorem.',
+      images: [
+        '/images/image.png',
+        '/images/image.png',
+        '/images/image.png',
+        '/images/image.png',
+      ],
+    },
+  },
+  {
+    title: 'Prof 2.0',
+    slug: 'prof2.0',
+    myRole: [
+      'DevOps',
+      'Frontend Developer',
+      'UI/UX',
+      'Website Design',
+      'Backend Developer',
+    ],
+    client: 'Rahul',
+    year: '2021',
+    featuredImage: '/images/image2.png',
+    about:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae, porro eligendi itaque iure minima aut harum id veritatis dolorem.',
+    images: [
+      '/images/image.png',
+      '/images/image.png',
+      '/images/image.png',
+      '/images/image.png',
+    ],
+    readNext: {
+      title: 'Portfolio Redesign',
+      slug: 'prof',
+      myRole: [
+        'DevOps',
+        'Frontend Developer',
+        'UI/UX',
+        'Website Design',
+        'Backend Developer',
+      ],
+      client: 'Rahul',
+      year: '2021',
+      featuredImage: '/images/image1.png',
+      about:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae, porro eligendi itaque iure minima aut harum id veritatis dolorem.',
+      images: [
+        '/images/image.png',
+        '/images/image.png',
+        '/images/image.png',
+        '/images/image.png',
+      ],
+    },
+  },
+  {
+    title: 'Portfolio Redesign',
+    slug: 'prof',
+    myRole: [
+      'DevOps',
+      'Frontend Developer',
+      'UI/UX',
+      'Website Design',
+      'Backend Developer',
+    ],
+    client: 'Rahul',
+    year: '2021',
+    featuredImage: '/images/image1.png',
+    about:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae, porro eligendi itaque iure minima aut harum id veritatis dolorem.',
+    images: [
+      '/images/image.png',
+      '/images/image.png',
+      '/images/image.png',
+      '/images/image.png',
+    ],
+    readNext: {
+      title: 'Prof 2.0',
+      slug: 'prof2.0',
+      myRole: [
+        'DevOps',
+        'Frontend Developer',
+        'UI/UX',
+        'Website Design',
+        'Backend Developer',
+      ],
+      client: 'Rahul',
+      year: '2021',
+      featuredImage: '/images/image2.png',
+      about:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae, porro eligendi itaque iure minima aut harum id veritatis dolorem.',
+      images: [
+        '/images/image.png',
+        '/images/image.png',
+        '/images/image.png',
+        '/images/image.png',
+      ],
+    },
+  },
+  {
+    title: 'Prof 2.0',
+    slug: 'prof2.0',
+    myRole: [
+      'DevOps',
+      'Frontend Developer',
+      'UI/UX',
+      'Website Design',
+      'Backend Developer',
+    ],
+    client: 'Rahul',
+    year: '2021',
+    featuredImage: '/images/image2.png',
+    about:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae, porro eligendi itaque iure minima aut harum id veritatis dolorem.',
+    images: [
+      '/images/image.png',
+      '/images/image.png',
+      '/images/image.png',
+      '/images/image.png',
+    ],
+    readNext: {
+      title: 'Portfolio Redesign',
+      slug: 'prof',
       myRole: [
         'DevOps',
         'Frontend Developer',

@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion';
 import styled, { keyframes } from 'styled-components';
 
+export const Container = styled.div`
+  background-color: ${props => props.theme.gray};
+  max-width: 90%;
+  margin: 0 auto;
+`;
+
 export const MarqueeContainer = styled.div`
   position: relative;
   overflow-x: hidden;

@@ -3,6 +3,8 @@
 <!-- Change the navbar for case study pages -->
 <!-- Design the next article section in case study page -->
 
-Design the case studies section on the home page
+<!-- Design the case studies section on the home page -->
+
+Could add more css magic to the thumbnails
 Finalize the hero section of the home page
 Plan the implementation of the service section

@@ -49,6 +49,7 @@ const Layout = props => {
     primary: '#f4955c',
     grayLight: '#4a4a4a',
     gray: '#2e2e2e',
+    base: '#2e2e2e',
   };
 
   return (

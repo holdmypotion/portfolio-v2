@@ -7,6 +7,7 @@ import Layout from '../components/portfolio/layout/layout';
 import HeroSection from '../components/portfolio/home/heroSection';
 import ProjectSection from '../components/portfolio/home/projectSection';
 import { Button } from '../styles/blog/globalStyles';
+import { CASE_STUDIES } from '../data/dummy';
 
 export default function Home() {
   return (
@@ -44,10 +45,14 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <HeroSection />
-      <div style={{ background: '#2e2e2e', height: '2000px' }}></div>
-      {/* <div style={{ height: '50vh' }}></div> */}
-      <ProjectSection />
+      {/* <HeroSection /> */}
+      {/* <div style={{ background: '#2e2e2e', height: '2000px' }}></div> */}
+      <div style={{ height: '50vh' }}></div>
+      <ProjectSection
+        subHeading='Selected Projects'
+        heading='Case Studies'
+        projects={CASE_STUDIES}
+      />
     </Layout>
   );
 }
