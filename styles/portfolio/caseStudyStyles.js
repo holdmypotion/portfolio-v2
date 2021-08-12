@@ -125,8 +125,27 @@ export const ImageContainer = styled.div`
 //////////////////////////////////
 
 export const NextProjectContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10rem;
+  margin: 4rem auto;
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+`;
+
+export const TitleBox = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
 `;

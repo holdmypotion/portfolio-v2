@@ -32,7 +32,7 @@ export const CASE_STUDIES = [
       ],
       client: 'Rahul',
       year: '2021',
-      featuredImage: '/images/image.png',
+      featuredImage: '/images/image1.png',
       about:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae, porro eligendi itaque iure minima aut harum id veritatis dolorem.',
       images: [

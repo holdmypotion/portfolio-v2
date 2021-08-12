@@ -64,6 +64,7 @@ export const FTextContainer = styled.div`
 
   & h3 {
     font-size: calc(1rem + 1vw);
+    white-space: nowrap;
   }
   & div {
     margin-top: 8px;

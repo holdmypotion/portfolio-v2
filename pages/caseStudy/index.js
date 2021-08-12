@@ -52,6 +52,7 @@ export default function CaseStudy() {
       <NextProject
         title={caseStudy.readNext.title}
         slug={caseStudy.readNext.slug}
+        image={caseStudy.readNext.featuredImage}
       />
     </Layout>
   );
