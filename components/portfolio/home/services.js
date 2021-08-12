@@ -7,6 +7,7 @@ import {
   ImageContainer,
   ImageWrapper,
   JustExtraHeight,
+  Overlay,
   Para,
   ServiceBox,
   ServicesContainer,
@@ -45,11 +46,12 @@ export default function Services({ services }) {
           <ImageWrapper>
             <ImageContainer>
               <Image
-                src={'/images/imageLight.png'}
+                src={'/images/giphy.webp'}
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center'
               />
+              <Overlay />
             </ImageContainer>
           </ImageWrapper>
         </StickyWrapper>

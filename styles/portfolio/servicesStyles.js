@@ -40,11 +40,13 @@ export const Heading = styled.h1`
   @media (min-width: 1080px) {
     font-size: calc(11rem + 5vw);
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-width: 6px;
   }
 `;
 
 export const ContentContainer = styled.div`
+  position: relative;
+  z-index: 5;
   @media (min-width: 1080px) {
     width: 40vw;
     margin: 0 auto;
@@ -106,4 +108,14 @@ export const JustExtraHeight = styled.div`
   @media (min-width: 1080px) {
     height: 50vh;
   }
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 2;
+  transition: 1s all ease;
 `;

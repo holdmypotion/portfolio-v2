@@ -69,7 +69,7 @@ export default function Contact() {
                 </span>
               </InputWrapper>
             </InputContainer>
-            <InputContainer>
+            <InputContainer medium>
               <Label for='subject'>Subject</Label>
               <InputWrapper>
                 <Input

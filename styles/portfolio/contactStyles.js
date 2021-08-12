@@ -57,12 +57,17 @@ export const ContactForm = styled.form`
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 20vw;
+  width: 25vw;
   margin: 2vh 0;
   ${props =>
     props.large &&
     css`
       width: 100%;
+    `};
+  ${props =>
+    props.medium &&
+    css`
+      width: 50%;
     `};
 
   @media (max-width: 1080px) {
