@@ -50,6 +50,7 @@ const Layout = props => {
     grayLight: '#4a4a4a',
     gray: '#2e2e2e',
     base: '#2e2e2e',
+    baseLight: '#4A4A4A',
   };
 
   return (

@@ -40,7 +40,7 @@ export const Heading = styled.h1`
   @media (min-width: 1080px) {
     font-size: calc(11rem + 5vw);
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 4px;
   }
 `;
 

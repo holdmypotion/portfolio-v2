@@ -5,6 +5,9 @@
 
 <!-- Design the case studies section on the home page -->
 
+<!-- Plan the implementation of the service section -->
+
+Contact Form
 Could add more css magic to the thumbnails
 Finalize the hero section of the home page
-Plan the implementation of the service section
+do some about the body color on the blog
