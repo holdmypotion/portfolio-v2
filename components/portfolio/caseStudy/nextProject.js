@@ -1,11 +1,21 @@
-import {} from '../../../styles/portfolio/caseStudyStyles';
+import Link from 'next/link';
+import {
+  NextProjectContainer,
+  Title,
+} from '../../../styles/portfolio/caseStudyStyles';
 import Marquee from '../UI/marquee';
 
-export default function NextProject({ title }) {
+export default function NextProject({ title, slug }) {
   return (
-    <div>
+    <>
       <Marquee text='Next Project' />
-      <h1>Rahul</h1>
-    </div>
+      <NextProjectContainer>
+        <Link href={'/caseStudy/' + slug}>
+          <a>
+            <Title>{title}</Title>
+          </a>
+        </Link>
+      </NextProjectContainer>
+    </>
   );
 }

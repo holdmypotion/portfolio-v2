@@ -110,8 +110,6 @@ export const AboutPara = styled.p`
 export const Images = styled.section`
   max-width: 90%;
   margin: 0 auto;
-  /* display: flex;
-  flex-wrap: wrap; */
 `;
 
 export const ImageContainer = styled.div`
@@ -121,4 +119,14 @@ export const ImageContainer = styled.div`
   @media (min-width: 700px) {
     margin: 8rem 0;
   }
+`;
+///////////////////////////////////
+// Next Project
+//////////////////////////////////
+
+export const NextProjectContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
 `;

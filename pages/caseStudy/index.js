@@ -49,7 +49,10 @@ export default function CaseStudy() {
         year={caseStudy.year}
       />
       <Content about={caseStudy.about} images={caseStudy.images} />
-      <NextProject title={caseStudy.readNext.title} />
+      <NextProject
+        title={caseStudy.readNext.title}
+        slug={caseStudy.readNext.slug}
+      />
     </Layout>
   );
 }
