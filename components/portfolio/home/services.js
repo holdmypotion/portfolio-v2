@@ -6,6 +6,7 @@ import {
   Heading,
   ImageContainer,
   ImageWrapper,
+  JustExtraHeight,
   Para,
   ServiceBox,
   ServicesContainer,
@@ -55,7 +56,7 @@ export default function Services({ services }) {
         <ContentContainer>{servicesSection}</ContentContainer>
       </ServicesContainer>
 
-      <div style={{ height: '200vh' }}></div>
+      <JustExtraHeight></JustExtraHeight>
     </Container>
   );
 }

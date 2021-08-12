@@ -101,3 +101,9 @@ export const ImageContainer = styled.div`
   height: 40vh;
   width: 30vw;
 `;
+
+export const JustExtraHeight = styled.div`
+  @media (min-width: 1080px) {
+    height: 50vh;
+  }
+`;
