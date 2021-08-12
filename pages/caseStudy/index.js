@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Content from '../../components/portfolio/caseStudy/content';
 import Hero from '../../components/portfolio/caseStudy/hero';
+import NextProject from '../../components/portfolio/caseStudy/nextProject';
 import Layout from '../../components/portfolio/layout/layout';
 import { CASE_STUDIES } from '../../data/dummy';
 export default function CaseStudy() {
@@ -48,6 +49,7 @@ export default function CaseStudy() {
         year={caseStudy.year}
       />
       <Content about={caseStudy.about} images={caseStudy.images} />
+      <NextProject title={caseStudy.readNext.title} />
     </Layout>
   );
 }

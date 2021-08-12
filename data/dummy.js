@@ -20,5 +20,27 @@ export const CASE_STUDIES = [
       '/images/image.png',
       '/images/image.png',
     ],
+    readNext: {
+      title: 'Prof 2.0',
+      slug: 'prof2.0',
+      myRole: [
+        'DevOps',
+        'Frontend Developer',
+        'UI/UX',
+        'Website Design',
+        'Backend Developer',
+      ],
+      client: 'Rahul',
+      year: '2021',
+      featuredImage: '/images/image.png',
+      about:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae, porro eligendi itaque iure minima aut harum id veritatis dolorem.',
+      images: [
+        '/images/image.png',
+        '/images/image.png',
+        '/images/image.png',
+        '/images/image.png',
+      ],
+    },
   },
 ];
