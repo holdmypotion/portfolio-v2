@@ -55,7 +55,7 @@ const Layout = props => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <ScrollProgressBar />
-      <Navbar />
+      <Navbar isHome={props.isHome} />
       <MobileFooter />
       {props.children}
       <Footer />

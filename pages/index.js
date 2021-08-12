@@ -10,7 +10,7 @@ import { Button } from '../styles/blog/globalStyles';
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout isHome>
       <Head>
         <title>Rahsand | Portfolio</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />

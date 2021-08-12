@@ -5,7 +5,7 @@ import {
   NMenuContainer,
 } from '../../../styles/portfolio/layoutStyles';
 
-const Navbar = () => {
+const Navbar = ({ isHome }) => {
   return (
     <NContainer>
       <NLogoContainer>
@@ -14,14 +14,18 @@ const Navbar = () => {
       <NMenuContainer>
         <ul>
           <li>
-            <Link href='/'>
-              <a>Work</a>
-            </Link>
+            {isHome && (
+              <Link href='/'>
+                <a>Work</a>
+              </Link>
+            )}
           </li>
           <li>
-            <Link href='/'>
-              <a>Services</a>
-            </Link>
+            {isHome && (
+              <Link href='/'>
+                <a>Services</a>
+              </Link>
+            )}
           </li>
           <li>
             <Link href='/blog'>
