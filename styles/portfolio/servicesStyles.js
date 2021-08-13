@@ -6,9 +6,14 @@ export const ServicesContainer = styled.div`
 `;
 
 export const StickyWrapper = styled.div`
+  top: 0;
   @media (min-width: 1080px) {
-    top: 20vh;
+    top: 0;
     position: sticky;
+  }
+
+  @media (min-height: 900px) {
+    top: 20%;
   }
 `;
 

@@ -10,6 +10,7 @@ import { Button } from '../styles/blog/globalStyles';
 import { CASE_STUDIES, SERVICES } from '../data/dummy';
 import Services from '../components/portfolio/home/services';
 import Contact from '../components/portfolio/home/contact';
+import USP from '../components/portfolio/home/usp';
 
 export default function Home() {
   return (
@@ -55,6 +56,7 @@ export default function Home() {
         heading='Case Studies'
         projects={CASE_STUDIES}
       />
+      <USP />
       <Services services={SERVICES} />
       <Contact />
     </Layout>
