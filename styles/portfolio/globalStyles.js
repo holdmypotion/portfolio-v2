@@ -1,10 +1,16 @@
 import { motion } from 'framer-motion';
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const Container = styled.div`
-  /* background-color: ${props => props.theme.gray}; */
-  max-width: 90%;
+  position: relative;
+  width: 90%;
   margin: 0 auto;
+
+  ${props =>
+    props.contain &&
+    css`
+      max-width: 1800px;
+    `}
 `;
 
 export const MarqueeContainer = styled.div`

@@ -11,6 +11,7 @@ import { CASE_STUDIES, SERVICES } from '../data/dummy';
 import Services from '../components/portfolio/home/services';
 import Contact from '../components/portfolio/home/contact';
 import USP from '../components/portfolio/home/usp';
+import About from '../components/portfolio/home/about';
 
 export default function Home() {
   return (
@@ -48,9 +49,8 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      {/* <HeroSection /> */}
-      {/* <div style={{ background: '#2e2e2e', height: '2000px' }}></div> */}
-      <div style={{ height: '50vh' }}></div>
+      <HeroSection />
+      <About />
       <ProjectSection
         subHeading='Selected Projects'
         heading='Case Studies'

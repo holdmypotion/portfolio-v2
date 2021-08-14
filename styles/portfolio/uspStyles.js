@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const USPContainer = styled.main`
   padding: 15vh 0;
   background-color: ${props => props.theme.primary};
-  margin: 20vh auto;
+  margin-bottom: 20vh;
 `;
 
 export const InternalContainer = styled.div`

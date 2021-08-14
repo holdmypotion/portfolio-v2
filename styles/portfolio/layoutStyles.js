@@ -14,7 +14,7 @@ export const NContainer = styled.div`
   font-family: Antonio;
   font-weight: 700;
   color: ${props => props.theme.primary};
-  /* mix-blend-mode: difference; ; */
+  mix-blend-mode: difference; ;
 `;
 
 export const NLogoContainer = styled.div``;
@@ -43,7 +43,7 @@ export const FContainer = styled.div`
   font-family: Antonio;
   font-weight: 700;
   color: ${props => props.theme.primary};
-  /* mix-blend-mode: difference; */
+  mix-blend-mode: difference;
 
   @media (min-width: 700px) {
     display: flex;
@@ -103,7 +103,7 @@ export const MFContainer = styled.div`
   font-family: Antonio;
   font-weight: 700;
   color: ${props => props.theme.primary};
-  /* mix-blend-mode: difference; */
+  mix-blend-mode: difference;
 
   @media (min-width: 700px) {
     display: none;

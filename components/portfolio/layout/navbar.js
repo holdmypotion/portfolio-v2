@@ -15,21 +15,21 @@ const Navbar = ({ isHome }) => {
         <ul>
           <li>
             {isHome && (
-              <Link href='/'>
-                <a>Work</a>
+              <Link href='/#projects'>
+                <a dataText='Work'>Work</a>
               </Link>
             )}
           </li>
           <li>
             {isHome && (
-              <Link href='/'>
-                <a>Services</a>
+              <Link href='/#services'>
+                <a dataText='Services'>Services</a>
               </Link>
             )}
           </li>
           <li>
             <Link href='/blog'>
-              <a>Blog</a>
+              <a dataText='Blog'>Blog</a>
             </Link>
           </li>
         </ul>

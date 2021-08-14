@@ -15,6 +15,7 @@ const ScrollProgressBar = () => {
         width: '100%',
         height: 10,
         zIndex: 100,
+        mixBlendMode: 'difference',
       }}
     >
       <motion.div
@@ -22,7 +23,7 @@ const ScrollProgressBar = () => {
           height: '100%',
           mixBlendMode: 'difference',
           width: width,
-          backgroundColor: '#f4955c',
+          backgroundColor: '#F5A270',
         }}
       ></motion.div>
     </div>

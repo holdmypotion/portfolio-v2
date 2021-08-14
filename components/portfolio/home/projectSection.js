@@ -7,21 +7,16 @@ import {
   Description,
   Header,
   Heading,
-  IntroTextContainer,
   Overlay,
   SubHeading,
   Thumbnail,
   ThumbnailContainer,
   Title,
 } from '../../../styles/portfolio/projectSectionStyles';
-import IntroText from './introText';
 
 const ProjectSection = ({ subHeading, heading, projects }) => {
   return (
-    <Container>
-      {/* <IntroTextContainer>
-        <IntroText />
-      </IntroTextContainer> */}
+    <Container id='projects'>
       <ProjectContainer>
         <Header>
           <SubHeading>{subHeading}</SubHeading>

@@ -4,6 +4,7 @@ export const ProjectContainer = styled.div`
   background-color: ${props => props.theme.gray};
   /* max-width: 2000px;
   margin: 0 auto; */
+  padding: 20vh 0;
 `;
 
 export const Header = styled.div``;
