@@ -49,13 +49,15 @@ const Layout = props => {
     primary: '#f4955c',
     grayLight: '#4a4a4a',
     gray: '#2e2e2e',
+    base: '#2e2e2e',
+    baseLight: '#4A4A4A',
   };
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <ScrollProgressBar />
-      <Navbar />
+      <Navbar isHome={props.isHome} />
       <MobileFooter />
       {props.children}
       <Footer />

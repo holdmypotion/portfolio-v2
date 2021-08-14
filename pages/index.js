@@ -7,10 +7,15 @@ import Layout from '../components/portfolio/layout/layout';
 import HeroSection from '../components/portfolio/home/heroSection';
 import ProjectSection from '../components/portfolio/home/projectSection';
 import { Button } from '../styles/blog/globalStyles';
+import { CASE_STUDIES, SERVICES } from '../data/dummy';
+import Services from '../components/portfolio/home/services';
+import Contact from '../components/portfolio/home/contact';
+import USP from '../components/portfolio/home/usp';
+import About from '../components/portfolio/home/about';
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout isHome>
       <Head>
         <title>Rahsand | Portfolio</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -45,9 +50,15 @@ export default function Home() {
       </Head>
 
       <HeroSection />
-      <div style={{ background: '#2e2e2e', height: '2000px' }}></div>
-      {/* <div style={{ height: '50vh' }}></div> */}
-      <ProjectSection />
+      <About />
+      <ProjectSection
+        subHeading='Selected Projects'
+        heading='Case Studies'
+        projects={CASE_STUDIES}
+      />
+      <USP />
+      <Services services={SERVICES} />
+      <Contact />
     </Layout>
   );
 }

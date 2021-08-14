@@ -25,7 +25,7 @@ export const NMenuContainer = styled.div`
   }
 
   & li {
-    font-size: 2rem;
+    font-size: calc(1rem + 1vw);
   }
 `;
 
@@ -63,7 +63,8 @@ export const FTextContainer = styled.div`
   align-items: center;
 
   & h3 {
-    font-size: 2rem;
+    font-size: calc(1rem + 1vw);
+    white-space: nowrap;
   }
   & div {
     margin-top: 8px;
@@ -111,8 +112,8 @@ export const MFContainer = styled.div`
 
 export const MFButtonContainer = styled.div`
   background-color: ${props => props.theme.primary};
-  width: 51px;
-  height: 51px;
+  width: 41px;
+  height: 41px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
