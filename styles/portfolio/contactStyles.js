@@ -1,9 +1,8 @@
 import styled, { css, keyframes } from 'styled-components';
 
 export const ContactContainer = styled.div`
-  padding-bottom: 10vh;
   @media (min-width: 1080px) {
-    padding: 20vw 0;
+    padding-top: 20vw;
   }
 `;
 

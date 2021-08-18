@@ -1,5 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import ScrollProgressBar from '../UI/scrollProgressBar';
+import Credits from './credits';
 import Footer from './footer';
 import MobileFooter from './mobileFooter';
 import Navbar from './navbar';
@@ -61,6 +62,7 @@ const Layout = props => {
       <MobileFooter />
       {props.children}
       <Footer />
+      <Credits />
     </ThemeProvider>
   );
 };

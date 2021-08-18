@@ -23,7 +23,7 @@ export default function Contact() {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   return (
-    <ContactContainer>
+    <ContactContainer id='contact'>
       <Marquee text={`Let's Work Together.`} />
       <Container>
         <ContentContainer>

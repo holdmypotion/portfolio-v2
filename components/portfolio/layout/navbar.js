@@ -1,16 +1,21 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   NContainer,
-  NLogoContainer,
+  LogoContainer,
   NMenuContainer,
 } from '../../../styles/portfolio/layoutStyles';
 
 const Navbar = ({ isHome }) => {
   return (
     <NContainer>
-      <NLogoContainer>
-        <h2>RnS</h2>
-      </NLogoContainer>
+      <LogoContainer>
+        <Image src={'/logo.png'} width={60} height={40} />
+        <div>
+          <h3>Rahul Sharma</h3>
+          <h3>Developer / Designer</h3>
+        </div>
+      </LogoContainer>
       <NMenuContainer>
         <ul>
           <li>

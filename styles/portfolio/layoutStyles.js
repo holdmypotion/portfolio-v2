@@ -17,7 +17,21 @@ export const NContainer = styled.div`
   mix-blend-mode: difference; ;
 `;
 
-export const NLogoContainer = styled.div``;
+export const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h3 {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 700px) {
+    & h3 {
+      padding-left: 1rem;
+    }
+  }
+`;
 
 export const NMenuContainer = styled.div`
   & ul {
@@ -118,4 +132,15 @@ export const MFButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const CreditsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Antonio;
+  font-weight: 700;
+  color: ${props => props.theme.primary};
+  padding-bottom: 5rem;
+  mix-blend-mode: difference;
 `;

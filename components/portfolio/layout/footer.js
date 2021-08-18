@@ -25,7 +25,7 @@ const Footer = () => {
         <FSocialSVG>{svgs}</FSocialSVG>
       </FlexContainer>
       <FlexContainer>
-        <Link href='/'>
+        <Link href='/#contact'>
           <a>
             <FTextContainer>
               <h3>Contact me</h3>
