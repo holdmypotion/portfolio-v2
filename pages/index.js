@@ -14,6 +14,7 @@ import USP from "../components/portfolio/home/usp";
 import About from "../components/portfolio/home/about";
 
 import { createClient } from "contentful";
+import Panels from "../components/blog/UI/Panels";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -70,6 +71,7 @@ export default function Home({ caseStudies }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Panels />
       <HeroSection />
       <About />
       <ProjectSection

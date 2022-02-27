@@ -5,6 +5,7 @@ import NextProject from "../components/portfolio/caseStudy/nextProject";
 import Layout from "../components/portfolio/layout/layout";
 
 import { createClient } from "contentful";
+import Panels from "../components/blog/UI/Panels";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -87,6 +88,7 @@ export default function CaseStudy({ caseStudy }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Panels />
       <Hero
         featuredImage={caseStudy.featuredImage}
         title={caseStudy.title}
