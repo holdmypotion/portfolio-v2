@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // Navbar
 export const NContainer = styled.div`
@@ -18,9 +18,11 @@ export const NContainer = styled.div`
 `;
 
 export const LogoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   & h3 {
     font-size: 1rem;

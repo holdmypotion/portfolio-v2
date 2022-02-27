@@ -24,6 +24,7 @@ const ProjectSection = ({ subHeading, heading, projects }) => {
           <Heading>{heading}</Heading>
           <ThumbnailContainer>
             {projects.map((project, index) => {
+              project = project.fields;
               let reverse = false;
               if (index % 2 !== 0) {
                 reverse = true;
@@ -33,22 +34,26 @@ const ProjectSection = ({ subHeading, heading, projects }) => {
                   key={project.slug}
                   style={{ marginLeft: reverse ? "auto" : 0 }}
                 >
-                  <Image
-                    src={project.featuredImage}
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="center"
-                  />
-                  <Overlay />
-                  <Content>
-                    <Title>{project.title}</Title>
-                    <Description>redesigning the future</Description>
-                    <Button>
-                      <Link href={project.slug}>
-                        <a>Case Study</a>
-                      </Link>
-                    </Button>
-                  </Content>
+                  <Link href={project.slug}>
+                    <a>
+                      <Image
+                        src={"https:" + project.featuredImage.fields.file.url}
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
+                      />
+                      <Overlay />
+                      <Content>
+                        <Title>{project.title}</Title>
+                        <Description>{project.subHeading}</Description>
+                        <Button>
+                          <Link href={project.slug}>
+                            <a>Case Study</a>
+                          </Link>
+                        </Button>
+                      </Content>
+                    </a>
+                  </Link>
                 </Thumbnail>
               );
             })}

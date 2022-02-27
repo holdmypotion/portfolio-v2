@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Content from "../../components/portfolio/caseStudy/content";
-import Hero from "../../components/portfolio/caseStudy/hero";
-import NextProject from "../../components/portfolio/caseStudy/nextProject";
-import Layout from "../../components/portfolio/layout/layout";
+import Content from "../components/portfolio/caseStudy/content";
+import Hero from "../components/portfolio/caseStudy/hero";
+import NextProject from "../components/portfolio/caseStudy/nextProject";
+import Layout from "../components/portfolio/layout/layout";
 
 import { createClient } from "contentful";
 
