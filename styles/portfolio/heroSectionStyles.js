@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const HeroSectionContainer = styled(motion.div)`
   position: relative;
@@ -107,7 +107,35 @@ export const Links = styled.p`
   color: ${props => props.theme.gray};
   font-size: calc(1rem + 0.5vw);
 
-  & span {
+  & div {
     font-weight: 700;
+  }
+`;
+
+export const Item = styled.div`
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    color: ${props => props.theme.white};
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: ${props => props.theme.white};
+    transition: transform 0.5s ease-in-out;
+    transform: scaleX(0);
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
   }
 `;
