@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 // Navbar
 export const NContainer = styled.div`
@@ -45,6 +45,29 @@ export const NMenuContainer = styled.div`
   }
 `;
 
+export const Menu = styled.ul`
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+`;
+
+export const Item = styled.li`
+  position: relative;
+  cursor: pointer;
+  font-size: calc(1rem + 1vw);
+
+  & a {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover a {
+    color: ${props => props.theme.white};
+  }
+`;
+
 // Footer
 export const FContainer = styled.div`
   display: none;
@@ -77,6 +100,7 @@ export const FTextContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  transition: all 0.2s ease-in-out;
 
   & h3 {
     font-size: calc(1rem + 1vw);
@@ -90,6 +114,23 @@ export const FTextContainer = styled.div`
     border-radius: 100px;
     background-color: ${props => props.theme.primary};
     mix-blend-mode: difference;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    ${props =>
+      props.contact &&
+      css`
+        color: ${props => props.theme.white};
+      `}
+  }
+
+  &:hover div {
+    ${props =>
+      props.contact &&
+      css`
+        background-color: ${props => props.theme.white};
+      `}
   }
 `;
 
@@ -145,4 +186,14 @@ export const CreditsContainer = styled.div`
   color: ${props => props.theme.primary};
   padding-bottom: 5rem;
   mix-blend-mode: difference;
+`;
+
+export const Svg = styled.span`
+  & path {
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover path {
+    fill: ${props => props.theme.white};
+  }
 `;

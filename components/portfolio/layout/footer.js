@@ -1,19 +1,20 @@
-import Link from 'next/link';
-import { SOCIAL_SVGS } from '../../../data/data';
+import Link from "next/link";
+import { SOCIAL_SVGS } from "../../../data/data";
 import {
   FContainer,
   FlexContainer,
   FSocialSVG,
   FTextContainer,
-} from '../../../styles/portfolio/layoutStyles';
+  Svg,
+} from "../../../styles/portfolio/layoutStyles";
 
 const Footer = () => {
   const svgs = SOCIAL_SVGS.map(svg => (
-    <span key={svg.url}>
+    <Svg key={svg.url}>
       <Link href={svg.url}>
         <a>{svg.svg}</a>
       </Link>
-    </span>
+    </Svg>
   ));
   return (
     <FContainer>
@@ -25,9 +26,9 @@ const Footer = () => {
         <FSocialSVG>{svgs}</FSocialSVG>
       </FlexContainer>
       <FlexContainer>
-        <Link href='/#contact'>
+        <Link href="/#contact">
           <a>
-            <FTextContainer>
+            <FTextContainer contact>
               <h3>Contact me</h3>
               <div></div>
             </FTextContainer>

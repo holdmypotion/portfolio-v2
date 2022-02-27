@@ -4,6 +4,8 @@ import {
   NContainer,
   LogoContainer,
   NMenuContainer,
+  Item,
+  Menu,
 } from "../../../styles/portfolio/layoutStyles";
 
 const Navbar = ({ isHome }) => {
@@ -21,27 +23,27 @@ const Navbar = ({ isHome }) => {
         </Link>
       </LogoContainer>
       <NMenuContainer>
-        <ul>
-          <li>
+        <Menu>
+          <Item>
             {isHome && (
               <Link href="/#projects">
                 <a dataText="Work">Work</a>
               </Link>
             )}
-          </li>
-          <li>
+          </Item>
+          <Item>
             {isHome && (
               <Link href="/#services">
                 <a dataText="Services">Services</a>
               </Link>
             )}
-          </li>
-          <li>
+          </Item>
+          <Item>
             <Link href="/blog">
               <a dataText="Blog">Blog</a>
             </Link>
-          </li>
-        </ul>
+          </Item>
+        </Menu>
       </NMenuContainer>
     </NContainer>
   );
