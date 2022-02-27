@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import {
   AboutContainer,
   AboutHeading,
@@ -8,7 +8,7 @@ import {
   ImageContainer,
   Images,
   Wrapper,
-} from '../../../styles/portfolio/caseStudyStyles';
+} from "../../../styles/portfolio/caseStudyStyles";
 export default function Content({ about, images }) {
   return (
     <Container>
@@ -22,14 +22,14 @@ export default function Content({ about, images }) {
       </AboutContainer>
       <Images>
         {images.map(image => (
-          <ImageContainer>
+          <ImageContainer key={image.fields.title}>
             <Image
-              src={image}
+              src={"https:" + image.fields.file.url}
               width={1280}
               height={750}
-              layout='responsive'
-              objectFit='cover'
-              objectPosition='center'
+              layout="responsive"
+              objectFit="cover"
+              objectPosition="center"
             />
           </ImageContainer>
         ))}
