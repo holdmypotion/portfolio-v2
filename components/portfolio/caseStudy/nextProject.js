@@ -13,22 +13,24 @@ export default function NextProject({ title, slug, image }) {
   return (
     <>
       <Marquee text="Next Project" />
-      <NextProjectContainer>
-        <Image
-          src={"https:" + image.fields.file.url}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-        />
-        <Overlay />
-        <TitleBox>
-          <Link href={"/caseStudy/" + slug}>
-            <a>
-              <Title>{title}</Title>
-            </a>
-          </Link>
-        </TitleBox>
-      </NextProjectContainer>
+      <Link href={"/" + slug}>
+        <NextProjectContainer>
+          <Image
+            src={"https:" + image.fields.file.url}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
+          <Overlay />
+          <TitleBox>
+            <Link href={"/" + slug}>
+              <a>
+                <Title>{title}</Title>
+              </a>
+            </Link>
+          </TitleBox>
+        </NextProjectContainer>
+      </Link>
     </>
   );
 }

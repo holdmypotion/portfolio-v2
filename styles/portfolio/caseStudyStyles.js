@@ -124,7 +124,8 @@ export const ImageContainer = styled.div`
 // Next Project
 //////////////////////////////////
 
-export const NextProjectContainer = styled.div`
+export const NextProjectContainer = styled.a`
+  display: block;
   margin: 4rem auto;
   position: relative;
   width: 80vw;
