@@ -10,7 +10,7 @@ export const NContainer = styled.div`
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   font-family: Antonio;
   font-weight: 700;
   color: ${props => props.theme.primary};
@@ -18,6 +18,7 @@ export const NContainer = styled.div`
 `;
 
 export const LogoContainer = styled.div`
+  padding-top: 0.5rem;
   & a {
     display: flex;
     align-items: center;
@@ -26,12 +27,17 @@ export const LogoContainer = styled.div`
 
   & h3 {
     font-size: 1rem;
+    transition: all 0.3s ease;
   }
 
   @media (min-width: 700px) {
     & h3 {
       padding-left: 1rem;
     }
+  }
+
+  &:hover h3 {
+    color: ${props => props.theme.white};
   }
 `;
 

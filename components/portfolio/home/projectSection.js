@@ -30,12 +30,12 @@ const ProjectSection = ({ subHeading, heading, projects }) => {
                 reverse = true;
               }
               return (
-                <Thumbnail
-                  key={project.slug}
-                  style={{ marginLeft: reverse ? "auto" : 0 }}
-                >
-                  <Link href={project.slug}>
-                    <a>
+                <Link href={project.slug}>
+                  <a>
+                    <Thumbnail
+                      key={project.slug}
+                      style={{ marginLeft: reverse ? "auto" : 0 }}
+                    >
                       <Image
                         src={"https:" + project.featuredImage.fields.file.url}
                         layout="fill"
@@ -52,9 +52,9 @@ const ProjectSection = ({ subHeading, heading, projects }) => {
                           </Link>
                         </Button>
                       </Content>
-                    </a>
-                  </Link>
-                </Thumbnail>
+                    </Thumbnail>
+                  </a>
+                </Link>
               );
             })}
           </ThumbnailContainer>
