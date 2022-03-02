@@ -1,4 +1,4 @@
-import { Container } from '../../../styles/portfolio/globalStyles';
+import { Container } from "../../../styles/portfolio/globalStyles";
 import {
   Heading,
   Para,
@@ -6,19 +6,19 @@ import {
   SubHeading,
   USPContainer,
   InternalContainer,
-} from '../../../styles/portfolio/uspStyles';
+} from "../../../styles/portfolio/uspStyles";
 
 export default function USP() {
   return (
-    <USPContainer id='services'>
+    <USPContainer>
       <Container>
         <InternalContainer>
           <Heading>
-            Your website should <br /> turn <span> visitors</span> into <br />{' '}
+            Your website should <br /> turn <span> visitors</span> into <br />{" "}
             <span>engaged</span> customers.
           </Heading>
           <SubHeading>
-            It’s like having a top-performing sales rep <br /> working{' '}
+            It’s like having a top-performing sales rep <br /> working{" "}
             <span> 24 hours a day, 7 days a week.</span>
           </SubHeading>
           <ParaContainer>

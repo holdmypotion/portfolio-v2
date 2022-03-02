@@ -90,7 +90,7 @@ export default function Contact() {
                 <TextArea
                   id="message"
                   rows="2"
-                  placeholder={`Wanna elaborate?`}
+                  placeholder={`Want to elaborate?`}
                   value={message}
                   onChange={e => setMessage(e.target.value)}
                 />

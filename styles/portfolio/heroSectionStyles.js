@@ -104,6 +104,7 @@ export const AboutText = styled.h1`
 
 export const Links = styled.p`
   padding: 2rem 0;
+  padding-left: 0.5rem;
   color: ${props => props.theme.gray};
   font-size: calc(1rem + 0.5vw);
 

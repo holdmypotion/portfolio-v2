@@ -31,29 +31,27 @@ const ProjectSection = ({ subHeading, heading, projects }) => {
               }
               return (
                 <Link href={project.slug}>
-                  <a>
-                    <Thumbnail
-                      key={project.slug}
-                      style={{ marginLeft: reverse ? "auto" : 0 }}
-                    >
-                      <Image
-                        src={"https:" + project.featuredImage.fields.file.url}
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center"
-                      />
-                      <Overlay />
-                      <Content>
-                        <Title>{project.title}</Title>
-                        <Description>{project.subHeading}</Description>
-                        <Button>
-                          <Link href={project.slug}>
-                            <a>Case Study</a>
-                          </Link>
-                        </Button>
-                      </Content>
-                    </Thumbnail>
-                  </a>
+                  <Thumbnail
+                    key={project.slug}
+                    style={{ marginLeft: reverse ? "auto" : 0 }}
+                  >
+                    <Image
+                      src={"https:" + project.featuredImage.fields.file.url}
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center"
+                    />
+                    <Overlay />
+                    <Content>
+                      <Title>{project.title}</Title>
+                      <Description>{project.subHeading}</Description>
+                      <Button>
+                        <Link href={project.slug}>
+                          <a>Case Study</a>
+                        </Link>
+                      </Button>
+                    </Content>
+                  </Thumbnail>
                 </Link>
               );
             })}
