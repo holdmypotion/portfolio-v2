@@ -1,32 +1,51 @@
-import Link from 'next/link';
-import styles from '../../../styles/portfolio/layout.module.css';
+import Image from "next/image";
+import Link from "next/link";
+import {
+  NContainer,
+  LogoContainer,
+  NMenuContainer,
+  Item,
+  Menu,
+} from "../../../styles/portfolio/layoutStyles";
 
-const Navbar = () => {
+const Navbar = ({ isHome }) => {
   return (
-    <div className={styles.navbar__container}>
-      <div className={styles.logoContainer}>
-        <h3>Rahul Sharma</h3>
-      </div>
-      <div className={styles.menuContainer}>
-        <ul>
-          <li>
-            <Link href='/'>
-              <a>Work</a>
+    <NContainer>
+      <LogoContainer>
+        <Link href={"/"}>
+          <a>
+            <Image src={"/logo.png"} width={60} height={40} />
+            <div>
+              <h3>Rahul Sharma</h3>
+              <h3>Developer / Designer</h3>
+            </div>
+          </a>
+        </Link>
+      </LogoContainer>
+      <NMenuContainer>
+        <Menu>
+          <Item>
+            {isHome && (
+              <Link href="/#projects">
+                <a dataText="Work">Work</a>
+              </Link>
+            )}
+          </Item>
+          <Item>
+            {isHome && (
+              <Link href="/#services">
+                <a dataText="Services">Services</a>
+              </Link>
+            )}
+          </Item>
+          <Item>
+            <Link href="/blog">
+              <a dataText="Blog">Blog</a>
             </Link>
-          </li>
-          <li>
-            <Link href='/'>
-              <a>Services</a>
-            </Link>
-          </li>
-          <li>
-            <Link href='/blog'>
-              <a>Blog</a>
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </div>
+          </Item>
+        </Menu>
+      </NMenuContainer>
+    </NContainer>
   );
 };
 

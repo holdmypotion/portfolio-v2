@@ -1,54 +1,42 @@
+import Image from 'next/image';
+import { Container } from '../../../styles/portfolio/globalStyles';
 import {
-  motion,
-  useViewportScroll,
-  useTransform,
-  useSpring,
-} from 'framer-motion';
-
-import styles from '../../../styles/portfolio/heroSection.module.css';
-import IntroText from './introText';
+  Header,
+  ImageContainer,
+  ImageWrapper,
+  HeroSectionContainer,
+  Text,
+} from '../../../styles/portfolio/heroSectionStyles';
 
 const HeroSection = () => {
-  const physics = { damping: 15, mass: 0.27, stiffness: 55 };
-  const { scrollY } = useViewportScroll();
-  const moveRight = useTransform(scrollY, [0, 1500], [0, 1400]);
-  const moveRightSpring = useSpring(moveRight, physics);
-  const moveLeft = useTransform(scrollY, [0, 1500], [0, -1400]);
-  const moveLeftSpring = useSpring(moveLeft, physics);
-  const scale = useTransform(scrollY, [0, 1500], [1, 2]);
-  const scaleSpring = useSpring(scale, physics);
-  const moveDown = useTransform(scrollY, [0, 2000], [0, 1000]);
-  const moveDownSpring = useSpring(moveDown, physics);
-
+  // TODO: Finalize the image issue
   return (
-    <div className={styles.heroSection}>
-      <div className={styles.headerContainer}>
-        <div className={styles.floatingHeader}>
-          <motion.h4
-            style={{ x: moveRightSpring }}
-            className={styles.developer}
-          >
-            Developer.
-          </motion.h4>
-          <motion.h4 style={{ x: moveLeftSpring }} className={styles.designer}>
-            Designer.
-          </motion.h4>
-        </div>
-      </div>
-      <div className={styles.imageContainerWrapper}>
-        <div className={styles.imageContainer}>
-          <div className={styles.image}>
-            <motion.img
-              src='/images/portrait.png'
-              style={{ scale: scaleSpring, y: moveDownSpring }}
+    <HeroSectionContainer>
+      <Container>
+        <Header>
+          <Text>
+            <h2 className='intro'>Full Stack</h2>
+            <h1 className='bold'>Developer</h1>
+            <h1 className='bold designer'>/Designer</h1>
+            <p>
+              working with startups to help them reach their full potential.
+            </p>
+          </Text>
+        </Header>
+        <ImageContainer>
+          <ImageWrapper>
+            <Image
+              src={'/images/giphy.gif'}
+              width={805}
+              height={1000}
+              layout='responsive'
+              objectFit='contain'
+              objectPosition='center'
             />
-          </div>
-        </div>
-      </div>
-      <div className={styles.introText}>
-        <IntroText />
-      </div>
-    </div>
+          </ImageWrapper>
+        </ImageContainer>
+      </Container>
+    </HeroSectionContainer>
   );
 };
 

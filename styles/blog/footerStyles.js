@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled(motion.div)`
   position: absolute;
@@ -65,7 +65,7 @@ export const Item = styled.li`
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -81,7 +81,7 @@ export const Item = styled.li`
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -139,7 +139,7 @@ export const Input = styled.input`
 
   ~ span::before,
   ~ span::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 50%;
@@ -157,7 +157,7 @@ export const Input = styled.input`
 
   ~ i::before,
   ~ i::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 0;
@@ -209,7 +209,7 @@ export const Svg = styled.span`
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -254,7 +254,7 @@ export const SwitchButton = styled.label`
 
   span:before {
     position: absolute;
-    content: '';
+    content: "";
     height: 15px;
     width: 15px;
     left: 4px;
