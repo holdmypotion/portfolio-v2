@@ -49,7 +49,6 @@ export const getStaticProps = async ({ params }) => {
 
 export default function Article({ article }) {
   if (!article) return <div>loading</div>;
-  console.log(article);
   const title = `Rahsand | Blog - ${article.fields.title}`;
   const imageString = article.fields.featuredImage.fields.file.url.replace(
     /["/"]/g,

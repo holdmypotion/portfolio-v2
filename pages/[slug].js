@@ -51,8 +51,8 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export default function CaseStudy({ caseStudy }) {
+  if (!caseStudy) return <div>loading</div>;
   caseStudy = caseStudy.fields;
-  console.log(caseStudy);
   return (
     <Layout>
       <Head>
