@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import {
   ContentContainer,
   HeroContainer,
@@ -7,17 +7,17 @@ import {
   Para,
   Title,
   FeaturedImageContainer,
-} from '../../../styles/portfolio/caseStudyStyles';
+} from "../../../styles/portfolio/caseStudyStyles";
 
 export default function Hero({ featuredImage, title, myRole, client, year }) {
   return (
     <HeroContainer>
       <FeaturedImageContainer>
         <Image
-          src={featuredImage}
-          layout='fill'
-          objectFit='cover'
-          objectPosition='center'
+          src={"https:" + featuredImage.fields.file.url}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
         />
       </FeaturedImageContainer>
       <ContentContainer>
@@ -25,7 +25,7 @@ export default function Hero({ featuredImage, title, myRole, client, year }) {
         <Block>
           <SubHeading>MY ROLe</SubHeading>
           {myRole.map(role => (
-            <Para>{role}</Para>
+            <Para key={role}>{role}</Para>
           ))}
         </Block>
         <Block>

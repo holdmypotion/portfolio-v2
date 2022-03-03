@@ -1,38 +1,49 @@
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 import {
   NContainer,
-  NLogoContainer,
+  LogoContainer,
   NMenuContainer,
-} from '../../../styles/portfolio/layoutStyles';
+  Item,
+  Menu,
+} from "../../../styles/portfolio/layoutStyles";
 
 const Navbar = ({ isHome }) => {
   return (
     <NContainer>
-      <NLogoContainer>
-        <h2>RnS</h2>
-      </NLogoContainer>
+      <LogoContainer>
+        <Link href={"/"}>
+          <a>
+            <Image src={"/logo.png"} width={60} height={40} />
+            <div>
+              <h3>Rahul Sharma</h3>
+              <h3>Developer / Designer</h3>
+            </div>
+          </a>
+        </Link>
+      </LogoContainer>
       <NMenuContainer>
-        <ul>
-          <li>
+        <Menu>
+          <Item>
             {isHome && (
-              <Link href='/#projects'>
-                <a dataText='Work'>Work</a>
+              <Link href="/#projects">
+                <a dataText="Work">Work</a>
               </Link>
             )}
-          </li>
-          <li>
+          </Item>
+          <Item>
             {isHome && (
-              <Link href='/#services'>
-                <a dataText='Services'>Services</a>
+              <Link href="/#services">
+                <a dataText="Services">Services</a>
               </Link>
             )}
-          </li>
-          <li>
-            <Link href='/blog'>
-              <a dataText='Blog'>Blog</a>
+          </Item>
+          <Item>
+            <Link href="/blog">
+              <a dataText="Blog">Blog</a>
             </Link>
-          </li>
-        </ul>
+          </Item>
+        </Menu>
       </NMenuContainer>
     </NContainer>
   );

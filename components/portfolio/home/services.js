@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { Container } from '../../../styles/portfolio/globalStyles';
+import Image from "next/image";
+import { Container } from "../../../styles/portfolio/globalStyles";
 import {
   ContentContainer,
   Header,
@@ -16,7 +16,7 @@ import {
   SubHeading,
   SubTitle,
   Title,
-} from '../../../styles/portfolio/servicesStyles';
+} from "../../../styles/portfolio/servicesStyles";
 
 export default function Services({ services }) {
   const servicesSection = services.map(service => (
@@ -34,7 +34,7 @@ export default function Services({ services }) {
   ));
 
   return (
-    <Container>
+    <Container id="services">
       <ServicesContainer>
         <StickyWrapper>
           <Header>
@@ -46,10 +46,10 @@ export default function Services({ services }) {
           <ImageWrapper>
             <ImageContainer>
               <Image
-                src={'/images/giphy.webp'}
-                layout='fill'
-                objectFit='cover'
-                objectPosition='center'
+                src={"/images/giphy.webp"}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
               />
               <Overlay />
             </ImageContainer>

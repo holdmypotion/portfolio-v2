@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 export const ProjectContainer = styled.div`
   background-color: ${props => props.theme.gray};
@@ -32,8 +32,9 @@ export const ThumbnailContainer = styled.div`
   margin: auto;
 `;
 
-export const Thumbnail = styled.div`
-  cursor: pointer;
+export const Thumbnail = styled.a`
+  display: block;
+  /* cursor: pointer; */
   position: relative;
   width: 100%;
   height: calc(100vw * 0.7);
@@ -50,7 +51,7 @@ export const Thumbnail = styled.div`
   }
 
   &::after {
-    content: '';
+    content: "";
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 50%;
@@ -158,7 +159,7 @@ export const Button = styled.button`
   }
 
   &::after {
-    content: '';
+    content: "";
     background: ${props => props.theme.primary};
     position: absolute;
     top: 50%;
@@ -176,7 +177,7 @@ export const Button = styled.button`
   }
 
   &::before {
-    content: '';
+    content: "";
     pointer-events: none;
     opacity: 0.6;
     background: radial-gradient(

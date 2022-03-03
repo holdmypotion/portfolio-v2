@@ -1,5 +1,6 @@
-import Image from 'next/image';
-import { Container } from '../../../styles/portfolio/globalStyles';
+import Link from "next/link";
+import Image from "next/image";
+import { Container } from "../../../styles/portfolio/globalStyles";
 import {
   Button,
   ProjectContainer,
@@ -12,39 +13,46 @@ import {
   Thumbnail,
   ThumbnailContainer,
   Title,
-} from '../../../styles/portfolio/projectSectionStyles';
+} from "../../../styles/portfolio/projectSectionStyles";
 
 const ProjectSection = ({ subHeading, heading, projects }) => {
   return (
-    <Container id='projects'>
+    <Container id="projects">
       <ProjectContainer>
         <Header>
           <SubHeading>{subHeading}</SubHeading>
           <Heading>{heading}</Heading>
           <ThumbnailContainer>
             {projects.map((project, index) => {
+              project = project.fields;
               let reverse = false;
               if (index % 2 !== 0) {
                 reverse = true;
               }
               return (
-                <Thumbnail
-                  key={project.slug}
-                  style={{ marginLeft: reverse ? 'auto' : 0 }}
-                >
-                  <Image
-                    src={project.featuredImage}
-                    layout='fill'
-                    objectFit='cover'
-                    objectPosition='center'
-                  />
-                  <Overlay />
-                  <Content>
-                    <Title>{project.title}</Title>
-                    <Description>redesigning the future</Description>
-                    <Button>Case Study</Button>
-                  </Content>
-                </Thumbnail>
+                <Link href={project.slug}>
+                  <Thumbnail
+                    key={project.slug}
+                    style={{ marginLeft: reverse ? "auto" : 0 }}
+                  >
+                    <Image
+                      src={"https:" + project.featuredImage.fields.file.url}
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center"
+                    />
+                    <Overlay />
+                    <Content>
+                      <Title>{project.title}</Title>
+                      <Description>{project.subHeading}</Description>
+                      <Button>
+                        <Link href={project.slug}>
+                          <a>Case Study</a>
+                        </Link>
+                      </Button>
+                    </Content>
+                  </Thumbnail>
+                </Link>
               );
             })}
           </ThumbnailContainer>

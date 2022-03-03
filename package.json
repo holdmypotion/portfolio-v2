@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.4",
     "@types/gtag.js": "^0.0.7",
     "contentful": "^8.4.2",
     "contentful-management": "^7.27.0",

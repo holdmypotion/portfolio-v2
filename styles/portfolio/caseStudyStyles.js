@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 //////////////////////////////////////
 // Hero.js
@@ -29,7 +29,7 @@ export const FeaturedImageContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  height: 80%;
+  /* height: 80%; */
   width: 100%;
   margin: auto 0;
   padding: 0 2rem;
@@ -124,11 +124,35 @@ export const ImageContainer = styled.div`
 // Next Project
 //////////////////////////////////
 
-export const NextProjectContainer = styled.div`
+export const NextProjectContainer = styled.a`
+  display: block;
   margin: 4rem auto;
   position: relative;
   width: 80vw;
   height: 80vh;
+  &:focus,
+  &:hover {
+    color: ${props => props.theme.base};
+    background: transparent;
+  }
+
+  &::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 0;
+  }
+
+  &:focus::after,
+  &:hover::after {
+    height: 100%;
+  }
 `;
 
 export const Overlay = styled.div`
