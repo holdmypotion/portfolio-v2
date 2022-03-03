@@ -1,8 +1,8 @@
-import { useContext } from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { ThemeContext } from '../../../store/theme-context';
-import { Container } from '../../../styles/blog/globalStyles';
-import Footer from './footer';
+import { useContext } from "react";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { ThemeContext } from "../../../store/theme-context";
+import { Container } from "../../../styles/blog/globalStyles";
+import Footer from "./footer";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -50,36 +50,36 @@ h2 {
 
 export default function Layout({ children }) {
   const darkTheme = {
-    base: '#313131',
-    baseLight: '#4A4A4A',
-    baseLightest: '#636363',
-    primary: '#F1762D',
-    primaryLight: '#F7B48C',
-    para: '#E3E3E3',
-    heading: '#FCFCFC',
-    black: '#171717',
-    articlePara: '#fff',
+    base: "#313131",
+    baseLight: "#4A4A4A",
+    baseLightest: "#636363",
+    primary: "#F1762D",
+    primaryLight: "#F7B48C",
+    para: "#E3E3E3",
+    heading: "#FCFCFC",
+    black: "#171717",
+    articlePara: "#fff",
   };
 
   const lightTheme = {
-    base: '#E3E3E3',
-    baseLight: '#FCFCFC',
-    baseLightest: '#E3E3E3',
-    primary: '#F1762D',
-    primaryLight: '#F7B48C',
-    para: '#4A4A4A',
-    heading: '#171717',
-    black: '#171717',
-    articlePara: '#000',
+    base: "#E3E3E3",
+    baseLight: "#FCFCFC",
+    baseLightest: "#E3E3E3",
+    primary: "#F1762D",
+    primaryLight: "#F7B48C",
+    para: "#4A4A4A",
+    heading: "#171717",
+    black: "#171717",
+    articlePara: "#000",
   };
 
   const currentTheme = useContext(ThemeContext);
   let theme;
   switch (currentTheme.theme) {
-    case 'dark':
+    case "dark":
       theme = darkTheme;
       break;
-    case 'light':
+    case "light":
       theme = lightTheme;
       break;
     default:

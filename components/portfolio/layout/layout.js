@@ -17,8 +17,8 @@ html {
 body {
   font-size: 16px;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  ${"" /* background: ${props => props.theme.base}; */}
-  ${"" /* color: ${props => props.theme.para}; */}
+  background: ${props => props.theme.base};
+  /* color: ${props => props.theme.para}; */
   overscroll-behavior: none;
   overflow-x: hidden;
 }
