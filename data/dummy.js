@@ -135,27 +135,27 @@ export const CASE_STUDIES = [
 
 export const SERVICES = [
   {
+    title: "Cloud",
+    subServices: [
+      {
+        subTitle: "DevOps",
+        description:
+          "Experienced in creating, configuring and maintaining Infrastructure using Terraform on AWS including Virtual Private Cloud (VPC), EC2, RDS, S3, Route53, DynamoDB, CloudWatch and IAM.",
+      },
+    ],
+  },
+  {
     title: "development",
     subServices: [
       {
-        subTitle: "frontend-web",
+        subTitle: "BACKEND",
         description:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.",
+          "Well documented and Containerized REST APIs with custom error handling and resuable middlewares. Nodejs | Django",
       },
       {
-        subTitle: "BACKEND-WEB",
+        subTitle: "FRONTEND",
         description:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.",
-      },
-      {
-        subTitle: "MOBILE",
-        description:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.",
-      },
-      {
-        subTitle: "Devops",
-        description:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.",
+          "Tailor-made web interfaces customized to your and your users' need. Just like the one you're on right now. ;) ",
       },
     ],
   },
@@ -165,17 +165,11 @@ export const SERVICES = [
       {
         subTitle: "Mobile / Web ui",
         description:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.",
+          "Have your app idea turned into a high-fidelity mock up and a presentable prototype.",
       },
       {
         subTitle: "Logo",
-        description:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.",
-      },
-      {
-        subTitle: "Graphic",
-        description:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ipsa placeat illum officiis in sapiente dicta aperiam alias dolor minus.",
+        description: "Get your brand the logo it deserves",
       },
     ],
   },
