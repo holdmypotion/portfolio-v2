@@ -17,7 +17,7 @@ export const getStaticPaths = async () => {
     content_type: "caseStudies",
   });
 
-  const paths = res.items.map(item => {
+  const paths = res.items.map((item) => {
     return {
       params: { slug: item.fields.slug },
     };
@@ -56,7 +56,7 @@ export default function CaseStudy({ caseStudy }) {
   return (
     <Layout>
       <Head>
-        <title>Rahsand | {caseStudy.title}</title>
+        <title>Rahul Sharma | {caseStudy.title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta
@@ -67,15 +67,15 @@ export default function CaseStudy({ caseStudy }) {
         <meta name="copyright" content="2021 | Rahul Sharma"></meta>
         <meta name="robots" content="index, follow"></meta>
         <meta property="og:type" content="website"></meta>
-        <meta property="og:url" content="https://www.rahsand.tech/"></meta>
-        <meta property="og:title" content="Rahsand | Blog"></meta>
+        <meta property="og:url" content="https://www.holdmypotion.tech/"></meta>
+        <meta property="og:title" content="Rahul Sharma | Blog"></meta>
         <meta
           property="og:description"
           content="I build websites and I build them good! | Articles on frontend, book notes, UI designs, and much more."
         />
-        <meta property="og:site_name" content="Rahsand | Blog"></meta>
+        <meta property="og:site_name" content="Rahul Sharma | Blog"></meta>
         <meta property="twitter:site" content="@holdmypotionn"></meta>
-        <meta property="twitter:title" content="Rahsand | Blog"></meta>
+        <meta property="twitter:title" content="Rahul Sharma | Blog"></meta>
         <meta
           property="twitter:description"
           content="I build websites and I build them good! | Articles on frontend, book notes, UI designs, and much more."
@@ -83,8 +83,8 @@ export default function CaseStudy({ caseStudy }) {
         <meta name="twitter:card" content="summary" key="twcard" />
         <meta name="twitter:creator" content="@holdmypotionn" key="twhandle" />
         {/* <meta property="og:image" content="Enter url"></meta> */}
-        <meta property="forem:domain" content="rahsand.tech"></meta>
-        <link rel="canonical" href="https://www.rahsand.tech/"></link>
+        <meta property="forem:domain" content="holdmypotion.tech"></meta>
+        <link rel="canonical" href="https://www.holdmypotion.tech/"></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
