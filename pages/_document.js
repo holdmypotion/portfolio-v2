@@ -26,13 +26,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Global Site Tag - Google Adsense */}
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5800993361514427"
-            crossorigin="anonymous"
-          ></script>
-
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

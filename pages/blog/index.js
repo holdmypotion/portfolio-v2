@@ -29,6 +29,13 @@ export default function Blog({ blogs }) {
     <Context>
       <Layout>
         <Head>
+          {/* Global Site Tag - Google Adsense */}
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5800993361514427"
+            crossorigin="anonymous"
+          ></script>
+
           <title>Rahul Sharma | Blog</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
