@@ -1,9 +1,9 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
-import { GA_TRACKING_ID } from '../lib/gtag';
+import { GA_TRACKING_ID } from "../lib/gtag";
 
 // Import styled components ServerStyleSheet
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
 
     // Step 2: Retrieve styles from components in the page
     const page = renderPage(
-      App => props => sheet.collectStyles(<App {...props} />)
+      (App) => (props) => sheet.collectStyles(<App {...props} />)
     );
 
     // Step 3: Extract the styles as <style> tags
@@ -28,9 +28,9 @@ export default class MyDocument extends Document {
         <Head>
           {/* Global Site Tag - Google Adsense */}
           <script
-            data-ad-client='ca-pub-5800993361514427'
             async
-            src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5800993361514427"
+            crossorigin="anonymous"
           ></script>
 
           {/* Global Site Tag (gtag.js) - Google Analytics */}
