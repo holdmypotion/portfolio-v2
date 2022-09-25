@@ -13,6 +13,7 @@ export default function Comments() {
     scriptEl.setAttribute('crossorigin', 'anonymous');
     scriptEl.setAttribute('async', true);
     scriptEl.setAttribute('repo', 'holdmypotion/portfolio-v2');
+    scriptEl.setAttribute('label', 'blog-comment');
     scriptEl.setAttribute('issue-term', 'pathname');
     scriptEl.setAttribute(
       'theme',
