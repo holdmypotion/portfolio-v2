@@ -54,7 +54,7 @@ export default function Article({ article }) {
     /["/"]/g,
     "%2F"
   );
-  const imageURL = `https://www.holdmypotion.tech/_next/image?url=https%3A${imageString}&w=828&q=75`;
+  const imageURL = `https://www.holdmypotion.com/_next/image?url=https%3A${imageString}&w=828&q=75`;
 
   return (
     <Context>
@@ -74,7 +74,7 @@ export default function Article({ article }) {
           <meta property="og:title" content={article.fields.title} />
           <meta
             property="og:url"
-            content={`https://holdmypotion.tech/blog/${article.fields.slug}`}
+            content={`https://holdmypotion.com/blog/${article.fields.slug}`}
           />
           <meta property="og:image" content={imageURL} />
           <meta
@@ -115,8 +115,8 @@ export default function Article({ article }) {
             name="monetization"
             content="$ilp.uphold.com/m9E8Lgjik82p"
           ></meta>
-          <meta property="forem:domain" content="holdmypotion.tech"></meta>
-          <link rel="canonical" href="https://www.holdmypotion.tech/"></link>
+          <meta property="forem:domain" content="holdmypotion.com"></meta>
+          <link rel="canonical" href="https://www.holdmypotion.com/"></link>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <MainContent article={article} />

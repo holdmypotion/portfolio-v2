@@ -67,7 +67,7 @@ export default function CaseStudy({ caseStudy }) {
         <meta name="copyright" content="2021 | Rahul Sharma"></meta>
         <meta name="robots" content="index, follow"></meta>
         <meta property="og:type" content="website"></meta>
-        <meta property="og:url" content="https://www.holdmypotion.tech/"></meta>
+        <meta property="og:url" content="https://www.holdmypotion.com/"></meta>
         <meta property="og:title" content="Rahul Sharma | Blog"></meta>
         <meta
           property="og:description"
@@ -83,8 +83,8 @@ export default function CaseStudy({ caseStudy }) {
         <meta name="twitter:card" content="summary" key="twcard" />
         <meta name="twitter:creator" content="@holdmypotionn" key="twhandle" />
         {/* <meta property="og:image" content="Enter url"></meta> */}
-        <meta property="forem:domain" content="holdmypotion.tech"></meta>
-        <link rel="canonical" href="https://www.holdmypotion.tech/"></link>
+        <meta property="forem:domain" content="holdmypotion.com"></meta>
+        <link rel="canonical" href="https://www.holdmypotion.com/"></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
