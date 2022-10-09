@@ -60,24 +60,24 @@ export default function Article({ article }) {
               title={title}
               hashtags={['100DaysOfCode', 'DEVCommunity']}
               children={<TwitterIcon size={24} borderRadius={2} />}
-              url={`https://www.rahsand.tech/${router.asPath}`}
+              url={`https://www.holdmypotion.com/${router.asPath}`}
             />
             <FacebookShareButton
               quote={title}
               hashtags={['100DaysOfCode', 'DEVCommunity']}
               children={<FacebookIcon size={24} borderRadius={2} />}
-              url={`https://www.rahsand.tech/${router.asPath}`}
+              url={`https://www.holdmypotion.com/${router.asPath}`}
             />
             {/* <LinkedinShareButton
               title={title}
               hashtags={['100DaysOfCode', 'DEVCommunity']}
               children={<LinkedinIcon size={24} borderRadius={2} />}
-              url={`https://www.rahsand.tech/${router.asPath}`}
+              url={`https://www.holdmypotion.com/${router.asPath}`}
             /> */}
             <RedditShareButton
               title={title}
               children={<RedditIcon size={24} borderRadius={2} />}
-              url={`https://www.rahsand.tech/${router.asPath}`}
+              url={`https://www.holdmypotion.com/${router.asPath}`}
             />
           </SocialContainer>
         </InfoContainer>
