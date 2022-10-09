@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 // Navbar
 export const NContainer = styled.div`
@@ -13,7 +13,7 @@ export const NContainer = styled.div`
   align-items: flex-start;
   font-family: Antonio;
   font-weight: 700;
-  color: ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   mix-blend-mode: difference; ;
 `;
 
@@ -28,6 +28,7 @@ export const LogoContainer = styled.div`
   & h3 {
     font-size: 1rem;
     transition: all 0.3s ease;
+    font-family: Antonio;
   }
 
   @media (min-width: 700px) {
@@ -37,7 +38,7 @@ export const LogoContainer = styled.div`
   }
 
   &:hover h3 {
-    color: ${props => props.theme.white};
+    color: ${(props) => props.theme.white};
   }
 `;
 
@@ -70,7 +71,7 @@ export const Item = styled.li`
   }
 
   &:hover a {
-    color: ${props => props.theme.white};
+    color: ${(props) => props.theme.white};
   }
 `;
 
@@ -87,7 +88,7 @@ export const FContainer = styled.div`
   align-items: center;
   font-family: Antonio;
   font-weight: 700;
-  color: ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   mix-blend-mode: difference;
 
   @media (min-width: 700px) {
@@ -118,24 +119,24 @@ export const FTextContainer = styled.div`
     width: 3rem;
     height: 2px;
     border-radius: 100px;
-    background-color: ${props => props.theme.primary};
+    background-color: ${(props) => props.theme.primary};
     mix-blend-mode: difference;
     transition: all 0.2s ease-in-out;
   }
 
   &:hover {
-    ${props =>
+    ${(props) =>
       props.contact &&
       css`
-        color: ${props => props.theme.white};
+        color: ${(props) => props.theme.white};
       `}
   }
 
   &:hover div {
-    ${props =>
+    ${(props) =>
       props.contact &&
       css`
-        background-color: ${props => props.theme.white};
+        background-color: ${(props) => props.theme.white};
       `}
   }
 `;
@@ -147,7 +148,7 @@ export const FSocialSVG = styled.div`
   justify-content: space-around;
 
   & path {
-    fill: ${props => props.theme.primary};
+    fill: ${(props) => props.theme.primary};
     mix-blend-mode: difference;
   }
 `;
@@ -165,7 +166,7 @@ export const MFContainer = styled.div`
   align-items: center;
   font-family: Antonio;
   font-weight: 700;
-  color: ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   mix-blend-mode: difference;
 
   @media (min-width: 700px) {
@@ -174,7 +175,7 @@ export const MFContainer = styled.div`
 `;
 
 export const MFButtonContainer = styled.div`
-  background-color: ${props => props.theme.primary};
+  background-color: ${(props) => props.theme.primary};
   width: 41px;
   height: 41px;
   border-radius: 50%;
@@ -189,7 +190,7 @@ export const CreditsContainer = styled.div`
   align-items: center;
   font-family: Antonio;
   font-weight: 700;
-  color: ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   padding-bottom: 5rem;
   mix-blend-mode: difference;
 `;
@@ -200,6 +201,6 @@ export const Svg = styled.span`
   }
 
   &:hover path {
-    fill: ${props => props.theme.white};
+    fill: ${(props) => props.theme.white};
   }
 `;
