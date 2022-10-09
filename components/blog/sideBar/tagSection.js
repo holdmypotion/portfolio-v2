@@ -17,31 +17,31 @@ export default function TagSection() {
   const [unselectedTags, setUnselectedTags] = useState(TAGS);
   const [selectedTags, setSelectedTags] = useState([]);
 
-  const selectTagHandler = tag => {
+  const selectTagHandler = (tag) => {
     const updatedSelectedTags = selectedTags.concat(tag);
     setSelectedTags(updatedSelectedTags);
     setUnselectedTags(
-      unselectedTags.filter(unselectedTag => unselectedTag !== tag)
+      unselectedTags.filter((unselectedTag) => unselectedTag !== tag)
     );
     filterContext.tagSelector(updatedSelectedTags);
   };
 
-  const unselectTagHandler = tag => {
+  const unselectTagHandler = (tag) => {
     setUnselectedTags(unselectedTags.concat(tag));
     const updatedSelectedTags = selectedTags.filter(
-      selectedTag => selectedTag !== tag
+      (selectedTag) => selectedTag !== tag
     );
     setSelectedTags(updatedSelectedTags);
     filterContext.tagSelector(updatedSelectedTags);
   };
 
-  const selectedTagsList = selectedTags.map(tag => (
+  const selectedTagsList = selectedTags.sort().map((tag) => (
     <SelectedTag key={tag} onClick={() => unselectTagHandler(tag)}>
       #{tag}
     </SelectedTag>
   ));
 
-  const unselectedTagsList = unselectedTags.map(tag => (
+  const unselectedTagsList = unselectedTags.sort().map((tag) => (
     <UnselectedTagBlock key={tag}>
       <UnselectedTag onClick={() => selectTagHandler(tag)}>
         #{tag}
