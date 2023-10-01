@@ -8,7 +8,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Antonio,
     Open Sans sans-serif;
   /* background-color: var(--gray-900); */
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 
   --header: Antonio;
   --headerWeight: 700;
