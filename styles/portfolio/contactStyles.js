@@ -103,6 +103,7 @@ export const Input = styled.input`
 
   &::placeholder {
     color: ${(props) => props.theme.primary};
+    opacity: 0.7;
   }
 
   ~ span::after {
@@ -168,6 +169,7 @@ export const TextArea = styled.textarea`
 
   &::placeholder {
     color: ${(props) => props.theme.primary};
+    opacity: 0.7;
   }
 
   /* ~ span::before, */
