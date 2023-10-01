@@ -1,12 +1,12 @@
-import Image from 'next/image';
-import { Container } from '../../../styles/portfolio/globalStyles';
+import Image from "next/image";
+import { Container } from "../../../styles/portfolio/globalStyles";
 import {
   Header,
   ImageContainer,
   ImageWrapper,
   HeroSectionContainer,
   Text,
-} from '../../../styles/portfolio/heroSectionStyles';
+} from "../../../styles/portfolio/heroSectionStyles";
 
 const HeroSection = () => {
   // TODO: Finalize the image issue
@@ -15,9 +15,9 @@ const HeroSection = () => {
       <Container>
         <Header>
           <Text>
-            <h2 className='intro'>Full Stack</h2>
-            <h1 className='bold'>Developer</h1>
-            <h1 className='bold designer'>/Designer</h1>
+            <h2 className="intro">Full Stack</h2>
+            <h1 className="bold">Developer</h1>
+            <h1 className="bold designer">/Designer</h1>
             <p>
               working with startups to help them reach their full potential.
             </p>
@@ -26,12 +26,12 @@ const HeroSection = () => {
         <ImageContainer>
           <ImageWrapper>
             <Image
-              src={'/images/giphy.gif'}
+              src={"/images/hero5.png"}
               width={805}
               height={1000}
-              layout='responsive'
-              objectFit='contain'
-              objectPosition='center'
+              layout="responsive"
+              objectFit="contain"
+              objectPosition="center"
             />
           </ImageWrapper>
         </ImageContainer>

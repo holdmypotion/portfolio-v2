@@ -19,7 +19,7 @@ import {
 } from "../../../styles/portfolio/servicesStyles";
 
 export default function Services({ services }) {
-  const servicesSection = services.map(service => (
+  const servicesSection = services.map((service) => (
     <ServiceSection key={service.title}>
       <Title>{service.title}</Title>
       {service.subServices.map((service, index) => (
@@ -43,7 +43,7 @@ export default function Services({ services }) {
           </Header>
         </StickyWrapper>
         <StickyWrapper>
-          <ImageWrapper>
+          {/* <ImageWrapper>
             <ImageContainer>
               <Image
                 src={"/images/giphy.webp"}
@@ -53,7 +53,7 @@ export default function Services({ services }) {
               />
               <Overlay />
             </ImageContainer>
-          </ImageWrapper>
+          </ImageWrapper> */}
         </StickyWrapper>
         <ContentContainer>{servicesSection}</ContentContainer>
       </ServicesContainer>

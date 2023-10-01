@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css, keyframes } from "styled-components";
 
 export const ContactContainer = styled.div`
   @media (min-width: 1080px) {
@@ -36,7 +36,7 @@ export const ImageContainer = styled.div`
   height: 25vw;
 
   @media (max-width: 1080px) {
-    width: 90%;
+    width: 44%;
     height: 45vw;
   }
 `;
@@ -58,12 +58,12 @@ export const InputContainer = styled.div`
   flex-direction: column;
   width: 25vw;
   margin: 2vh 0;
-  ${props =>
+  ${(props) =>
     props.large &&
     css`
       width: 100%;
     `};
-  ${props =>
+  ${(props) =>
     props.medium &&
     css`
       width: 50%;
@@ -75,22 +75,22 @@ export const InputContainer = styled.div`
 `;
 
 export const Label = styled.label`
-  color: ${props => props.theme.grayLight};
+  color: ${(props) => props.theme.grayLight};
   font-size: calc(0.8rem + 0.5vw);
 `;
 
 export const InputWrapper = styled.div`
   position: relative;
-  background: ${props => props.theme.base};
+  background: ${(props) => props.theme.base};
   border-radius: 2px;
   width: 100%;
   transition: 0.4s;
 `;
 export const Input = styled.input`
   font-family: Open Sans;
-  background: ${props => props.theme.base};
+  background: ${(props) => props.theme.base};
   outline: none;
-  color: ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   font-size: calc(1rem + 0.5vw);
   letter-spacing: 0.5px;
   width: 100%;
@@ -98,21 +98,21 @@ export const Input = styled.input`
   padding-bottom: 10px;
   border-radius: 2px;
   border: 2px solid transparent;
-  border-bottom: 2px solid ${props => props.theme.grayLight};
+  border-bottom: 2px solid ${(props) => props.theme.grayLight};
   transition: 0.4s;
 
   &::placeholder {
-    color: ${props => props.theme.primary};
+    color: ${(props) => props.theme.primary};
   }
 
   ~ span::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: ${props => props.theme.primary};
+    background-color: ${(props) => props.theme.primary};
     transition: 0.4s;
     border-radius: 2px;
   }
@@ -123,13 +123,13 @@ export const Input = styled.input`
   }
 
   ~ i::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 0;
     width: 2px;
     height: 0;
-    background-color: ${props => props.theme.primary};
+    background-color: ${(props) => props.theme.primary};
     transition: 0.6s;
   }
 
@@ -153,9 +153,9 @@ export const Input = styled.input`
 
 export const TextArea = styled.textarea`
   font-family: Open Sans;
-  background: ${props => props.theme.base};
+  background: ${(props) => props.theme.base};
   outline: none;
-  color: ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   font-size: calc(1rem + 0.5vw);
   letter-spacing: 0.5px;
   width: 100%;
@@ -163,22 +163,22 @@ export const TextArea = styled.textarea`
   padding-bottom: 10px;
   border-radius: 2px;
   border: 2px solid transparent;
-  border-bottom: 2px solid ${props => props.theme.grayLight};
+  border-bottom: 2px solid ${(props) => props.theme.grayLight};
   transition: 0.4s;
 
   &::placeholder {
-    color: ${props => props.theme.primary};
+    color: ${(props) => props.theme.primary};
   }
 
   /* ~ span::before, */
   ~ span::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: ${props => props.theme.primary};
+    background-color: ${(props) => props.theme.primary};
     transition: 0.4s;
     border-radius: 2px;
   }
@@ -190,13 +190,13 @@ export const TextArea = styled.textarea`
 
   /* ~ i::before, */
   ~ i::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 0;
     width: 2px;
     height: 0;
-    background-color: ${props => props.theme.primary};
+    background-color: ${(props) => props.theme.primary};
     transition: 0.6s;
   }
 
@@ -232,10 +232,10 @@ const bubbles = keyframes`
 export const Submit = styled.button`
   cursor: pointer;
   position: relative;
-  color: ${props => props.theme.primary};
-  border: 2px solid ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
+  border: 2px solid ${(props) => props.theme.primary};
   padding: 7px 20px;
-  padding: ${props => props.py} ${props => props.px};
+  padding: ${(props) => props.py} ${(props) => props.px};
   text-transform: uppercase;
   overflow: hidden;
   transition: 1s all ease;
@@ -246,19 +246,19 @@ export const Submit = styled.button`
   letter-spacing: 0.04em;
   border-radius: 2px;
   outline: none;
-  background: ${props => props.theme.base};
+  background: ${(props) => props.theme.base};
   z-index: 1;
   margin-top: 2rem;
 
   &:focus,
   &:hover {
-    color: ${props => props.theme.base};
+    color: ${(props) => props.theme.base};
     background: transparent;
   }
 
   &::after {
-    content: '';
-    background: ${props => props.theme.primary};
+    content: "";
+    background: ${(props) => props.theme.primary};
     position: absolute;
     top: 50%;
     left: 50%;
@@ -275,31 +275,31 @@ export const Submit = styled.button`
   }
 
   &::before {
-    content: '';
+    content: "";
     pointer-events: none;
     opacity: 0.6;
     background: radial-gradient(
         circle at 20% 35%,
         transparent 0,
         transparent 2px,
-        ${props => props.theme.primary} 3px,
-        ${props => props.theme.primary} 4px,
+        ${(props) => props.theme.primary} 3px,
+        ${(props) => props.theme.primary} 4px,
         transparent 4px
       ),
       radial-gradient(
         circle at 75% 44%,
         transparent 0,
         transparent 2px,
-        ${props => props.theme.primary} 3px,
-        ${props => props.theme.primary} 4px,
+        ${(props) => props.theme.primary} 3px,
+        ${(props) => props.theme.primary} 4px,
         transparent 4px
       ),
       radial-gradient(
         circle at 46% 52%,
         transparent 0,
         transparent 4px,
-        ${props => props.theme.primary} 5px,
-        ${props => props.theme.primary} 6px,
+        ${(props) => props.theme.primary} 5px,
+        ${(props) => props.theme.primary} 6px,
         transparent 6px
       );
 
@@ -317,24 +317,24 @@ export const Submit = styled.button`
         circle at 20% 35%,
         transparent 0,
         transparent 2px,
-        ${props => props.theme.base} 3px,
-        ${props => props.theme.base} 4px,
+        ${(props) => props.theme.base} 3px,
+        ${(props) => props.theme.base} 4px,
         transparent 4px
       ),
       radial-gradient(
         circle at 75% 44%,
         transparent 0,
         transparent 2px,
-        ${props => props.theme.base} 3px,
-        ${props => props.theme.base} 4px,
+        ${(props) => props.theme.base} 3px,
+        ${(props) => props.theme.base} 4px,
         transparent 4px
       ),
       radial-gradient(
         circle at 46% 52%,
         transparent 0,
         transparent 4px,
-        ${props => props.theme.base} 5px,
-        ${props => props.theme.base} 6px,
+        ${(props) => props.theme.base} 5px,
+        ${(props) => props.theme.base} 6px,
         transparent 6px
       );
   }

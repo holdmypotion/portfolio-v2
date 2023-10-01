@@ -3,18 +3,17 @@ import { motion } from "framer-motion";
 
 export const HeroSectionContainer = styled(motion.div)`
   position: relative;
-  background-color: ${props => props.theme.primary};
+  background-color: ${(props) => props.theme.primary};
   min-height: 100vh;
 `;
 
 export const ImageContainer = styled.div`
   position: static;
   @media (min-width: 1080px) {
-    width: 40vw;
-    padding-top: 4vh;
-    position: absolute;
-    top: 0;
-    right: 0;
+    width: 55vw;
+    position: fixed;
+    top: -10%;
+    right: -10%;
   }
 `;
 
@@ -34,7 +33,7 @@ export const Header = styled(motion.div)`
 `;
 
 export const Text = styled.h1`
-  color: ${props => props.theme.gray};
+  color: ${(props) => props.theme.gray};
   font-size: calc(3rem + 1vw);
   font-weight: normal;
   text-transform: none;
@@ -46,7 +45,7 @@ export const Text = styled.h1`
   }
 
   & h1 {
-    color: ${props => props.theme.gray};
+    color: ${(props) => props.theme.gray};
     font-size: calc(3rem + 6vw);
     font-weight: 800;
     text-transform: uppercase;
@@ -86,14 +85,14 @@ export const Text = styled.h1`
 
 export const AboutContainer = styled.div`
   padding: 20vh 0;
-  background-color: ${props => props.theme.primary};
+  background-color: ${(props) => props.theme.primary};
 `;
 
 export const AboutText = styled.h1`
   font-family: Open Sans;
   font-size: calc(2rem + 5vw);
   font-weight: normal;
-  color: ${props => props.theme.gray};
+  color: ${(props) => props.theme.gray};
   padding-bottom: 1rem;
   text-transform: none;
   letter-spacing: -0.05em;
@@ -105,7 +104,7 @@ export const AboutText = styled.h1`
 export const Links = styled.p`
   padding: 2rem 0;
   padding-left: 0.5rem;
-  color: ${props => props.theme.gray};
+  color: ${(props) => props.theme.gray};
   font-size: calc(1rem + 0.5vw);
 
   & div {
@@ -121,7 +120,7 @@ export const Item = styled.div`
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    color: ${props => props.theme.white};
+    color: ${(props) => props.theme.white};
   }
 
   &::after {
@@ -131,7 +130,7 @@ export const Item = styled.div`
     right: 0;
     bottom: 0;
     height: 2px;
-    background-color: ${props => props.theme.white};
+    background-color: ${(props) => props.theme.white};
     transition: transform 0.5s ease-in-out;
     transform: scaleX(0);
   }
